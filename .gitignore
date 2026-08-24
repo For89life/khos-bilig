@@ -6,6 +6,7 @@
 !index.html
 !CNAME
 !gallery.html
+!partner.html
 !img/
 
 # Inside img/, keep only the .webp files the pages actually request
