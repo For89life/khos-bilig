@@ -4,16 +4,15 @@
 /*
 !.gitignore
 !index.html
+!CNAME
 !gallery.html
 !img/
 
-# Inside img/, keep only what the pages request at runtime
+# Inside img/, keep only the .webp files the pages actually request
 img/original/
 img/_src/
-img/partners/*.png
-img/partners/*.jpg
-img/partners/*.jpeg
-img/partners/*.txt
+img/partners/*
+!img/partners/*.webp
 
 # leftover source/unused logo files that no page requests
 img/partners/Daco.webp
