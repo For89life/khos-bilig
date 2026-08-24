@@ -139,83 +139,6 @@ footer{background:var(--ink);color:#fff;padding:56px 0 32px}
 }
 :focus-visible{outline:2px solid var(--gold);outline-offset:3px}
 
-/* ─── ПРОЦЕСС ─── */
-.proc{padding:90px 0 0}
-.proc-head{margin-bottom:64px}
-.proc-grid{
-  display:grid;grid-template-columns:repeat(5,1fr);
-  border-top:1px solid var(--line);
-}
-.proc-step{
-  border-right:1px solid var(--line);padding:36px 26px 44px;position:relative;
-  transition:background .4s;
-}
-.proc-step:last-child{border-right:0}
-.proc-step:hover{background:var(--paper-2)}
-.proc-step::before{
-  content:'';position:absolute;top:-1px;left:0;width:100%;height:1px;
-  background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .5s;
-}
-.proc-step:hover::before{transform:scaleX(1)}
-.proc-n{
-  font-size:11px;font-weight:500;letter-spacing:.2em;color:var(--gold);margin-bottom:20px;
-}
-.proc-step h3{font-family:'Manrope',sans-serif;font-size:1.02rem;font-weight:500;letter-spacing:-.01em;margin-bottom:11px;line-height:1.4}
-.proc-step p{font-size:13.5px;color:var(--ink-2);font-weight:300;line-height:1.7}
-
-/* ─── ҮНЭ ЮУНААС ХАМААРАХ ─── */
-.factors{background:var(--ink);color:#fff;padding:110px 0;margin-top:110px}
-.factors .title{color:#fff}
-.factors .eyebrow{color:rgba(255,255,255,.45)}
-.factors-head{margin-bottom:60px}
-.factors-grid{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
-  background:var(--line-dark);border:1px solid var(--line-dark);
-}
-.factor{background:var(--ink);padding:34px 28px 38px;transition:background .35s}
-.factor:hover{background:#151D28}
-.factor h3{font-family:'Manrope',sans-serif;font-size:1rem;font-weight:500;margin-bottom:10px;letter-spacing:-.01em}
-.factor p{font-size:13.5px;color:rgba(255,255,255,.5);font-weight:300;line-height:1.7}
-
-/* ─── ХҮСЭЛТ ИЛГЭЭХ ─── */
-.request{padding:110px 0 130px}
-.request-in{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
-.request h2.title{font-family:'Manrope',sans-serif;font-size:clamp(1.9rem,3.6vw,3rem);font-weight:200;line-height:1.18;letter-spacing:-.02em;max-width:20ch}
-.request h2.title b{font-weight:500}
-.req-phones{margin:38px 0 34px}
-.req-l{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-3);margin-bottom:10px}
-.req-phone{
-  font-family:'Manrope',sans-serif;font-size:1.7rem;font-weight:300;
-  letter-spacing:-.01em;display:block;transition:color .25s;
-}
-.req-phone:hover{color:var(--gold)}
-.req-box{border:1px solid var(--line);padding:40px 36px 44px}
-.req-box h3{font-family:'Manrope',sans-serif;font-size:1.15rem;font-weight:500;letter-spacing:-.01em;margin-bottom:12px}
-.req-box p{font-size:14px;color:var(--ink-2);font-weight:300;margin-bottom:28px}
-.req-cta{
-  display:inline-flex;align-items:center;gap:12px;
-  font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;
-  padding:15px 28px;background:var(--ink);color:#fff;transition:background .25s,gap .25s;
-}
-.req-cta:hover{background:var(--gold);gap:18px}
-.req-cta svg{width:14px;height:14px;stroke:currentColor;stroke-width:1.5;fill:none}
-.req-note{font-size:12.5px;color:var(--ink-3);font-weight:300;margin-top:22px;line-height:1.7}
-
-@media(max-width:1024px){
-  .proc-grid{grid-template-columns:repeat(2,1fr)}
-  .proc-step:nth-child(2n){border-right:0}
-  .factors-grid{grid-template-columns:1fr 1fr}
-  .request-in{grid-template-columns:1fr;gap:44px}
-}
-@media(max-width:820px){
-  .proc-grid,.factors-grid{grid-template-columns:1fr}
-  .proc-step{border-right:0;border-bottom:1px solid var(--line);padding:30px 0 34px}
-  .proc{padding-top:64px}
-  .factors{padding:70px 0;margin-top:70px}
-  .request{padding:70px 0 90px}
-  .req-box{padding:32px 24px 36px}
-}
-
 /* ─── ҮЙЛЧИЛГЭЭ СОНГОХ ─── */
 .pick{padding:90px 0 0}
 .pick-head{margin-bottom:56px}
@@ -327,43 +250,6 @@ footer{background:var(--ink);color:#fff;padding:56px 0 32px}
     </a>
   </div>
 </header>
-
-<!-- ─── ПРОЦЕСС ─── -->
-<section class="proc">
-  <div class="wrap">
-    <div class="proc-head">
-      <div class="eyebrow">Хэрхэн эхлэх вэ</div>
-      <h2 class="title">Хүсэлтээс <b>хамгаалалт эхлэх</b> хүртэл</h2>
-    </div>
-    <div class="proc-grid">
-      <article class="proc-step">
-        <div class="proc-n">01</div>
-        <h3>Хүсэлт илгээх</h3>
-        <p>Утсаар холбогдох эсвэл доорх маягтыг бөглөнө. Бид ажлын 1 хоногийн дотор эргэн холбогдоно.</p>
-      </article>
-      <article class="proc-step">
-        <div class="proc-n">02</div>
-        <h3>Объектын үзлэг</h3>
-        <p>Мэргэжилтэн газар дээр нь очиж, объектын онцлог, нэвтрэх цэг, эмзэг хэсгийг судална.</p>
-      </article>
-      <article class="proc-step">
-        <div class="proc-n">03</div>
-        <h3>Эрсдэлийн үнэлгээ</h3>
-        <p>Илэрсэн эрсдэлийг зэрэглэн үнэлж, шаардагдах хүн хүч, техник хэрэгслийг тодорхойлно.</p>
-      </article>
-      <article class="proc-step">
-        <div class="proc-n">04</div>
-        <h3>Санал, үнийн тооцоо</h3>
-        <p>Хамгаалалтын төлөвлөгөө болон задаргаатай үнийн саналыг бичгээр хүргүүлнэ.</p>
-      </article>
-      <article class="proc-step">
-        <div class="proc-n">05</div>
-        <h3>Гэрээ, эхлэл</h3>
-        <p>Гэрээ байгуулж, алба хаагчдыг объектод дадлагажуулан хамгаалалтад гаргана.</p>
-      </article>
-    </div>
-  </div>
-</section>
 
 <!-- ─── ҮЙЛЧИЛГЭЭ СОНГОХ ─── -->
 <section class="pick" id="pick">
