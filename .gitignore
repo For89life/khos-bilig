@@ -9,6 +9,7 @@
 !robots.txt
 !sitemap.xml
 !partner.html
+!i18n.js
 !img/
 
 # Inside img/, keep only the .webp files the pages actually request
