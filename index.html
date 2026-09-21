@@ -285,17 +285,31 @@ section{padding:92px 0}
 .reg-card p{font-size:13.5px;color:var(--txt-2)}
 @media(max-width:1080px){.reg-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:560px){.reg-grid{grid-template-columns:1fr}}
-/* ── бүсийн зураглал ── */
-.reg-map{margin:44px 0 0;background:#fff;border:1px solid var(--line);overflow:hidden}
-.reg-map img{width:100%;height:auto;display:block}
-.reg-map figcaption{padding:18px 24px;border-top:1px solid var(--line);
-  display:flex;flex-wrap:wrap;justify-content:center;gap:10px 30px}
-.rm-z{display:flex;align-items:center;gap:9px;font-size:13.5px;color:var(--txt-2)}
-.rm-z::before{content:'';width:11px;height:11px;border-radius:50%;flex:none}
-.rm-z.w::before{background:#2C72C4}
-.rm-z.c::before{background:#E8B22B}
-.rm-z.e::before{background:#2E9E4B}
-@media(max-width:620px){.reg-map figcaption{gap:10px 18px;padding:16px}.rm-z{font-size:12.5px}}
+/* ── бүс тус бүрийн зураглал ── */
+.reg-card{display:flex;flex-direction:column}
+.reg-card p{flex:1}
+.reg-map{margin-top:18px;padding:0;width:100%;display:block;position:relative;overflow:hidden;
+  background:#fff;border:1px solid var(--line);cursor:pointer;transition:border-color .25s}
+.reg-map:hover{border-color:var(--gold)}
+.reg-map img{width:100%;height:auto;display:block;transition:transform .45s}
+.reg-map:hover img{transform:scale(1.04)}
+.reg-map-ico{position:absolute;right:8px;bottom:8px;width:30px;height:30px;border-radius:50%;
+  background:rgba(13,18,25,.74);display:grid;place-items:center;opacity:0;transform:translateY(4px);
+  transition:.25s;pointer-events:none}
+.reg-map:hover .reg-map-ico,.reg-map:focus-visible .reg-map-ico{opacity:1;transform:none}
+.reg-map-ico svg{width:14px;height:14px;stroke:#fff;fill:none;stroke-width:2}
+
+/* зураглалын томруулсан харагдац */
+.rlb{position:fixed;inset:0;z-index:200;background:rgba(8,11,15,.95);display:none;
+  place-items:center;padding:64px 24px}
+.rlb.on{display:grid}
+.rlb img{max-width:100%;max-height:86vh;object-fit:contain}
+.rlb-close{position:absolute;right:20px;top:18px;width:46px;height:46px;cursor:pointer;
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);display:grid;place-items:center}
+.rlb-close:hover{background:var(--gold);border-color:var(--gold)}
+.rlb-close svg{width:18px;height:18px;stroke:#fff;fill:none;stroke-width:1.8}
+@media(max-width:640px){.rlb{padding:56px 12px}}
+
 
 
 /* ── БҮТЭЦ (зурагтай) ── */
@@ -786,6 +800,10 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
         <div class="reg-city">Улаанбаатар хот</div>
         <h3>Төв бүс</h3>
         <p>Хотын төв бүсийн объект, байгууллагуудын хамгаалалтыг хариуцан зохион байгуулна.</p>
+        <button type="button" class="reg-map" data-full="img/districts/central.webp" aria-label="Төв бүсийн зураглалыг томруулж үзэх">
+          <img src="img/districts/thumb/central.webp" alt="Улаанбаатар хот — Төвийн бүс: Сүхбаатар, Чингэлтэй, Баянзүрх дүүрэг" loading="lazy" width="760" height="543">
+          <span class="reg-map-ico"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16" y1="16" x2="21" y2="21"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+        </button>
       </article>
       <article class="reg-card">
         <div class="reg-n">02</div>
@@ -793,6 +811,10 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
         <div class="reg-city">Улаанбаатар хот</div>
         <h3>Баруун бүс</h3>
         <p>Баруун бүсийн объект, байгууллагуудын хамгаалалтыг хариуцан зохион байгуулна.</p>
+        <button type="button" class="reg-map" data-full="img/districts/west.webp" aria-label="Баруун бүсийн зураглалыг томруулж үзэх">
+          <img src="img/districts/thumb/west.webp" alt="Улаанбаатар хот — Баруун бүс: Сонгинохайрхан, Баянгол, Хан-Уул дүүрэг" loading="lazy" width="760" height="543">
+          <span class="reg-map-ico"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16" y1="16" x2="21" y2="21"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+        </button>
       </article>
       <article class="reg-card">
         <div class="reg-n">03</div>
@@ -800,6 +822,10 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
         <div class="reg-city">Улаанбаатар хот</div>
         <h3>Зүүн бүс</h3>
         <p>Зүүн бүсийн объект, байгууллагуудын хамгаалалтыг хариуцан зохион байгуулна.</p>
+        <button type="button" class="reg-map" data-full="img/districts/east.webp" aria-label="Зүүн бүсийн зураглалыг томруулж үзэх">
+          <img src="img/districts/thumb/east.webp" alt="Улаанбаатар хот — Зүүн бүс: Налайх, Багануур, Багахангай дүүрэг" loading="lazy" width="760" height="543">
+          <span class="reg-map-ico"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16" y1="16" x2="21" y2="21"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+        </button>
       </article>
       <article class="reg-card">
         <div class="reg-n">04</div>
@@ -810,17 +836,6 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
       </article>
     </div>
 
-    <!-- ТҮР НУУСАН: дүүргийн зураглал буруу зурагдсан.
-         Зөв зургаар сольсны дараа энэ тайлбарын хаалтыг авна.
-    <figure class="reg-map">
-      <img src="img/district.webp" alt="Улаанбаатар хотын 9 дүүргийг Баруун, Төв, Зүүн бүсэд хуваасан зураглал" loading="lazy" width="1536" height="1024">
-      <figcaption>
-        <span class="rm-z w">Баруун бүс — Сонгинохайрхан, Баянгол, Хан-Уул</span>
-        <span class="rm-z c">Төв бүс — Сүхбаатар, Чингэлтэй, Баянзүрх</span>
-        <span class="rm-z e">Зүүн бүс — Налайх, Багануур, Багахангай</span>
-      </figcaption>
-    </figure>
-    -->
   </div>
 </section>
 
@@ -1176,6 +1191,15 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
   </div>
 </section>
 
+
+<!-- ─── БҮСИЙН ЗУРАГЛАЛ — ТОМРУУЛСАН ХАРАГДАЦ ─── -->
+<div class="rlb" id="regLb" role="dialog" aria-modal="true" aria-label="Бүсийн зураглал">
+  <button class="rlb-close" id="regLbClose" aria-label="Хаах">
+    <svg viewBox="0 0 24 24"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
+  </button>
+  <img id="regLbImg" src="" alt="">
+</div>
+
 <!-- ─── FOOTER — жишээний бүтцээр ─── -->
 <footer>
   <div class="wrap">
@@ -1240,8 +1264,26 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
   </div>
 </footer>
 
+
 <script>
 function pLogo(img){img.style.display='none'}
+
+/* бүсийн зураглалыг томруулж үзэх */
+(function(){
+  var lb=document.getElementById('regLb');
+  if(!lb)return;
+  var img=document.getElementById('regLbImg');
+  function open(src,alt){img.src=src;img.alt=alt;lb.classList.add('on');document.body.style.overflow='hidden'}
+  function close(){lb.classList.remove('on');img.src='';document.body.style.overflow=''}
+  [].slice.call(document.querySelectorAll('.reg-map')).forEach(function(b){
+    b.addEventListener('click',function(){open(b.dataset.full,b.querySelector('img').alt)});
+  });
+  document.getElementById('regLbClose').onclick=close;
+  lb.addEventListener('click',function(e){if(e.target===lb)close()});
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'&&lb.classList.contains('on'))close();
+  });
+})();
 
 /* hero слайдер */
 (function(){

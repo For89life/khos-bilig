@@ -3,10 +3,13 @@
    мөрийг хөндөхгүй. data-svc-г ОГТ орчуулахгүй — Google Form-той таарах ёстой. */
 (function(){
   var DICT = {
-"Улаанбаатар хотын 9 дүүргийг Баруун, Төв, Зүүн бүсэд хуваасан зураглал": "Map of Ulaanbaatar's nine districts divided into Western, Central and Eastern zones",
-"Баруун бүс — Сонгинохайрхан, Баянгол, Хан-Уул": "Western zone — Songinokhairkhan, Bayangol, Khan-Uul",
-"Төв бүс — Сүхбаатар, Чингэлтэй, Баянзүрх": "Central zone — Sukhbaatar, Chingeltei, Bayanzurkh",
-"Зүүн бүс — Налайх, Багануур, Багахангай": "Eastern zone — Nalaikh, Baganuur, Bagakhangai",
+"Улаанбаатар хот — Төвийн бүс: Сүхбаатар, Чингэлтэй, Баянзүрх дүүрэг": "Ulaanbaatar — Central zone: Sukhbaatar, Chingeltei and Bayanzurkh districts",
+"Улаанбаатар хот — Баруун бүс: Сонгинохайрхан, Баянгол, Хан-Уул дүүрэг": "Ulaanbaatar — Western zone: Songinokhairkhan, Bayangol and Khan-Uul districts",
+"Улаанбаатар хот — Зүүн бүс: Налайх, Багануур, Багахангай дүүрэг": "Ulaanbaatar — Eastern zone: Nalaikh, Baganuur and Bagakhangai districts",
+"Төв бүсийн зураглалыг томруулж үзэх": "Enlarge the Central zone map",
+"Баруун бүсийн зураглалыг томруулж үзэх": "Enlarge the Western zone map",
+"Зүүн бүсийн зураглалыг томруулж үзэх": "Enlarge the Eastern zone map",
+"Бүсийн зураглал": "Zone map",
 "ТӨГС ҮЙЛЧИЛГЭЭГ БИД ТҮҮЧЭЭЛНЭ": "SETTING THE STANDARD FOR EXCEPTIONAL SERVICE",
 "24/7 түүчээлнэ": "24/7, around the clock",
 "8 жилийн": "8 years of",
