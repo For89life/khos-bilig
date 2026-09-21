@@ -10,6 +10,11 @@
 !sitemap.xml
 !partner.html
 !i18n.js
+!en/
+!.claude/
+.claude/*
+!.claude/build-en.py
+!.claude/i18n-dict.json
 !img/
 
 # Inside img/, keep only the .webp files the pages actually request

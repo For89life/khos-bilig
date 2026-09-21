@@ -1,21 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://mss.mn/</loc>
-    <lastmod>2026-09-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="mn" href="https://mss.mn/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mss.mn/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mss.mn/"/>
+    <lastmod>2026-09-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://mss.mn/en/</loc>
+    <xhtml:link rel="alternate" hreflang="mn" href="https://mss.mn/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mss.mn/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mss.mn/"/>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://mss.mn/gallery.html</loc>
+    <xhtml:link rel="alternate" hreflang="mn" href="https://mss.mn/gallery.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mss.mn/en/gallery.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mss.mn/gallery.html"/>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://mss.mn/en/gallery.html</loc>
+    <xhtml:link rel="alternate" hreflang="mn" href="https://mss.mn/gallery.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mss.mn/en/gallery.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mss.mn/gallery.html"/>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://mss.mn/partner.html</loc>
-    <lastmod>2026-09-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="mn" href="https://mss.mn/partner.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mss.mn/en/partner.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mss.mn/partner.html"/>
+    <lastmod>2026-09-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mss.mn/gallery.html</loc>
-    <lastmod>2026-09-19</lastmod>
+    <loc>https://mss.mn/en/partner.html</loc>
+    <xhtml:link rel="alternate" hreflang="mn" href="https://mss.mn/partner.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mss.mn/en/partner.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mss.mn/partner.html"/>
+    <lastmod>2026-09-21</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
 </urlset>
