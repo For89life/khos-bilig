@@ -285,6 +285,18 @@ section{padding:92px 0}
 .reg-card p{font-size:13.5px;color:var(--txt-2)}
 @media(max-width:1080px){.reg-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:560px){.reg-grid{grid-template-columns:1fr}}
+/* ── бүсийн зураглал ── */
+.reg-map{margin:44px 0 0;background:#fff;border:1px solid var(--line);overflow:hidden}
+.reg-map img{width:100%;height:auto;display:block}
+.reg-map figcaption{padding:18px 24px;border-top:1px solid var(--line);
+  display:flex;flex-wrap:wrap;justify-content:center;gap:10px 30px}
+.rm-z{display:flex;align-items:center;gap:9px;font-size:13.5px;color:var(--txt-2)}
+.rm-z::before{content:'';width:11px;height:11px;border-radius:50%;flex:none}
+.rm-z.w::before{background:#2C72C4}
+.rm-z.c::before{background:#E8B22B}
+.rm-z.e::before{background:#2E9E4B}
+@media(max-width:620px){.reg-map figcaption{gap:10px 18px;padding:16px}.rm-z{font-size:12.5px}}
+
 
 /* ── БҮТЭЦ (зурагтай) ── */
 .org-sec{position:relative;overflow:hidden;background:var(--paper-2)}
@@ -797,6 +809,15 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
         <p>Баянхонгор, Дорнод, Дорноговь аймаг дахь уул уурхайн олборлолт, үйлдвэр, кемпийн хамгаалалтыг тусгай нэгжээр хариуцна.</p>
       </article>
     </div>
+
+    <figure class="reg-map">
+      <img src="img/district.webp" alt="Улаанбаатар хотын 9 дүүргийг Баруун, Төв, Зүүн бүсэд хуваасан зураглал" loading="lazy" width="1536" height="1024">
+      <figcaption>
+        <span class="rm-z w">Баруун бүс — Сонгинохайрхан, Баянгол, Хан-Уул</span>
+        <span class="rm-z c">Төв бүс — Сүхбаатар, Чингэлтэй, Баянзүрх</span>
+        <span class="rm-z e">Зүүн бүс — Налайх, Багануур, Багахангай</span>
+      </figcaption>
+    </figure>
   </div>
 </section>
 
