@@ -475,6 +475,51 @@ section{padding:92px 0}
 .hr-job i{font:800 13px/1 'Inter',sans-serif;font-style:normal;color:var(--gold);flex:none}
 .hr-job span{font:600 15px/1.4 'Manrope',sans-serif;color:#fff}
 @media(max-width:900px){.hr-in{grid-template-columns:1fr;gap:36px}}
+/* ── танилцуулгын онцлох мөр ── */
+.about-claim{font:600 16px/1.6 'Manrope',sans-serif;color:var(--ink);
+  border-left:3px solid var(--gold);padding:4px 0 4px 16px;margin:4px 0 20px}
+
+/* ── манай хамт олон ── */
+.sub-h{font:800 clamp(19px,2.3vw,26px)/1.3 'Manrope',sans-serif;text-transform:uppercase;
+  text-align:center;max-width:820px;margin:0 auto 20px;letter-spacing:-.01em}
+.team-txt{max-width:820px;margin:0 auto}
+.team-txt p{color:var(--txt-2);margin-bottom:14px}
+.force{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;margin-top:40px}
+.force-i{background:#fff;border:1px solid var(--line);padding:26px 18px;text-align:center}
+.force-i b{display:block;font:800 clamp(26px,3vw,36px)/1 'Manrope',sans-serif;color:var(--gold)}
+.force-i span{display:block;margin-top:9px;font-size:13px;color:var(--txt-2);line-height:1.45}
+@media(max-width:1000px){.force{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:620px){.force{grid-template-columns:repeat(2,1fr)}}
+
+/* ── мэргэжлийн чадавх ── */
+.cap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.cap-card{background:#fff;border:1px solid var(--line);padding:30px 26px;transition:.3s}
+.cap-card:hover{border-color:var(--gold);transform:translateY(-5px)}
+.cap-ic{width:50px;height:50px;border-radius:50%;background:rgba(185,149,55,.12);
+  display:grid;place-items:center;margin-bottom:18px}
+.cap-ic svg{width:21px;height:21px;stroke:var(--gold);fill:none;stroke-width:1.5}
+.cap-card h3{font-size:15.5px;font-weight:700;margin-bottom:10px;text-transform:uppercase}
+.cap-card p{font-size:14px;color:var(--txt-2)}
+@media(max-width:1000px){.cap-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.cap-grid{grid-template-columns:1fr}}
+
+/* ── сургалт ── */
+.tr-tags{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:900px;margin:0 auto}
+.tr-tag{background:#fff;border:1px solid var(--line);border-radius:999px;padding:11px 20px;
+  font:500 14px/1 'Inter',sans-serif;color:var(--txt)}
+.tr-close{text-align:center;max-width:780px;margin:36px auto 0;
+  font:700 18px/1.5 'Manrope',sans-serif;text-transform:uppercase;letter-spacing:-.01em}
+.tr-close span{display:block;margin-top:12px;font:400 15px/1.7 'Inter',sans-serif;
+  color:var(--txt-2);text-transform:none;letter-spacing:0}
+
+/* ── хүний нөөц ── */
+.hr-lbl{font:600 11px/1 'Inter',sans-serif;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:16px}
+.hr-perks{font-size:13.5px;color:rgba(255,255,255,.55);margin-bottom:26px}
+.hr-job{align-items:flex-start}
+.hr-job b{display:block;font:700 15px/1.4 'Manrope',sans-serif;color:#fff;margin-bottom:5px}
+.hr-job span{display:block;font:400 13.5px/1.6 'Inter',sans-serif;color:rgba(255,255,255,.6)}
+
 
 /* ── ХОЛБОО БАРИХ (шинэчилсэн бүтэц) ── */
 .ct{background:var(--paper-2)}
@@ -562,7 +607,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
     </span>
     <span class="tb-i">
       <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-      Mon–Sat 09:00–18:00 · Emergency 24/7
+      Mon–Fri 09:00–18:00 · Rapid response 24/7
     </span>
     <span class="tb-sp"></span>
     <a href="#contact" class="tb-btn">Contact</a>
@@ -576,7 +621,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
       <img src="/img/logo.webp" alt="KHOS BILIG">
       <div class="brand-name">
         KHOS BILIG SECURITY HOLDING LLC
-        <span>SETTING THE STANDARD FOR EXCEPTIONAL SERVICE</span>
+        <span>WE LEAD THE WAY IN SECURITY</span>
       </div>
     </a>
 
@@ -588,16 +633,16 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
         </a>
         <div class="drop">
           <a href="#directions">Facility security</a>
-          <a href="#directions">Bank &amp; financial institution security</a>
-          <a href="#directions">Mineral &amp; mining site security</a>
-          <a href="#directions">Cargo, transport &amp; explosives escort security</a>
-          <a href="#directions">Construction &amp; development site security</a>
-          <a href="#directions">Resort, hotel &amp; retail security</a>
-          <a href="#directions">Concert, mass gathering &amp; event security</a>
-          <a href="#directions">Valuables-in-transit security</a>
+          <a href="#directions">Bank and financial institution security</a>
+          <a href="#directions">Mining and mineral site security</a>
+          <a href="#directions">Hazardous cargo, explosives and blasting equipment security</a>
+          <a href="#directions">Construction and development site security</a>
+          <a href="#directions">Resort, hotel, retail and service venue security</a>
+          <a href="#directions">Concert and mass gathering event security</a>
+          <a href="#directions">Valuables and high-value goods in transit security</a>
         </div>
       </li>
-      <li><a href="#hr">Careers</a></li>
+      <li><a href="#team">Our team</a></li>
       <li><a href="#news">News</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -625,8 +670,9 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
     <a href="#partners"><i>08</i> Partner organizations</a>
     <a href="#gallery"><i>09</i> Photo gallery</a>
     <a href="#news"><i>10</i> News</a>
-    <a href="#hr"><i>11</i> Careers</a>
-    <a href="#contact"><i>12</i> Contact</a>
+    <a href="#team"><i>11</i> Our team</a>
+    <a href="#hr"><i>12</i> Open positions</a>
+    <a href="#contact"><i>13</i> Contact</a>
   </div>
 </div>
 
@@ -699,24 +745,27 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
       <div class="about-in">
         <div class="about-media">
           <img src="/img/thumb/g11-flags.webp" alt="The flags of Mongolia and Khos Bilig Security">
-          <div class="about-badge"><b>8</b><span>years</span></div>
+          <div class="about-badge"><b>9</b><span>years</span></div>
         </div>
         <div>
-          <div class="eyebrow">About Us</div>
-          <h2>8 years of <b>experience</b></h2>
-          <p class="about-lede">Now in our eighth year of steady, dependable work in the security industry.</p>
-          <p>Khos Bilig Security LLC is a professional organization that strictly observes the Constitution of Mongolia, the Law on Contract Guarding and Security and other related legal acts, and that has operated steadily and without interruption in the security industry for eight years.</p>
-          <p>We see security not merely as a duty but as a strategic factor protecting our client's value, reputation and assets. We therefore apply internationally aligned methods and consistently implement the national standard MNS 6908:2021 “Security and guarding services”.</p>
-          <p>Over the past four years our team has provided dedicated security at high-risk, high-grade sites — mining operations, processing plants, coal camps and business centers — proving itself a dependable partner.</p>
+          <div class="eyebrow">About us</div>
+          <h2>Nine years <b>built together</b></h2>
+          <p class="about-lede">We protect your security to a professional standard.</p>
+          <p>Khos Bilig Security Holding LLC is a professional organization that strictly observes the Constitution of Mongolia, the Law on Contract Guarding and Security and all related laws and regulations, and that is now in its ninth year of steady, uninterrupted operation in the security industry.</p>
+          <p>We see security not merely as a guarding duty but as a strategic component protecting our client's assets, people, business continuity and reputation. We therefore plan each service around the client's circumstances, the site's risk level and the needs of their operation, and deliver it to a high professional standard.</p>
+          <p>We work to the national standard MNS 6908:2021 “Security and guarding services”, delivering our service through modern methods, qualified personnel and accountable management.</p>
+          <p>Over the past five years we have guarded high-risk sites with special requirements, steadily building our industry experience and professional capability — mining operations, processing plants, coal camps and business centers among them.</p>
+          <p>Our goal is not simply to guard a site, but to be a dependable partner in our client's safe and stable operation.</p>
+          <p class="about-claim">Professional protection. Dependable partnership. Lasting security.</p>
 
           <div class="about-boxes">
             <div class="about-box">
-              <b>MNS 6908:2021 standard</b>
-              <span>Implementation of the national standard “Security and guarding services”</span>
+              <b>Insurance-backed security service</b>
+              <span>We share the risk — up to 90% of any loss incurred can be recovered through insurance.</span>
             </div>
             <div class="about-box">
-              <b>Insurance-backed security service</b>
-              <span>An insurance-backed system covering up to 90% of damages</span>
+              <b>MNS 6908:2021 standard</b>
+              <span>We apply the national standard “Security and guarding services” throughout our operation.</span>
             </div>
           </div>
         </div>
@@ -728,7 +777,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
 <!-- ─── СТАТИСТИК ─── -->
 <div class="stats">
   <div class="wrap stats-grid">
-    <div><div class="stat-n"><span class="cnt" data-to="8">0</span></div><div class="stat-l">years of stable operation</div></div>
+    <div><div class="stat-n"><span class="cnt" data-to="9">0</span></div><div class="stat-l">years of stable operation</div></div>
     <div><div class="stat-n"><span class="cnt" data-to="90">0</span><small>%</small></div><div class="stat-l">of damages covered</div></div>
     <div><div class="stat-n">24<small>/7</small></div><div class="stat-l">centralized operator monitoring</div></div>
   </div>
@@ -751,37 +800,37 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
       <a href="/en/partner.html" class="dir-card">
         <img src="/img/thumb/g13-bank.webp" alt="" loading="lazy">
         <div class="dir-ic"><svg viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="12" rx="1"/><path d="M8 8V6a4 4 0 0 1 8 0v2"/><circle cx="12" cy="14" r="2"/></svg></div>
-        <div class="dir-in"><div class="dir-n">02</div><h3>Bank &amp; financial institution security</h3></div>
+        <div class="dir-in"><div class="dir-n">02</div><h3>Bank and financial institution security</h3></div>
       </a>
       <a href="/en/partner.html" class="dir-card">
         <img src="/img/thumb/g16-plant.webp" alt="" loading="lazy">
         <div class="dir-ic"><svg viewBox="0 0 24 24"><path d="M3 20L9 7l4 7 3-4 5 10z"/><line x1="2" y1="20" x2="22" y2="20"/></svg></div>
-        <div class="dir-in"><div class="dir-n">03</div><h3>Mineral &amp; mining site security</h3></div>
+        <div class="dir-in"><div class="dir-n">03</div><h3>Mining and mineral site security</h3></div>
       </a>
       <a href="/en/partner.html" class="dir-card">
         <img src="/img/thumb/g04-explosives.webp" alt="" loading="lazy">
         <div class="dir-ic"><svg viewBox="0 0 24 24"><rect x="1" y="6" width="13" height="10"/><path d="M14 9h4l4 4v3h-8z"/><circle cx="6" cy="19" r="2"/><circle cx="18" cy="19" r="2"/></svg></div>
-        <div class="dir-in"><div class="dir-n">04</div><h3>Cargo, transport &amp; explosives escort security</h3></div>
+        <div class="dir-in"><div class="dir-n">04</div><h3>Hazardous cargo, explosives and blasting equipment security</h3></div>
       </a>
       <a href="/en/partner.html" class="dir-card">
         <img src="/img/thumb/g12-construction.webp" alt="" loading="lazy">
         <div class="dir-ic"><svg viewBox="0 0 24 24"><rect x="3" y="9" width="18" height="12"/><polyline points="3 9 12 3 21 9"/></svg></div>
-        <div class="dir-in"><div class="dir-n">05</div><h3>Construction &amp; development site security</h3></div>
+        <div class="dir-in"><div class="dir-n">05</div><h3>Construction and development site security</h3></div>
       </a>
       <a href="/en/partner.html" class="dir-card">
         <img src="/img/thumb/g03-hotel.webp" alt="" loading="lazy">
         <div class="dir-ic"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18"/><line x1="9" y1="8" x2="10" y2="8"/><line x1="14" y1="8" x2="15" y2="8"/><path d="M10 21v-4h4v4"/></svg></div>
-        <div class="dir-in"><div class="dir-n">06</div><h3>Resort, hotel &amp; retail security</h3></div>
+        <div class="dir-in"><div class="dir-n">06</div><h3>Resort, hotel, retail and service venue security</h3></div>
       </a>
       <a href="/en/partner.html" class="dir-card">
         <img src="/img/thumb/g01-mall.webp" alt="" loading="lazy">
         <div class="dir-ic"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg></div>
-        <div class="dir-in"><div class="dir-n">07</div><h3>Concert, mass gathering &amp; event security</h3></div>
+        <div class="dir-in"><div class="dir-n">07</div><h3>Concert and mass gathering event security</h3></div>
       </a>
       <a href="/en/partner.html" class="dir-card">
         <img src="/img/thumb/g07-gear.webp" alt="" loading="lazy">
         <div class="dir-ic"><svg viewBox="0 0 24 24"><path d="M12 2l2.5 6.5L21 11l-6.5 2.5L12 20l-2.5-6.5L3 11l6.5-2.5z"/></svg></div>
-        <div class="dir-in"><div class="dir-n">08</div><h3>Valuables-in-transit security</h3></div>
+        <div class="dir-in"><div class="dir-n">08</div><h3>Valuables and high-value goods in transit security</h3></div>
       </a>
     </div>
   </div>
@@ -843,79 +892,96 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
   </div>
 </section>
 
-<!-- ─── ҮЙЛЧИЛГЭЭНИЙ БҮТЭЦ ─── -->
-<section class="org-sec" id="org">
+
+<!-- ─── МАНАЙ ХАМТ ОЛОН ─── -->
+<section class="sec-alt" id="team">
   <div class="wrap">
     <div class="sec-head">
-      <div class="eyebrow">Organization</div>
-      <h2>Service <b>structure</b></h2>
+      <div class="eyebrow">Our team</div>
+      <h2>Security — <b>our shared responsibility</b></h2>
       <div class="bar"></div>
-      <p class="lede">The company operates through the following structure, designed to keep officers at a high level of readiness and under responsive command.</p>
+      <p class="lede">Professional leadership, capable officers and a single chain of organization keep our clients secure.</p>
     </div>
 
-    <div class="org-grid">
-      <article class="org-card">
-        <div class="org-img">
-          <img src="/img/thumb/g19-dispatch.webp" alt="" loading="lazy">
-          <div class="org-ic"><svg viewBox="0 0 24 24"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg></div>
-        </div>
-        <div class="org-body">
-          <h3>24-hour head-office operator monitoring</h3>
-          <p>Head-office operators maintain uninterrupted camera monitoring around the clock, with surveillance systems installed at every feasible point.</p>
-        </div>
-      </article>
-      <article class="org-card">
-        <div class="org-img">
-          <img src="/img/thumb/g17-patrol.webp" alt="" loading="lazy">
-          <div class="org-ic"><svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
-        </div>
-        <div class="org-body">
-          <h3>Rapid-response team</h3>
-          <p>The rapid-response team, equipped with specially fitted vehicles with amber beacons and sirens, stays ready for calls 24 hours a day.</p>
-        </div>
-      </article>
-      <article class="org-card">
-        <div class="org-img">
-          <img src="/img/thumb/g14-post.webp" alt="" loading="lazy">
-          <div class="org-ic"><svg viewBox="0 0 24 24"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg></div>
-        </div>
-        <div class="org-body">
-          <h3>AI camera system monitoring</h3>
-          <p>AI-based smart cameras help prevent risks, detect violations and enable swift action.</p>
-        </div>
-      </article>
-      <article class="org-card">
-        <div class="org-img">
-          <img src="/img/thumb/g02-team.webp" alt="" loading="lazy">
-          <div class="org-ic"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
-        </div>
-        <div class="org-body">
-          <h3>Security manager</h3>
-          <p>A dedicated security manager provides professional leadership and control at team level, keeping service readiness high.</p>
-        </div>
-      </article>
-      <article class="org-card">
-        <div class="org-img">
-          <img src="/img/thumb/g15-logbook.webp" alt="" loading="lazy">
-          <div class="org-ic"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
-        </div>
-        <div class="org-body">
-          <h3>Insurance-backed security service</h3>
-          <p>A General Liability Insurance Agreement with Munkh Insurance LLC guarantees that damages incurred are compensated.</p>
-        </div>
-      </article>
-      <article class="org-card">
-        <div class="org-img">
-          <img src="/img/thumb/g06-uniform.webp" alt="" loading="lazy">
-          <div class="org-ic"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
-        </div>
-        <div class="org-body">
-          <h3>MNS 6908:2021 standard implementation</h3>
-          <p>The national standard “Security and guarding services” is implemented consistently using internationally aligned methods.</p>
-        </div>
-      </article>
-    
+    <h3 class="sub-h">Broad operations, one professional team</h3>
+    <div class="team-txt">
+      <p>Khos Bilig Security Holding LLC provides security across all nine districts of Ulaanbaatar and in the provinces, operating as one organized team of around 200 security officers, a five-person rapid-response team, three control room operators and more than ten office staff.</p>
+      <p>Today we serve more than twenty client organizations operating in Ulaanbaatar and the provinces, delivering a dependable security solution matched to each client's needs and to the nature of their site.</p>
     </div>
+
+    <div class="force">
+      <div class="force-i"><b>200+</b><span>security officers</span></div>
+      <div class="force-i"><b>5</b><span>person rapid-response team</span></div>
+      <div class="force-i"><b>3</b><span>control room operators</span></div>
+      <div class="force-i"><b>10+</b><span>office staff</span></div>
+      <div class="force-i"><b>20+</b><span>client organizations</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── МЭРГЭЖЛИЙН ЧАДАВХ ─── -->
+<section id="capability">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Capability and equipment</div>
+      <h2>A professional team. <b>Modern technology.</b></h2>
+      <div class="bar"></div>
+      <p class="lede">To sustain the quality of our work, our speed of response and our officers' readiness, we equip the operation with modern technology, purpose-built equipment and professional protective gear.</p>
+    </div>
+
+    <div class="cap-grid">
+      <article class="cap-card">
+        <div class="cap-ic"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <h3>Camera monitoring</h3>
+        <p>We run a camera surveillance system and a professional operator service for continuous oversight of a site, giving us the means to monitor and log what matters without delay.</p>
+      </article>
+      <article class="cap-card">
+        <div class="cap-ic"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="6" width="13" height="10"/><path d="M14 9h4l4 4v3h-8z"/><circle cx="6" cy="19" r="2"/><circle cx="18" cy="19" r="2"/></svg></div>
+        <h3>Rapid-response vehicles</h3>
+        <p>The rapid-response team is equipped with purpose-fitted vehicles, so it can reach a site quickly and act when the situation calls for it.</p>
+      </article>
+      <article class="cap-card">
+        <div class="cap-ic"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+        <h3>Professional guarding equipment</h3>
+        <p>Officers are issued with the service uniform, identification and protective equipment that suit the duties they perform.</p>
+      </article>
+      <article class="cap-card">
+        <div class="cap-ic"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3>Special protective equipment</h3>
+        <p>Within the limits of the law and regulations, handcuffs, batons and other special equipment are available for use where the situation requires it.</p>
+      </article>
+      <article class="cap-card">
+        <div class="cap-ic"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="12" rx="1"/><path d="M8 8V6a4 4 0 0 1 8 0v2"/><circle cx="12" cy="14" r="2"/></svg></div>
+        <h3>Armed protection</h3>
+        <p>In strict compliance with the law, permits and our internal rules, licensed officers provide armed protection where the assignment requires it.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ─── ТОГТМОЛ СУРГАЛТ ─── -->
+<section class="sec-alt" id="training">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Continuous training</div>
+      <h2>Skills we keep <b>developing</b></h2>
+      <div class="bar"></div>
+      <p class="lede">Each quarter we run professional training, practical exercises and development programs to raise our officers' knowledge, skill, discipline and readiness.</p>
+    </div>
+
+    <div class="tr-tags">
+      <span class="tr-tag">Professional security knowledge</span>
+      <span class="tr-tag">Safe working practice</span>
+      <span class="tr-tag">Readiness for emergencies</span>
+      <span class="tr-tag">First aid</span>
+      <span class="tr-tag">Fire safety</span>
+      <span class="tr-tag">Communication and service skills</span>
+      <span class="tr-tag">Discipline and accountability</span>
+      <span class="tr-tag">Site-specific practical training</span>
+    </div>
+
+    <p class="tr-close">Professional capability is the foundation of our protection.
+      <span>Beyond technology and equipment, we regard human skill, readiness and accountability as the decisive factors in a security service.</span></p>
   </div>
 </section>
 
@@ -1122,15 +1188,19 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
   <div class="wrap hr-in">
     <div>
       <div class="eyebrow">Careers</div>
-      <h2>Join <b>our team</b></h2>
-      <p>We recruit security guards, shift supervisors and control room operators on an ongoing basis. Training, uniform, special equipment and full social benefits are provided.</p>
+      <h2>Join our professional <b>security team</b></h2>
+      <p>We are continuously recruiting for the following positions as our team grows.</p>
+      <p class="hr-perks">Stable employment · Professional training · Room to grow · Full social benefits</p>
       <a href="https://docs.google.com/forms/d/e/1FAIpQLSepLOvYHadHuFuk6w0dDIABCCq9gR6jrglamjnhd-zK33P3XA/viewform" class="btn" target="_blank" rel="noopener">Submit an application
         <svg viewBox="0 0 24 24"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="14 6 20 12 14 18"/></svg></a>
     </div>
-    <div class="hr-jobs">
-      <div class="hr-job"><i>01</i><span>Security guard</span></div>
-      <div class="hr-job"><i>02</i><span>Shift supervisor</span></div>
-      <div class="hr-job"><i>03</i><span>Control room operator</span></div>
+    <div>
+      <div class="hr-lbl">Open positions</div>
+      <div class="hr-jobs">
+        <div class="hr-job"><i>01</i><div><b>Security officer</b><span>Carries out day-to-day guarding and security monitoring at the site.</span></div></div>
+        <div class="hr-job"><i>02</i><div><b>Rapid-response shift supervisor</b><span>Responsible for the rapid-response shift, the organization of its officers and the performance of their duties.</span></div></div>
+        <div class="hr-job"><i>03</i><div><b>Control room operator</b><span>Handles camera monitoring, information logging and prompt oversight of the situation.</span></div></div>
+      </div>
     </div>
   </div>
 </section>
@@ -1150,13 +1220,13 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
         <div class="ct-l">Phone</div>
         <div class="ct-v"><a href="tel:77202525">7720-2525</a></div>
         <div class="ct-v"><a href="tel:99636785">9963-6785</a></div>
-        <div class="ct-sub">Mon–Sat 09:00–18:00 · Emergency 24/7</div>
+        <div class="ct-sub">Mon–Fri 09:00–18:00 · Rapid response 24/7</div>
       </div>
       <div class="ct-cell">
         <div class="ct-ic"><svg viewBox="0 0 24 24" stroke-linecap="round"><rect x="2" y="4" width="20" height="16"/><polyline points="2 6 12 13 22 6"/></svg></div>
         <div class="ct-l">Email</div>
         <div class="ct-v sm"><a href="mailto:info@khosbilig.mn">info@khosbilig.mn</a></div>
-        <div class="ct-sub">We reply to inquiries within 24 hours.</div>
+        <div class="ct-sub">We will send you a reply within 24 hours.</div>
       </div>
       <div class="ct-cell">
         <div class="ct-ic"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
@@ -1181,7 +1251,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
         <div class="eyebrow">Location</div>
         <div class="map-addr">3rd floor, Bayanbogd Plaza, Ikh Toiruu, 5th khoroo, Chingeltei district, Ulaanbaatar</div>
         <div class="map-meta">Phone: 7720-2525 · 9963-6785</div>
-        <div class="map-meta" style="margin-bottom:24px">Mon–Sat 09:00–18:00 · Emergency 24/7</div>
+        <div class="map-meta" style="margin-bottom:24px">Mon–Fri 09:00–18:00 · Rapid response 24/7</div>
         <a href="https://www.google.com/maps/search/?api=1&query=%D0%91%D0%B0%D1%8F%D0%BD%D0%B1%D0%BE%D0%B3%D0%B4+%D0%9F%D0%BB%D0%B0%D0%B7%D0%B0+%D0%A3%D0%BB%D0%B0%D0%B0%D0%BD%D0%B1%D0%B0%D0%B0%D1%82%D0%B0%D1%80" class="link" target="_blank" rel="noopener">
           Open in Google Maps
           <svg viewBox="0 0 24 24"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="14 6 20 12 14 18"/></svg>
@@ -1213,7 +1283,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
           <img src="/img/logo.webp" alt="KHOS BILIG">
           <div class="ft-brand-name">
             KHOS BILIG SECURITY HOLDING LLC
-            <span>SETTING THE STANDARD FOR EXCEPTIONAL SERVICE</span>
+            <span>WE LEAD THE WAY IN SECURITY</span>
           </div>
         </div>
         <p class="ft-desc">A professional organization in its eighth year of steady work in the security industry. Implementing MNS 6908:2021, with an insured security service.</p>
@@ -1223,13 +1293,13 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
         <div class="ft-h">Services</div>
         <div class="ft-cols">
           <a href="#directions">Facility security</a>
-          <a href="#directions">Construction &amp; development site security</a>
-          <a href="#directions">Bank &amp; financial institution security</a>
-          <a href="#directions">Resort, hotel &amp; retail security</a>
-          <a href="#directions">Mineral &amp; mining site security</a>
+          <a href="#directions">Construction and development site security</a>
+          <a href="#directions">Bank and financial institution security</a>
+          <a href="#directions">Resort, hotel, retail and service venue security</a>
+          <a href="#directions">Mining and mineral site security</a>
           <a href="#directions">Concert and event security</a>
-          <a href="#directions">Cargo, transport and explosives security</a>
-          <a href="#directions">Valuables-in-transit security</a>
+          <a href="#directions">Hazardous cargo and explosives security</a>
+          <a href="#directions">Valuables and high-value goods in transit security</a>
           <a href="#ai">24/7 AI camera monitoring</a>
           <a href="#hr">Careers</a>
         </div>
