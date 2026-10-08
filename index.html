@@ -74,6 +74,7 @@
   }
 }
 </script>
+<script>document.documentElement.classList.add('js')</script>
 <link rel="icon" href="img/favicon-48.png" sizes="48x48" type="image/png">
 <link rel="icon" href="img/favicon-192.png" sizes="192x192" type="image/png">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
@@ -483,8 +484,16 @@ section{padding:92px 0}
 @media(max-width:600px){.nm-box{padding:22px 18px 26px}.nf-imgs{grid-template-columns:1fr}}
 
 /* ── ХҮНИЙ НӨӨЦ (шинэ булан) ── */
-.hr{position:relative;background:var(--ink);color:#fff;overflow:hidden}
-.hr::before{content:'';position:absolute;inset:0;background:url('img/thumb/supervisor.webp') center/cover;opacity:.18}
+/* ажлын байрны бараан карт — хүний нөөцийн хэсэг дотор */
+.hr-card{position:relative;background:var(--ink);color:#fff;overflow:hidden;padding:56px 52px}
+.hr-card::before{content:'';position:absolute;inset:0;background:url('img/thumb/supervisor.webp') center/cover;opacity:.18}
+@media(max-width:700px){.hr-card{padding:36px 22px}}
+/* сургалтын дэд хэсэг */
+.tr-block{margin-top:80px;padding-top:64px;border-top:1px solid var(--line);scroll-margin-top:110px}
+.tr-head{text-align:center;max-width:820px;margin:0 auto 40px}
+.tr-head h3{font-size:clamp(22px,2.8vw,32px);font-weight:800;text-transform:uppercase;margin-bottom:14px}
+.tr-head h3 b{color:var(--gold);font-weight:800}
+.tr-head p{color:var(--txt-2);font-size:15.5px}
 .hr-in{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
 .hr-in h2{color:#fff;font-size:clamp(26px,3.4vw,42px);font-weight:800;text-transform:uppercase;margin-bottom:18px}
 .hr-in h2 b{color:var(--gold);font-weight:800}
@@ -499,6 +508,21 @@ section{padding:92px 0}
 /* ── танилцуулгын онцлох мөр ── */
 .about-claim{font:600 16px/1.6 'Manrope',sans-serif;color:var(--ink);
   border-left:3px solid var(--gold);padding:4px 0 4px 16px;margin:4px 0 20px}
+/* хураагддаг бичвэр — эхний мөрүүд бүдгэрч харагдана, товчоор сунана */
+.js .more{max-height:96px;overflow:hidden;position:relative;transition:max-height .55s cubic-bezier(.4,0,.2,1);
+  -webkit-mask-image:linear-gradient(#000 25%,transparent);mask-image:linear-gradient(#000 25%,transparent)}
+.js .more.on{-webkit-mask-image:none;mask-image:none}
+.more-ctl{text-align:center;margin:14px 0 6px}
+.more-btn{display:none;align-items:center;gap:10px;background:var(--gold);color:#fff;border:0;border-radius:999px;
+  padding:13px 24px;cursor:pointer;font:600 11.5px/1 'Inter',sans-serif;letter-spacing:.14em;text-transform:uppercase;
+  box-shadow:0 10px 26px rgba(185,149,55,.32);transition:background .25s,transform .25s,box-shadow .25s}
+.js .more-btn{display:inline-flex}
+.more-btn:hover{background:#a3822c;transform:translateY(-2px);box-shadow:0 14px 30px rgba(185,149,55,.42)}
+.more-btn:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.more-btn svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2.2;transition:transform .35s}
+.more-btn[aria-expanded="true"] svg{transform:rotate(180deg)}
+.more-btn .m-close,.more-btn[aria-expanded="true"] .m-open{display:none}
+.more-btn[aria-expanded="true"] .m-close{display:inline}
 .about-txt .about-claim{border-left:0;padding:18px 0 0;margin:10px 0 0;position:relative}
 .about-txt .about-claim::before{content:'';position:absolute;top:0;left:50%;width:56px;height:3px;margin-left:-28px;background:var(--gold)}
 
@@ -726,7 +750,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
     <a href="#gallery"><i>09</i> Зургийн цомог</a>
     <a href="#news"><i>10</i> Мэдээ мэдээлэл</a>
     <a href="#team"><i>11</i> Манай хамт олон</a>
-    <a href="#hr"><i>12</i> Нээлттэй ажлын байр</a>
+    <a href="#hr"><i>12</i> Хүний нөөц</a>
     <a href="#contact"><i>13</i> Холбоо барих</a>
   </div>
 </div>
@@ -803,10 +827,18 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
           <h2>Хамтдаа бүтээлцсэн <b>9 жил</b></h2>
           <p class="about-lede">Аюулгүй байдлыг бид мэргэжлийн түвшинд хамгаална.</p>
           <p>«Хос Билиг Секьюрити Холдинг» ХХК нь Монгол Улсын Үндсэн хууль, «Гэрээт харуул хамгаалалтын тухай» хууль болон холбогдох хууль, дүрэм, журам, эрх зүйн актуудыг үйл ажиллагаандаа чанд мөрдөн ажилладаг, харуул хамгаалалтын салбарт 9 дэх жилдээ тогтвортой, тасралтгүй үйл ажиллагаа явуулж буй мэргэжлийн байгууллага юм.</p>
+          <div class="more" id="about-more">
           <p>Бид аюулгүй байдлыг зөвхөн хамгаалалтын үүрэг бус, харилцагчийн хөрөнгө, ажилтан, үйл ажиллагааны тасралтгүй байдал, нэр хүндийг хамгаалах стратегийн чухал хэсэг гэж үздэг. Тиймээс бид хамгаалалтын үйлчилгээг харилцагчийн онцлог, объектын эрсдэлийн түвшин, үйл ажиллагааны хэрэгцээнд нийцүүлэн төлөвлөж, мэргэжлийн өндөр түвшинд хүргэхийг зорин ажилладаг.</p>
           <p>Үйл ажиллагаандаа MNS 6908:2021 «Аюулгүй байдал, харуул хамгаалалтын үйлчилгээ» үндэсний стандартыг мөрдөж, орчин үеийн арга барил, мэргэжлийн боловсон хүчин, хариуцлагатай менежментэд тулгуурлан хамгаалалтын үйлчилгээг үзүүлж байна.</p>
           <p>Сүүлийн 5 жилийн хугацаанд бид өндөр эрсдэлтэй, тусгай шаардлага бүхий объектуудад хамгаалалтын үйлчилгээ үзүүлж, салбарын туршлага, мэргэжлийн чадавхаа тасралтгүй хөгжүүлэн ажиллаж ирсэн. Үүнд уул уурхайн олборлолт, боловсруулах үйлдвэр, нүүрсний кемп, бизнесийн төвүүд зэрэг үйл ажиллагааны онцлог, эрсдэлийн түвшин өндөр объектууд багтдаг.</p>
           <p>Бидний зорилго бол зөвхөн объектыг хамгаалах бус, харилцагчийнхаа аюулгүй, тогтвортой үйл ажиллагааны найдвартай түнш байх явдал юм.</p>
+          </div>
+          <div class="more-ctl">
+            <button type="button" class="more-btn" aria-expanded="false" aria-controls="about-more">
+              <span class="m-open">Дэлгэрэнгүй унших</span><span class="m-close">Хураах</span>
+              <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+          </div>
           <p class="about-claim">Мэргэжлийн хамгаалалт. Найдвартай түншлэл. Тогтвортой аюулгүй байдал.</p>
         </div>
         <div class="about-media">
@@ -953,9 +985,15 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
     </figure>
 
     <h3 class="sub-h">Өргөн хүрээний үйл ажиллагаа, нэгдсэн мэргэжлийн баг</h3>
-    <div class="team-txt">
+    <div class="team-txt more" id="team-more">
       <p>«Хос Билиг Секьюрити Холдинг» ХХК нь Улаанбаатар хотын 9 дүүрэг болон хөдөө орон нутагт хамгаалалтын үйлчилгээг үзүүлж, нийт 200 орчим хамгаалалтын ажилтан, 5 хүний бүрэлдэхүүнтэй шуурхай бүлэг, 3 камерын хяналтын оператор, 10 гаруй оффисын ажилтан бүхий нэгдсэн багийн зохион байгуулалттайгаар үйл ажиллагаагаа явуулж байна.</p>
       <p>Өнөөдрийн байдлаар бид Улаанбаатар хот болон орон нутагт үйл ажиллагаа явуулдаг 20 гаруй харилцагч байгууллагад хамгаалалтын үйлчилгээ үзүүлэн, харилцагч бүрийн хэрэгцээ, объектын онцлогт нийцсэн найдвартай хамгаалалтын шийдлийг хүргэн ажиллаж байна.</p>
+    </div>
+    <div class="more-ctl">
+      <button type="button" class="more-btn" aria-expanded="false" aria-controls="team-more">
+        <span class="m-open">Дэлгэрэнгүй унших</span><span class="m-close">Хураах</span>
+        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
     </div>
 
     <div class="force">
@@ -1012,36 +1050,6 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
   </div>
 </section>
 
-<!-- ─── ТОГТМОЛ СУРГАЛТ ─── -->
-<section class="sec-alt" id="training">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="eyebrow">Тогтмол сургалт, хөгжил</div>
-      <h2>Ур чадварыг <b>тогтмол хөгжүүлнэ</b></h2>
-      <div class="bar"></div>
-      <p class="lede">Манай хамгаалалтын ажилтнуудын мэргэжлийн мэдлэг, ур чадвар, сахилга хариуцлага, бэлэн байдлыг тогтмол дээшлүүлэх зорилгоор улирал бүр мэргэжлийн сургалт, дадлага, хөгжлийн хөтөлбөрийг зохион байгуулдаг.</p>
-    </div>
-
-    <div class="tr-media">
-      <img src="img/thumb/training.webp" alt="Хамгаалалтын ажилтнуудын мэргэжлийн сургалт" loading="lazy">
-      <img src="img/thumb/briefing.webp" alt="Ээлжийн бүрэлдэхүүнд зааварчилгаа өгч буй нь" loading="lazy">
-    </div>
-
-    <div class="tr-tags">
-      <span class="tr-tag">Хамгаалалтын мэргэжлийн мэдлэг</span>
-      <span class="tr-tag">Аюулгүй ажиллагаа</span>
-      <span class="tr-tag">Онцгой нөхцөлд ажиллах бэлэн байдал</span>
-      <span class="tr-tag">Анхны тусламж</span>
-      <span class="tr-tag">Галын аюулгүй байдал</span>
-      <span class="tr-tag">Харилцаа, үйлчилгээний ур чадвар</span>
-      <span class="tr-tag">Сахилга, хариуцлага</span>
-      <span class="tr-tag">Объектын онцлогт тохирсон дадлага</span>
-    </div>
-
-    <p class="tr-close">Мэргэжлийн чадавх бол бидний хамгаалалтын үндэс.
-      <span>Бид техник технологи, тоног төхөөрөмжөөс гадна хүний ур чадвар, бэлэн байдал, хариуцлагыг хамгаалалтын үйлчилгээний гол хүчин зүйл гэж үздэг.</span></p>
-  </div>
-</section>
 
 <!-- ─── AI КАМЕР ─── -->
 <section class="ai" id="ai">
@@ -1305,9 +1313,18 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
   </div>
 </div>
 
-<!-- ─── ХҮНИЙ НӨӨЦ — шинэ булан ─── -->
-<section class="hr" id="hr">
-  <div class="wrap hr-in">
+<!-- ─── ХҮНИЙ НӨӨЦ — ажлын байр + тогтмол сургалт нэг хэсэгт ─── -->
+<section class="sec-alt hr-sec" id="hr">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Хүний нөөц</div>
+      <h2>Хамт олноо <b>хөгжүүлнэ</b></h2>
+      <div class="bar"></div>
+      <p class="lede">Бид мэргэжлийн хамгаалалтын багаа тогтмол өргөжүүлж, ажилтан бүрийнхээ ур чадвар, бэлэн байдлыг тасралтгүй хөгжүүлдэг.</p>
+    </div>
+
+  <div class="hr-card">
+  <div class="hr-in">
     <div>
       <div class="eyebrow">Хүний нөөц</div>
       <h2>Мэргэжлийн хамгаалалтын <b>багт нэгдээрэй</b></h2>
@@ -1323,6 +1340,35 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
         <div class="hr-job"><i>02</i><div><b>Шуурхай бүлгийн ээлжийн ахлагч</b><span>Шуурхай бүлгийн ээлжийн үйл ажиллагаа, ажилтнуудын зохион байгуулалт, үүрэг гүйцэтгэлийг хариуцна.</span></div></div>
         <div class="hr-job"><i>03</i><div><b>Камерын хяналтын оператор</b><span>Камерын хяналт, мэдээллийн бүртгэл, нөхцөл байдлын шуурхай хяналтыг хэрэгжүүлнэ.</span></div></div>
       </div>
+    </div>
+  </div>
+  </div>
+
+    <div class="tr-block" id="training">
+      <div class="tr-head">
+        <div class="eyebrow">Тогтмол сургалт, хөгжил</div>
+        <h3>Ур чадварыг <b>тогтмол хөгжүүлнэ</b></h3>
+        <p>Манай хамгаалалтын ажилтнуудын мэргэжлийн мэдлэг, ур чадвар, сахилга хариуцлага, бэлэн байдлыг тогтмол дээшлүүлэх зорилгоор улирал бүр мэргэжлийн сургалт, дадлага, хөгжлийн хөтөлбөрийг зохион байгуулдаг.</p>
+      </div>
+
+      <div class="tr-media">
+        <img src="img/thumb/training.webp" alt="Хамгаалалтын ажилтнуудын мэргэжлийн сургалт" loading="lazy">
+        <img src="img/thumb/briefing.webp" alt="Ээлжийн бүрэлдэхүүнд зааварчилгаа өгч буй нь" loading="lazy">
+      </div>
+
+      <div class="tr-tags">
+        <span class="tr-tag">Хамгаалалтын мэргэжлийн мэдлэг</span>
+        <span class="tr-tag">Аюулгүй ажиллагаа</span>
+        <span class="tr-tag">Онцгой нөхцөлд ажиллах бэлэн байдал</span>
+        <span class="tr-tag">Анхны тусламж</span>
+        <span class="tr-tag">Галын аюулгүй байдал</span>
+        <span class="tr-tag">Харилцаа, үйлчилгээний ур чадвар</span>
+        <span class="tr-tag">Сахилга, хариуцлага</span>
+        <span class="tr-tag">Объектын онцлогт тохирсон дадлага</span>
+      </div>
+
+      <p class="tr-close">Мэргэжлийн чадавх бол бидний хамгаалалтын үндэс.
+        <span>Бид техник технологи, тоног төхөөрөмжөөс гадна хүний ур чадвар, бэлэн байдал, хариуцлагыг хамгаалалтын үйлчилгээний гол хүчин зүйл гэж үздэг.</span></p>
     </div>
   </div>
 </section>
@@ -1521,6 +1567,26 @@ function pLogo(img){img.style.display='none'}
   var h=location.hash&&document.getElementById(location.hash.slice(1));
   if(h&&h.classList.contains('news-item'))open(h);
 })();
+
+/* хураагддаг бичвэр — max-height-ийг бодит өндрөөр нь хөдөлгөнө */
+[].slice.call(document.querySelectorAll('.more-btn')).forEach(function(b){
+  var m=document.getElementById(b.getAttribute('aria-controls'));
+  if(!m)return;
+  m.addEventListener('transitionend',function(e){
+    if(e.propertyName==='max-height'&&m.classList.contains('on'))m.style.maxHeight='none';
+  });
+  b.addEventListener('click',function(){
+    var open=b.getAttribute('aria-expanded')!=='true';
+    b.setAttribute('aria-expanded',open);
+    if(open){m.classList.add('on');m.style.maxHeight=m.scrollHeight+'px';}
+    else{
+      m.style.maxHeight=m.scrollHeight+'px';m.offsetHeight;   // 'none'-оос хөдөлгөөнтэй буцаана
+      m.classList.remove('on');m.style.maxHeight='';
+      var top=m.getBoundingClientRect().top;
+      if(top<0)window.scrollBy({top:top-140,behavior:'smooth'});
+    }
+  });
+});
 
 /* hero слайдер */
 (function(){

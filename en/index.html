@@ -75,6 +75,7 @@
   }
 }
 </script>
+<script>document.documentElement.classList.add('js')</script>
 <link rel="icon" href="/img/favicon-48.png" sizes="48x48" type="image/png">
 <link rel="icon" href="/img/favicon-192.png" sizes="192x192" type="image/png">
 <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
@@ -484,8 +485,16 @@ section{padding:92px 0}
 @media(max-width:600px){.nm-box{padding:22px 18px 26px}.nf-imgs{grid-template-columns:1fr}}
 
 /* ── ХҮНИЙ НӨӨЦ (шинэ булан) ── */
-.hr{position:relative;background:var(--ink);color:#fff;overflow:hidden}
-.hr::before{content:'';position:absolute;inset:0;background:url('/img/thumb/supervisor.webp') center/cover;opacity:.18}
+/* ажлын байрны бараан карт — хүний нөөцийн хэсэг дотор */
+.hr-card{position:relative;background:var(--ink);color:#fff;overflow:hidden;padding:56px 52px}
+.hr-card::before{content:'';position:absolute;inset:0;background:url('/img/thumb/supervisor.webp') center/cover;opacity:.18}
+@media(max-width:700px){.hr-card{padding:36px 22px}}
+/* сургалтын дэд хэсэг */
+.tr-block{margin-top:80px;padding-top:64px;border-top:1px solid var(--line);scroll-margin-top:110px}
+.tr-head{text-align:center;max-width:820px;margin:0 auto 40px}
+.tr-head h3{font-size:clamp(22px,2.8vw,32px);font-weight:800;text-transform:uppercase;margin-bottom:14px}
+.tr-head h3 b{color:var(--gold);font-weight:800}
+.tr-head p{color:var(--txt-2);font-size:15.5px}
 .hr-in{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
 .hr-in h2{color:#fff;font-size:clamp(26px,3.4vw,42px);font-weight:800;text-transform:uppercase;margin-bottom:18px}
 .hr-in h2 b{color:var(--gold);font-weight:800}
@@ -500,6 +509,21 @@ section{padding:92px 0}
 /* ── танилцуулгын онцлох мөр ── */
 .about-claim{font:600 16px/1.6 'Manrope',sans-serif;color:var(--ink);
   border-left:3px solid var(--gold);padding:4px 0 4px 16px;margin:4px 0 20px}
+/* хураагддаг бичвэр — эхний мөрүүд бүдгэрч харагдана, товчоор сунана */
+.js .more{max-height:96px;overflow:hidden;position:relative;transition:max-height .55s cubic-bezier(.4,0,.2,1);
+  -webkit-mask-image:linear-gradient(#000 25%,transparent);mask-image:linear-gradient(#000 25%,transparent)}
+.js .more.on{-webkit-mask-image:none;mask-image:none}
+.more-ctl{text-align:center;margin:14px 0 6px}
+.more-btn{display:none;align-items:center;gap:10px;background:var(--gold);color:#fff;border:0;border-radius:999px;
+  padding:13px 24px;cursor:pointer;font:600 11.5px/1 'Inter',sans-serif;letter-spacing:.14em;text-transform:uppercase;
+  box-shadow:0 10px 26px rgba(185,149,55,.32);transition:background .25s,transform .25s,box-shadow .25s}
+.js .more-btn{display:inline-flex}
+.more-btn:hover{background:#a3822c;transform:translateY(-2px);box-shadow:0 14px 30px rgba(185,149,55,.42)}
+.more-btn:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.more-btn svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2.2;transition:transform .35s}
+.more-btn[aria-expanded="true"] svg{transform:rotate(180deg)}
+.more-btn .m-close,.more-btn[aria-expanded="true"] .m-open{display:none}
+.more-btn[aria-expanded="true"] .m-close{display:inline}
 .about-txt .about-claim{border-left:0;padding:18px 0 0;margin:10px 0 0;position:relative}
 .about-txt .about-claim::before{content:'';position:absolute;top:0;left:50%;width:56px;height:3px;margin-left:-28px;background:var(--gold)}
 
@@ -727,7 +751,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
     <a href="#gallery"><i>09</i> Photo gallery</a>
     <a href="#news"><i>10</i> News</a>
     <a href="#team"><i>11</i> Our team</a>
-    <a href="#hr"><i>12</i> Open positions</a>
+    <a href="#hr"><i>12</i> Careers</a>
     <a href="#contact"><i>13</i> Contact</a>
   </div>
 </div>
@@ -804,10 +828,18 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
           <h2>Nine years <b>built together</b></h2>
           <p class="about-lede">We protect your security to a professional standard.</p>
           <p>Khos Bilig Security Holding LLC is a professional organization that strictly observes the Constitution of Mongolia, the Law on Contract Guarding and Security and all related laws and regulations, and that is now in its ninth year of steady, uninterrupted operation in the security industry.</p>
+          <div class="more" id="about-more">
           <p>We see security not merely as a guarding duty but as a strategic component protecting our client's assets, people, business continuity and reputation. We therefore plan each service around the client's circumstances, the site's risk level and the needs of their operation, and deliver it to a high professional standard.</p>
           <p>We work to the national standard MNS 6908:2021 “Security and guarding services”, delivering our service through modern methods, qualified personnel and accountable management.</p>
           <p>Over the past five years we have guarded high-risk sites with special requirements, steadily building our industry experience and professional capability — mining operations, processing plants, coal camps and business centers among them.</p>
           <p>Our goal is not simply to guard a site, but to be a dependable partner in our client's safe and stable operation.</p>
+          </div>
+          <div class="more-ctl">
+            <button type="button" class="more-btn" aria-expanded="false" aria-controls="about-more">
+              <span class="m-open">Read more</span><span class="m-close">Show less</span>
+              <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+          </div>
           <p class="about-claim">Professional protection. Dependable partnership. Lasting security.</p>
         </div>
         <div class="about-media">
@@ -954,9 +986,15 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
     </figure>
 
     <h3 class="sub-h">Broad operations, one professional team</h3>
-    <div class="team-txt">
+    <div class="team-txt more" id="team-more">
       <p>Khos Bilig Security Holding LLC provides security across all nine districts of Ulaanbaatar and in the provinces, operating as one organized team of around 200 security officers, a five-person rapid-response team, three control room operators and more than ten office staff.</p>
       <p>Today we serve more than twenty client organizations operating in Ulaanbaatar and the provinces, delivering a dependable security solution matched to each client's needs and to the nature of their site.</p>
+    </div>
+    <div class="more-ctl">
+      <button type="button" class="more-btn" aria-expanded="false" aria-controls="team-more">
+        <span class="m-open">Read more</span><span class="m-close">Show less</span>
+        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
     </div>
 
     <div class="force">
@@ -1013,36 +1051,6 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
   </div>
 </section>
 
-<!-- ─── ТОГТМОЛ СУРГАЛТ ─── -->
-<section class="sec-alt" id="training">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="eyebrow">Continuous training</div>
-      <h2>Skills we keep <b>developing</b></h2>
-      <div class="bar"></div>
-      <p class="lede">Each quarter we run professional training, practical exercises and development programs to raise our officers' knowledge, skill, discipline and readiness.</p>
-    </div>
-
-    <div class="tr-media">
-      <img src="/img/thumb/training.webp" alt="Professional training for security officers" loading="lazy">
-      <img src="/img/thumb/briefing.webp" alt="Briefing the shift team" loading="lazy">
-    </div>
-
-    <div class="tr-tags">
-      <span class="tr-tag">Professional security knowledge</span>
-      <span class="tr-tag">Safe working practice</span>
-      <span class="tr-tag">Readiness for emergencies</span>
-      <span class="tr-tag">First aid</span>
-      <span class="tr-tag">Fire safety</span>
-      <span class="tr-tag">Communication and service skills</span>
-      <span class="tr-tag">Discipline and accountability</span>
-      <span class="tr-tag">Site-specific practical training</span>
-    </div>
-
-    <p class="tr-close">Professional capability is the foundation of our protection.
-      <span>Beyond technology and equipment, we regard human skill, readiness and accountability as the decisive factors in a security service.</span></p>
-  </div>
-</section>
 
 <!-- ─── AI КАМЕР ─── -->
 <section class="ai" id="ai">
@@ -1306,9 +1314,18 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
   </div>
 </div>
 
-<!-- ─── ХҮНИЙ НӨӨЦ — шинэ булан ─── -->
-<section class="hr" id="hr">
-  <div class="wrap hr-in">
+<!-- ─── ХҮНИЙ НӨӨЦ — ажлын байр + тогтмол сургалт нэг хэсэгт ─── -->
+<section class="sec-alt hr-sec" id="hr">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Careers</div>
+      <h2>Growing <b>our people</b></h2>
+      <div class="bar"></div>
+      <p class="lede">We keep expanding our professional security team and continuously develop the skills and readiness of every employee.</p>
+    </div>
+
+  <div class="hr-card">
+  <div class="hr-in">
     <div>
       <div class="eyebrow">Careers</div>
       <h2>Join our professional <b>security team</b></h2>
@@ -1324,6 +1341,35 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
         <div class="hr-job"><i>02</i><div><b>Rapid-response shift supervisor</b><span>Responsible for the rapid-response shift, the organization of its officers and the performance of their duties.</span></div></div>
         <div class="hr-job"><i>03</i><div><b>Control room operator</b><span>Handles camera monitoring, information logging and prompt oversight of the situation.</span></div></div>
       </div>
+    </div>
+  </div>
+  </div>
+
+    <div class="tr-block" id="training">
+      <div class="tr-head">
+        <div class="eyebrow">Continuous training</div>
+        <h3>Skills we keep <b>developing</b></h3>
+        <p>Each quarter we run professional training, practical exercises and development programs to raise our officers' knowledge, skill, discipline and readiness.</p>
+      </div>
+
+      <div class="tr-media">
+        <img src="/img/thumb/training.webp" alt="Professional training for security officers" loading="lazy">
+        <img src="/img/thumb/briefing.webp" alt="Briefing the shift team" loading="lazy">
+      </div>
+
+      <div class="tr-tags">
+        <span class="tr-tag">Professional security knowledge</span>
+        <span class="tr-tag">Safe working practice</span>
+        <span class="tr-tag">Readiness for emergencies</span>
+        <span class="tr-tag">First aid</span>
+        <span class="tr-tag">Fire safety</span>
+        <span class="tr-tag">Communication and service skills</span>
+        <span class="tr-tag">Discipline and accountability</span>
+        <span class="tr-tag">Site-specific practical training</span>
+      </div>
+
+      <p class="tr-close">Professional capability is the foundation of our protection.
+        <span>Beyond technology and equipment, we regard human skill, readiness and accountability as the decisive factors in a security service.</span></p>
     </div>
   </div>
 </section>
@@ -1522,6 +1568,26 @@ function pLogo(img){img.style.display='none'}
   var h=location.hash&&document.getElementById(location.hash.slice(1));
   if(h&&h.classList.contains('news-item'))open(h);
 })();
+
+/* хураагддаг бичвэр — max-height-ийг бодит өндрөөр нь хөдөлгөнө */
+[].slice.call(document.querySelectorAll('.more-btn')).forEach(function(b){
+  var m=document.getElementById(b.getAttribute('aria-controls'));
+  if(!m)return;
+  m.addEventListener('transitionend',function(e){
+    if(e.propertyName==='max-height'&&m.classList.contains('on'))m.style.maxHeight='none';
+  });
+  b.addEventListener('click',function(){
+    var open=b.getAttribute('aria-expanded')!=='true';
+    b.setAttribute('aria-expanded',open);
+    if(open){m.classList.add('on');m.style.maxHeight=m.scrollHeight+'px';}
+    else{
+      m.style.maxHeight=m.scrollHeight+'px';m.offsetHeight;   // 'none'-оос хөдөлгөөнтэй буцаана
+      m.classList.remove('on');m.style.maxHeight='';
+      var top=m.getBoundingClientRect().top;
+      if(top<0)window.scrollBy({top:top-140,behavior:'smooth'});
+    }
+  });
+});
 
 /* hero слайдер */
 (function(){
