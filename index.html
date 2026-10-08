@@ -232,11 +232,12 @@ section{padding:92px 0}
 /* ── ② БИДНИЙ ТУХАЙ (hero дээр давхарлана) ── */
 .about{padding:0 0 92px;position:relative;z-index:6;margin-top:-90px}
 .about-card{background:#fff;box-shadow:0 26px 70px rgba(13,18,25,.16);padding:56px 52px}
-.about-in{display:grid;grid-template-columns:.92fr 1.08fr;gap:52px;align-items:center}
-.about-media{position:relative;display:grid;gap:14px}
-.about-media img{width:100%;height:340px;object-fit:cover;object-position:30% center}
-.about-media img+img{height:250px;object-position:center}
-.about-badge{position:absolute;right:-12px;bottom:-12px;background:var(--gold);color:#fff;padding:22px 26px;text-align:center}
+/* бичвэр голлосон, доор нь 2 зураг тэгш хэмтэй */
+.about-in{display:flex;flex-direction:column;gap:44px}
+.about-txt{max-width:900px;margin:0 auto;text-align:center}
+.about-media{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:16px;padding-bottom:22px}
+.about-media img{width:100%;height:360px;object-fit:cover;object-position:center}
+.about-badge{position:absolute;left:50%;bottom:0;transform:translateX(-50%);background:var(--gold);color:#fff;padding:20px 28px;text-align:center;box-shadow:0 14px 34px rgba(13,18,25,.22)}
 .about-badge b{display:block;font:800 38px/1 'Manrope',sans-serif}
 .about-badge span{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;margin-top:5px;opacity:.92}
 .about h2{font-size:clamp(28px,3.6vw,46px);font-weight:800;text-transform:uppercase;margin-bottom:14px;letter-spacing:-.01em}
@@ -244,8 +245,8 @@ section{padding:92px 0}
 .about-lede{font:500 17px/1.6 'Manrope',sans-serif;color:var(--ink);margin-bottom:24px;
   padding-bottom:22px;border-bottom:1px solid var(--line)}
 .about p{color:var(--txt-2);margin-bottom:15px}
-@media(max-width:980px){.about-in{grid-template-columns:1fr;gap:44px}.about-media img{height:320px}.about-media img+img{height:230px}.about-card{padding:40px 26px}}
-@media(max-width:560px){.about{margin-top:-50px}.about-media img{height:250px}.about-media img+img{height:200px}}
+@media(max-width:980px){.about-in{gap:36px}.about-media img{height:280px}.about-card{padding:40px 26px}}
+@media(max-width:560px){.about{margin-top:-50px}.about-media{grid-template-columns:1fr;gap:12px}.about-media img{height:220px}}
 
 /* ── СТАТИСТИК ── */
 .stats{background:var(--ink);padding:62px 0;position:relative;overflow:hidden}
@@ -496,6 +497,8 @@ section{padding:92px 0}
 /* ── танилцуулгын онцлох мөр ── */
 .about-claim{font:600 16px/1.6 'Manrope',sans-serif;color:var(--ink);
   border-left:3px solid var(--gold);padding:4px 0 4px 16px;margin:4px 0 20px}
+.about-txt .about-claim{border-left:0;padding:18px 0 0;margin:10px 0 0;position:relative}
+.about-txt .about-claim::before{content:'';position:absolute;top:0;left:50%;width:56px;height:3px;margin-left:-28px;background:var(--gold)}
 
 /* ── манай хамт олон ── */
 .sub-h{font:800 clamp(19px,2.3vw,26px)/1.3 'Manrope',sans-serif;text-transform:uppercase;
@@ -508,6 +511,15 @@ section{padding:92px 0}
 .force-i span{display:block;margin-top:9px;font-size:13px;color:var(--txt-2);line-height:1.45}
 @media(max-width:1000px){.force{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:620px){.force{grid-template-columns:repeat(2,1fr)}}
+/* бараан дэвсгэр — дээд (бүсүүд), доод (чадавх) цагаан хэсгээс ялгарна */
+.team-sec{background:var(--ink);position:relative;overflow:hidden}
+.team-sec::before{content:'';position:absolute;inset:0;background:url('img/mine-team.webp') center/cover;opacity:.1}
+.team-sec::after{content:'';position:absolute;inset:0;background:linear-gradient(rgba(13,18,25,.55),rgba(13,18,25,.85))}
+.team-sec .wrap{position:relative;z-index:2}
+.team-sec .sec-head h2,.team-sec .sub-h{color:#fff}
+.team-sec .sec-head .lede,.team-sec .team-txt p{color:rgba(255,255,255,.7)}
+.team-sec .force-i{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.12)}
+.team-sec .force-i span{color:rgba(255,255,255,.62)}
 
 /* ── мэргэжлийн чадавх ── */
 .cap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
@@ -781,12 +793,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
   <div class="wrap">
     <div class="about-card">
       <div class="about-in">
-        <div class="about-media">
-          <img src="img/g10-tactical.webp" alt="«Хос Билиг Секьюрити Холдинг»-ийн туг болон тусгай хамгаалалтын хэрэгсэл">
-          <img src="img/thumb/meeting.webp" alt="Удирдлагын зөвлөгөөн" loading="lazy">
-          <div class="about-badge"><b>9</b><span>дахь жилдээ</span></div>
-        </div>
-        <div>
+        <div class="about-txt">
           <div class="eyebrow">Танилцуулга</div>
           <h2>Хамтдаа бүтээлцсэн <b>9 жил</b></h2>
           <p class="about-lede">Аюулгүй байдлыг бид мэргэжлийн түвшинд хамгаална.</p>
@@ -796,6 +803,11 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
           <p>Сүүлийн 5 жилийн хугацаанд бид өндөр эрсдэлтэй, тусгай шаардлага бүхий объектуудад хамгаалалтын үйлчилгээ үзүүлж, салбарын туршлага, мэргэжлийн чадавхаа тасралтгүй хөгжүүлэн ажиллаж ирсэн. Үүнд уул уурхайн олборлолт, боловсруулах үйлдвэр, нүүрсний кемп, бизнесийн төвүүд зэрэг үйл ажиллагааны онцлог, эрсдэлийн түвшин өндөр объектууд багтдаг.</p>
           <p>Бидний зорилго бол зөвхөн объектыг хамгаалах бус, харилцагчийнхаа аюулгүй, тогтвортой үйл ажиллагааны найдвартай түнш байх явдал юм.</p>
           <p class="about-claim">Мэргэжлийн хамгаалалт. Найдвартай түншлэл. Тогтвортой аюулгүй байдал.</p>
+        </div>
+        <div class="about-media">
+          <img src="img/g10-tactical.webp" alt="«Хос Билиг Секьюрити Холдинг»-ийн туг болон тусгай хамгаалалтын хэрэгсэл" loading="lazy">
+          <img src="img/meeting.webp" alt="Удирдлагын зөвлөгөөн" loading="lazy">
+          <div class="about-badge"><b>9</b><span>дахь жилдээ</span></div>
         </div>
       </div>
     </div>
@@ -807,7 +819,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
   <div class="wrap stats-grid">
     <div><div class="stat-n"><span class="cnt" data-to="9">0</span></div><div class="stat-l">дахь жилдээ тогтвортой</div></div>
     <div><div class="stat-n"><span class="cnt" data-to="90">0</span><small>%</small></div><div class="stat-l">хүртэл хохирол барагдуулалт</div></div>
-    <div><div class="stat-n">24<small>/7</small></div><div class="stat-l">нэгдсэн операторын хяналт</div></div>
+    <div><div class="stat-n">24/7</div><div class="stat-l">нэгдсэн операторын хяналт</div></div>
   </div>
 </div>
 
@@ -922,7 +934,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
 
 
 <!-- ─── МАНАЙ ХАМТ ОЛОН ─── -->
-<section class="sec-alt" id="team">
+<section class="team-sec" id="team">
   <div class="wrap">
     <div class="sec-head">
       <div class="eyebrow">Манай хамт олон</div>
