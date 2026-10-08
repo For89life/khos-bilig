@@ -37,7 +37,7 @@
   "telephone": ["+976-7720-2525", "+976-9963-6785"],
   "foundingDate": "2018-02-05",
   "priceRange": "$$",
-  "slogan": "Төгс үйлчилгээг бид түүчээлнэ",
+  "slogan": "Аюулгүй байдлыг бид манлайлна",
   "knowsLanguage": ["mn", "en"],
   "address": {
     "@type": "PostalAddress",
@@ -49,7 +49,7 @@
   },
   "openingHoursSpecification": [{
     "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
     "opens": "09:00",
     "closes": "18:00"
   }],
@@ -74,7 +74,9 @@
   }
 }
 </script>
-<link rel="icon" href="img/logo.webp" type="image/webp">
+<link rel="icon" href="img/favicon-48.png" sizes="48x48" type="image/png">
+<link rel="icon" href="img/favicon-192.png" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -211,8 +213,8 @@ section{padding:92px 0}
 .slide-tag{display:inline-flex;align-items:center;gap:10px;color:var(--gold);
   font:600 11.5px/1 'Inter',sans-serif;letter-spacing:.24em;text-transform:uppercase;margin-bottom:20px}
 .slide-tag::before,.slide-tag::after{content:'';width:34px;height:1px;background:var(--gold)}
-.slide h1{color:#fff;font-size:clamp(30px,4.8vw,56px);font-weight:800;text-transform:uppercase;max-width:1000px}
-.slide h1 b{color:var(--gold);font-weight:800}
+.slide h1,.slide .slide-h{color:#fff;font-size:clamp(30px,4.8vw,56px);font-weight:800;text-transform:uppercase;max-width:1000px}
+.slide h1 b,.slide .slide-h b{color:var(--gold);font-weight:800}
 .slide p{color:rgba(255,255,255,.78);max-width:720px;margin:22px 0 34px;font-size:16px}
 .hero-arrow{position:absolute;top:calc(50% - 40px);z-index:3;transform:translateY(-50%);width:52px;height:52px;
   background:rgba(185,149,55,.9);border:0;cursor:pointer;display:grid;place-items:center;border-radius:2px;transition:.2s}
@@ -717,7 +719,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
     <a href="#about"><i>02</i> Бидний тухай</a>
     <a href="#directions"><i>03</i> Үйлчилгээний чиглэл</a>
     <a href="#regions"><i>04</i> Хамгаалалтын газар</a>
-    <a href="#org"><i>05</i> Үйлчилгээний бүтэц</a>
+    <a href="#capability"><i>05</i> Мэргэжлийн чадавх</a>
     <a href="#ai"><i>06</i> 24/7 AI камерын хяналт</a>
     <a href="#insurance"><i>07</i> Эрсдэл хариуцах тогтолцоо</a>
     <a href="#partners"><i>08</i> Хамтрагч байгууллагууд</a>
@@ -747,7 +749,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
     <div class="slide-bg s2"></div>
     <div class="slide-in">
       <div class="slide-tag">24/7 Найдвартай хамгаалалт</div>
-      <h1>Таны аюулгүй байдал — <b>24/7 хяналтад</b></h1>
+      <h2 class="slide-h">Таны аюулгүй байдал — <b>24/7 хяналтад</b></h2>
       <p>Өмч хөрөнгө, ажилтан, бизнесийн тань аюулгүй байдлыг орчин үеийн технологи, мэргэжлийн хамгаалалтын үйлчилгээгээр найдвартай хамгаална.</p>
       <a href="#directions" class="btn">Үйлчилгээний чиглэл
         <svg viewBox="0 0 24 24"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="14 6 20 12 14 18"/></svg></a>
@@ -758,9 +760,9 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
     <div class="slide-bg s3"></div>
     <div class="slide-in">
       <div class="slide-tag">24/7 Найдвартай хамгаалалт</div>
-      <h1>Дуудлага бүрт — <b>бид 24/7 бэлэн</b></h1>
+      <h2 class="slide-h">Дуудлага бүрт — <b>бид 24/7 бэлэн</b></h2>
       <p>Тусгайлан бэлтгэгдсэн шуурхай ажиллагааны баг нь дохиолол, дуудлага бүрд богино хугацаанд газар дээр нь очиж, нөхцөл байдлыг шуурхай хяналтдаа авна.</p>
-      <a href="#org" class="btn">Дэлгэрэнгүй үзэх
+      <a href="#capability" class="btn">Дэлгэрэнгүй үзэх
         <svg viewBox="0 0 24 24"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="14 6 20 12 14 18"/></svg></a>
     </div>
   </article>
@@ -773,7 +775,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
     </div>
     <div class="slide-in">
       <div class="slide-tag">Даатгалтай хамгаалалтын алба</div>
-      <h1>Хохирлыг <b>90% хүртэл барагдуулна</b></h1>
+      <h2 class="slide-h">Хохирлыг <b>90% хүртэл барагдуулна</b></h2>
       <p>Даатгалын байгууллагатай хамтран ажилладаг бөгөөд хамгаалалтын албаны буруугаас хохирол учирсан нь тогтоогдвол 90 хүртэлх хувийг барагдуулна.</p>
       <a href="#insurance" class="btn">Дэлгэрэнгүй үзэх
         <svg viewBox="0 0 24 24"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="14 6 20 12 14 18"/></svg></a>

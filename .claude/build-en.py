@@ -51,7 +51,7 @@ SCHEMA_EN = """<script type="application/ld+json">
   "telephone": ["+976-7720-2525", "+976-9963-6785"],
   "foundingDate": "2018-02-05",
   "priceRange": "$$",
-  "slogan": "Setting the standard for exceptional service",
+  "slogan": "We lead the way in security",
   "knowsLanguage": ["mn", "en"],
   "address": {
     "@type": "PostalAddress",
@@ -63,7 +63,7 @@ SCHEMA_EN = """<script type="application/ld+json">
   },
   "openingHoursSpecification": [{
     "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
     "opens": "09:00",
     "closes": "18:00"
   }],
@@ -213,6 +213,8 @@ def add_hreflang_to_mn():
 
 
 def build_sitemap():
+    import datetime
+    today = datetime.date.today().isoformat()   # build хийсэн өдөр = сүүлд өөрчлөгдсөн өдөр
     rows = []
     for src, meta in META.items():
         pri = "1.0" if src == "index.html" else ("0.8" if src == "partner.html" else "0.6")
@@ -222,9 +224,9 @@ def build_sitemap():
                 '\n    <xhtml:link rel="alternate" hreflang="%s" href="%s/%s%s"/>'
                 % (lg, SITE, pr, meta["path"])
                 for lg, pr in (("mn", ""), ("en", "en/"), ("x-default", "")))
-            rows.append("  <url>\n    <loc>%s</loc>%s\n    <lastmod>2026-09-21</lastmod>\n"
+            rows.append("  <url>\n    <loc>%s</loc>%s\n    <lastmod>%s</lastmod>\n"
                         "    <changefreq>monthly</changefreq>\n    <priority>%s</priority>\n  </url>"
-                        % (loc, alts, pri))
+                        % (loc, alts, today, pri))
     xml = ('<?xml version="1.0" encoding="UTF-8"?>\n'
            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n'
            '        xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'
