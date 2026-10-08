@@ -501,7 +501,7 @@ section{padding:92px 0}
   box-shadow:0 14px 30px rgba(13,18,25,.2)}
 .hr-badge b{display:block;font:800 13px/1.3 'Manrope',sans-serif;letter-spacing:.06em;text-transform:uppercase}
 .hr-badge span{display:block;font-size:11px;opacity:.9;margin-top:3px;letter-spacing:.06em}
-.hr-bottom{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;margin-top:72px}
+.hr-bottom{margin-top:72px}
 .hr-box{border:1px solid var(--line);padding:34px 32px}
 .hr-box.dark{background:var(--ink);border-color:var(--ink);position:relative;overflow:hidden}
 .hr-box.dark::before{content:'';position:absolute;inset:0;background:url('img/thumb/supervisor.webp') center/cover;opacity:.14}
@@ -509,20 +509,15 @@ section{padding:92px 0}
 .hr-lbl{font:600 11px/1 'Inter',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
 .hr-box h3{font-size:20px;font-weight:800;text-transform:uppercase;margin-bottom:22px}
 .hr-box.dark h3{color:#fff}
-.hr-jobs{display:grid;gap:12px}
+.hr-jobs{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .hr-job{display:flex;align-items:flex-start;gap:16px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);
   padding:18px 22px;transition:.25s}
 .hr-job:hover{background:rgba(185,149,55,.14);border-color:var(--gold)}
 .hr-job i{font:800 13px/1.5 'Inter',sans-serif;font-style:normal;color:var(--gold);flex:none}
 .hr-job b{display:block;font:700 15px/1.4 'Manrope',sans-serif;color:#fff;margin-bottom:4px}
 .hr-job span{display:block;font:400 13.5px/1.6 'Inter',sans-serif;color:rgba(255,255,255,.62)}
-.tr-list{display:grid;grid-template-columns:1fr 1fr;gap:12px 18px}
-.tr-list li{display:flex;align-items:flex-start;gap:10px;font-size:14px;line-height:1.45;color:var(--txt)}
-.tr-list li::before{content:'';flex:none;width:18px;height:18px;margin-top:1px;border-radius:50%;
-  background:var(--gold) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='5 12 10 17 19 7'/%3E%3C/svg%3E") center/11px no-repeat}
-.tr-note{margin-top:24px;padding-top:20px;border-top:1px solid var(--line);font:600 14.5px/1.6 'Manrope',sans-serif;color:var(--ink)}
-@media(max-width:1000px){.hr-top,.hr-bottom{grid-template-columns:1fr;gap:44px}.hr-bottom{margin-top:52px}}
-@media(max-width:600px){.hr-perks,.tr-list{grid-template-columns:1fr}.hr-pics{padding:0 0 36px 24px}.hr-pics .p1{height:260px}
+@media(max-width:1000px){.hr-top{grid-template-columns:1fr;gap:44px}.hr-bottom{margin-top:52px}.hr-jobs{grid-template-columns:1fr}}
+@media(max-width:600px){.hr-perks{grid-template-columns:1fr}.hr-pics{padding:0 0 36px 24px}.hr-pics .p1{height:260px}
   .hr-pics .p2{height:140px;width:58%}.hr-box{padding:26px 20px}.hr-badge{right:0}}
 /* ── танилцуулгын онцлох мөр ── */
 .about-claim{font:600 16px/1.6 'Manrope',sans-serif;color:var(--ink);
@@ -1351,21 +1346,6 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
         </div>
       </div>
 
-      <div class="hr-box" id="training">
-        <div class="hr-lbl">Тогтмол сургалт, хөгжил</div>
-        <h3>Сургалтын чиглэл</h3>
-        <ul class="tr-list">
-          <li>Хамгаалалтын мэргэжлийн мэдлэг</li>
-          <li>Аюулгүй ажиллагаа</li>
-          <li>Онцгой нөхцөлд ажиллах бэлэн байдал</li>
-          <li>Анхны тусламж</li>
-          <li>Галын аюулгүй байдал</li>
-          <li>Харилцаа, үйлчилгээний ур чадвар</li>
-          <li>Сахилга, хариуцлага</li>
-          <li>Объектын онцлогт тохирсон дадлага</li>
-        </ul>
-        <p class="tr-note">Мэргэжлийн чадавх бол бидний хамгаалалтын үндэс.</p>
-      </div>
     </div>
 
   </div>
