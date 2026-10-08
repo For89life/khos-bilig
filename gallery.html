@@ -158,10 +158,9 @@ section{padding:92px 0}
 /* ── footer ── */
 footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
 .ft-grid{display:grid;grid-template-columns:1.15fr 1.5fr 1.35fr;gap:52px;padding-bottom:52px}
-.ft-brand{display:flex;align-items:center;gap:13px;margin-bottom:20px}
-.ft-brand img{width:48px;height:48px;object-fit:contain}
-.ft-brand-name{font:700 13.5px/1.25 'Manrope',sans-serif;color:#fff}
-.ft-brand-name span{display:block;font:400 10.5px/1.4 'Inter',sans-serif;color:rgba(255,255,255,.42);margin-top:3px}
+.ft-brand{display:flex;flex-direction:column;align-items:flex-start;gap:12px;margin-bottom:20px}
+.ft-brand img{width:230px;max-width:100%;height:auto}
+.ft-brand-name span{display:block;font:400 10.5px/1.4 'Inter',sans-serif;color:rgba(255,255,255,.42);letter-spacing:.08em}
 .ft-desc{font-size:13.5px}
 .ft-h{font:800 17px/1 'Manrope',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#fff;
   margin-bottom:24px;display:flex;align-items:center;gap:16px}
@@ -185,7 +184,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
 @media(max-width:1000px){.ft-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:700px){.ft-grid{grid-template-columns:1fr;gap:40px}.ft-cols{grid-template-columns:1fr}}
 
-.phero::before{background-image:url('img/hero-02.webp')}
+.phero::before{background-image:url('img/mine-team.webp')}
 
 .alb-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
 .alb-item{background:#fff;border:1px solid var(--line);overflow:hidden;cursor:pointer;transition:.3s;display:flex;flex-direction:column}
@@ -250,7 +249,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
 <header class="hdr">
   <div class="hdr-in">
     <a href="index.html" class="brand">
-      <img src="img/logo.webp" alt="ХОС БИЛИГ">
+      <img src="img/logo-dark.webp" alt="ХОС БИЛИГ">
       <div class="brand-name">
         ХОС БИЛИГ СЕКЬЮРИТИ ХОЛДИНГ ХХК
         <span>АЮУЛГҮЙ БАЙДЛЫГ БИД МАНЛАЙЛНА</span>
@@ -322,229 +321,241 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
 
       <figure class="alb-item">
         <div class="alb-thumb">
-          <img src="img/thumb/g01-mall.webp" data-full="img/g01-mall.webp" alt="Худалдааны төвийн хамгаалалт" loading="lazy">
+          <img src="img/thumb/guard-car.webp" data-full="img/guard-car.webp" alt="Бизнесийн төвийн хамгаалалт" loading="lazy">
           <span class="alb-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16" y1="16" x2="21" y2="21"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
         </div>
         <figcaption class="alb-cap">
           <div class="alb-loc">Улаанбаатар · Төв бүс</div>
-          <h3>Худалдаа үйлчилгээний төвийн хамгаалалт</h3>
-          <p>Алба хаагч худалдааны төвийн танхимд ээлжийн үүрэг гүйцэтгэж, үйлчлүүлэгчдийн аюулгүй байдлыг хангаж байна.</p>
+          <h3>Бизнесийн төвийн хамгаалалт</h3>
+          <p>Хамгаалалтын ажилтан шуурхай ажиллагааны автомашины хамт бизнесийн төвийн гадна талбайд ээлжийн үүрэг гүйцэтгэж байна.</p>
         </figcaption>
       </figure>
 
       <figure class="alb-item">
         <div class="alb-thumb">
-          <img src="img/thumb/g03-hotel.webp" data-full="img/g03-hotel.webp" alt="Зочид буудлын хамгаалалт" loading="lazy">
-          <span class="alb-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16" y1="16" x2="21" y2="21"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
-        </div>
-        <figcaption class="alb-cap">
-          <div class="alb-loc">Улаанбаатар · Төв бүс</div>
-          <h3>Зочид буудлын объектын хамгаалалт</h3>
-          <p>Таван одтой зочид буудлын үүдэнд ээлжийн бүрэлдэхүүн болон хамгаалалтын автомашинууд бэлэн байдалд ажиллаж байна.</p>
-        </figcaption>
-      </figure>
-
-      <figure class="alb-item">
-        <div class="alb-thumb">
-          <img src="img/thumb/g02-team.webp" data-full="img/g02-team.webp" alt="Хамгаалалтын баг" loading="lazy">
+          <img src="img/thumb/object.webp" data-full="img/object.webp" alt="Объектын харуулын пост" loading="lazy">
           <span class="alb-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16" y1="16" x2="21" y2="21"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
         </div>
         <figcaption class="alb-cap">
           <div class="alb-loc">Улаанбаатар</div>
-          <h3>Ээлжийн бүрэлдэхүүн</h3>
-          <p>Аюулгүй байдал хариуцсан менежер болон ээлжийн алба хаагчид үүрэг хүлээн авахад бэлэн зогсож байна.</p>
+          <h3>Объектын хамгаалалт</h3>
+          <p>Объектын харуулын пост дээр удирдлага ээлжийн ажилтнуудтай үүрэг гүйцэтгэлийн талаар ярилцаж байна.</p>
         </figcaption>
       </figure>
 
       <figure class="alb-item">
         <div class="alb-thumb">
-          <img src="img/thumb/g04-explosives.webp" data-full="img/g04-explosives.webp" alt="Тэсрэх бодисын үйлдвэрийн хамгаалалт" loading="lazy">
+          <img src="img/thumb/bank.webp" data-full="img/bank.webp" alt="Банкны хамгаалалт" loading="lazy">
           <span class="alb-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16" y1="16" x2="21" y2="21"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
         </div>
         <figcaption class="alb-cap">
-          <div class="alb-loc">Орон нутаг · Тусгай объект</div>
-          <h3>Тэсрэх бодисын үйлдвэрийн хамгаалалт</h3>
-          <p>Тэсрэх материалын үйлдвэрийн харуулын байранд алба хаагчид тусгай журмын дагуу үүрэг гүйцэтгэнэ.</p>
+          <div class="alb-loc">Улаанбаатар</div>
+          <h3>Банк, санхүүгийн байгууллагын хамгаалалт</h3>
+          <p>Хамгаалалтын ажилтан банкны үйлчилгээний танхим болон АТМ-ийн орчинд хяналт тавьж байна.</p>
         </figcaption>
       </figure>
 
       <figure class="alb-item">
         <div class="alb-thumb">
-          <img src="img/thumb/g05-gate.webp" data-full="img/g05-gate.webp" alt="Объектын хяналтын цэг" loading="lazy">
+          <img src="img/thumb/mine-team.webp" data-full="img/mine-team.webp" alt="Уул уурхайн объектын хамгаалалт" loading="lazy">
           <span class="alb-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16" y1="16" x2="21" y2="21"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
         </div>
         <figcaption class="alb-cap">
           <div class="alb-loc">Орон нутаг</div>
-          <h3>Объектын нэвтрэх хяналтын цэг</h3>
-          <p>Хамгаалалтын бүсийн хаалганы постод алба хаагчид нэвтрэх хөдөлгөөнийг хянан ажиллаж байна.</p>
+          <h3>Уул уурхайн объектын хамгаалалт</h3>
+          <p>Уул уурхайн объектын хяналтын пост дээрх хамгаалалтын ээлжийн бүрэлдэхүүн.</p>
         </figcaption>
       </figure>
 
       <figure class="alb-item">
         <div class="alb-thumb">
-          <img src="img/thumb/g08-transport.webp" data-full="img/g08-transport.webp" alt="Тээврийн хэрэгслийн шалгалт" loading="lazy">
+          <img src="img/thumb/mine-gate.webp" data-full="img/mine-gate.webp" alt="Уул уурхайн талбайн хяналтын цэг" loading="lazy">
           <span class="alb-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16" y1="16" x2="21" y2="21"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
         </div>
         <figcaption class="alb-cap">
-          <div class="alb-loc">Орон нутаг · Тээвэр</div>
-          <h3>Тээврийн хэрэгслийн үзлэг</h3>
-          <p>Объектоос гарах тээврийн хэрэгсэлд үзлэг хийж, ачааны бүрэн бүтэн байдлыг шалгаж байна.</p>
+          <div class="alb-loc">Орон нутаг</div>
+          <h3>Уул уурхайн талбайн хяналтын цэг</h3>
+          <p>Хамгаалалтын ажилтан талбайд нэвтрэх тээврийн хэрэгслийн бичиг баримтыг шалгаж байна.</p>
         </figcaption>
       </figure>
 
       <figure class="alb-item">
         <div class="alb-thumb">
-          <img src="img/thumb/g09-female.webp" data-full="img/g09-female.webp" alt="Эмэгтэй алба хаагч" loading="lazy">
+          <img src="img/thumb/cargo-escort.webp" data-full="img/cargo-escort.webp" alt="Аюултай ачааны тээвэрлэлтийн хамгаалалт" loading="lazy">
           <span class="alb-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16" y1="16" x2="21" y2="21"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
         </div>
         <figcaption class="alb-cap">
-          <div class="alb-loc">Улаанбаатар · Төв бүс</div>
-          <h3>Радио холбоогоор мэдээлэл дамжуулж байна</h3>
-          <p>Алба хаагч объектын нөхцөл байдлыг радио холбоогоор хяналтын төвд шуурхай мэдээлж байна.</p>
+          <div class="alb-loc">Тээвэрлэлт</div>
+          <h3>Аюултай ачааны тээвэрлэлтийн хамгаалалт</h3>
+          <p>Шуурхай ажиллагааны автомашин хүнд даацын ачааны машиныг замын турш дагалдан хамгаалж байна.</p>
         </figcaption>
       </figure>
 
       <figure class="alb-item">
         <div class="alb-thumb">
-          <img src="img/thumb/g10-tactical.webp" data-full="img/g10-tactical.webp" alt="Тусгай хамгаалалтын бүлэг" loading="lazy">
+          <img src="img/thumb/cargo-convoy.webp" data-full="img/cargo-convoy.webp" alt="Ачаа тээвэрлэлтийн дагалдан хамгаалалт" loading="lazy">
           <span class="alb-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16" y1="16" x2="21" y2="21"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
         </div>
         <figcaption class="alb-cap">
-          <div class="alb-loc">Тусгай бүлэг</div>
-          <h3>Тусгай хамгаалалтын бүрэн хэрэгсэл</h3>
-          <p>Тусгай бэлтгэгдсэн бүлгийн алба хаагч бүрэн хамгаалалтын хэрэгслээр тоноглогдсон байдал.</p>
+          <div class="alb-loc">Тээвэрлэлт</div>
+          <h3>Ачаа тээвэрлэлтийн дагалдан хамгаалалт</h3>
+          <p>Ачаа тээвэрлэлтийг эхлэх цэгээс хүлээлгэн өгөх хүртэл тасралтгүй дагалдан хамгаална.</p>
         </figcaption>
       </figure>
 
       <figure class="alb-item">
         <div class="alb-thumb">
-          <img src="img/thumb/g06-uniform.webp" data-full="img/g06-uniform.webp" alt="Дүрэмт хувцасны тэмдэг" loading="lazy">
+          <img src="img/thumb/construction.webp" data-full="img/construction.webp" alt="Барилгын талбайн хамгаалалт" loading="lazy">
           <span class="alb-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16" y1="16" x2="21" y2="21"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
         </div>
         <figcaption class="alb-cap">
-          <div class="alb-loc">Стандарт хангамж</div>
-          <h3>Байгууллагын энгэрийн тэмдэг</h3>
-          <p>Алба хаагчид стандартын дагуу дүрэмт хувцас, байгууллагын тэмдгээр бүрэн хангагдсан байдаг.</p>
-        </figcaption>
-      </figure>
-
-      <figure class="alb-item">
-        <div class="alb-thumb">
-          <img src="img/thumb/g07-gear.webp" data-full="img/g07-gear.webp" alt="Алба хаагчийн тусгай хэрэгсэл" loading="lazy">
-          <span class="alb-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16" y1="16" x2="21" y2="21"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
-        </div>
-        <figcaption class="alb-cap">
-          <div class="alb-loc">Стандарт хангамж</div>
-          <h3>Тусгай хэрэгслийн бүрдэл</h3>
-          <p>Гэрэл ойлгогч хантааз, бүс болон тусгай хэрэгслээр алба хаагчид бүрэн тоноглогддог.</p>
-        </figcaption>
-      </figure>
-
-      <figure class="alb-item">
-        <div class="alb-thumb">
-          <img src="img/thumb/g11-flags.webp" data-full="img/g11-flags.webp" alt="Албан ёсны туг" loading="lazy">
-          <span class="alb-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16" y1="16" x2="21" y2="21"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
-        </div>
-        <figcaption class="alb-cap">
-          <div class="alb-loc">Байгууллага</div>
-          <h3>Монгол Улс болон байгууллагын туг</h3>
-          <p>Хурлын танхимд Монгол Улсын төрийн далбаа болон байгууллагын туг хамт залагдсан байна.</p>
-        </figcaption>
-      </figure>
-
-      <figure class="alb-item">
-        <div class="alb-thumb">
-          <img src="img/thumb/g12-construction.webp" data-full="img/g12-construction.webp" alt="Барилгын талбайн хамгаалалт" loading="lazy">
-          <span class="alb-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16" y1="16" x2="21" y2="21"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
-        </div>
-        <figcaption class="alb-cap">
-          <div class="alb-loc">Улаанбаатар · Барилга</div>
+          <div class="alb-loc">Улаанбаатар</div>
           <h3>Барилгын талбайн хамгаалалт</h3>
-          <p>Баригдаж буй орон сууцны цогцолборын талбайд алба хаагч эргүүлийн автомашины хамт үүрэг гүйцэтгэж байна.</p>
+          <p>Хамгаалалтын ажилтан бүтээн байгуулалтын талбайд холбооны хэрэгслээр мэдээлэл солилцож байна.</p>
         </figcaption>
       </figure>
 
       <figure class="alb-item">
         <div class="alb-thumb">
-          <img src="img/thumb/g13-bank.webp" data-full="img/g13-bank.webp" alt="Банк, АТМ-ийн хамгаалалт" loading="lazy">
+          <img src="img/thumb/hotel-team.webp" data-full="img/hotel-team.webp" alt="Зочид буудлын хамгаалалт" loading="lazy">
           <span class="alb-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16" y1="16" x2="21" y2="21"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
         </div>
         <figcaption class="alb-cap">
           <div class="alb-loc">Улаанбаатар · Төв бүс</div>
-          <h3>Банк, АТМ-ийн хамгаалалт</h3>
-          <p>Банкны салбар болон АТМ-ийн бүсэд аюулгүй байдлын хяналт тавьж, радио холбоогоор мэдээлэл дамжуулж байна.</p>
+          <h3>Зочид буудлын хамгаалалт</h3>
+          <p>Таван одтой зочид буудлын үүдэнд хамгаалалтын ээлжийн бүрэлдэхүүн бэлэн байдалд ажиллаж байна.</p>
         </figcaption>
       </figure>
 
       <figure class="alb-item">
         <div class="alb-thumb">
-          <img src="img/thumb/g14-post.webp" data-full="img/g14-post.webp" alt="Харуулын постын хяналт" loading="lazy">
+          <img src="img/thumb/event.webp" data-full="img/event.webp" alt="Арга хэмжээний хамгаалалтын бэлтгэл" loading="lazy">
           <span class="alb-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16" y1="16" x2="21" y2="21"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
         </div>
         <figcaption class="alb-cap">
           <div class="alb-loc">Орон нутаг</div>
-          <h3>Харуулын постын хяналт</h3>
-          <p>Постын байранд алба хаагч камерын дүрсийг хянан, объектын нөхцөл байдлыг тасралтгүй ажиглаж байна.</p>
+          <h3>Арга хэмжээний хамгаалалтын бэлтгэл</h3>
+          <p>Олон хүн хамарсан арга хэмжээний өмнө хамгаалалтын бүрэлдэхүүнд үүрэг даалгавар өгч байна.</p>
         </figcaption>
       </figure>
 
       <figure class="alb-item">
         <div class="alb-thumb">
-          <img src="img/thumb/g15-logbook.webp" data-full="img/g15-logbook.webp" alt="Ээлжийн бүртгэл хөтлөх" loading="lazy">
-          <span class="alb-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16" y1="16" x2="21" y2="21"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
-        </div>
-        <figcaption class="alb-cap">
-          <div class="alb-loc">Албаны бэлэн байдал</div>
-          <h3>Ээлжийн бүртгэл хөтлөлт</h3>
-          <p>Алба хаагч ээлжийн тэмдэглэл, үзлэгийн бүртгэлийг журмын дагуу хөтөлж, хүлээлцэх ажиллагааг баримтжуулна.</p>
-        </figcaption>
-      </figure>
-
-      <figure class="alb-item">
-        <div class="alb-thumb">
-          <img src="img/thumb/g16-plant.webp" data-full="img/g16-plant.webp" alt="Тэсрэх бодисын үйлдвэрийн харуул" loading="lazy">
-          <span class="alb-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16" y1="16" x2="21" y2="21"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
-        </div>
-        <figcaption class="alb-cap">
-          <div class="alb-loc">Орон нутаг · Тусгай объект</div>
-          <h3>Тэсрэх бодисын үйлдвэрийн харуул</h3>
-          <p>«Илч Түлш» ХХК-ийн тэсрэх бодисын үйлдвэрийн үүдэнд ээлжийн алба хаагчид бэлэн байдалд ажиллаж байна.</p>
-        </figcaption>
-      </figure>
-
-      <figure class="alb-item">
-        <div class="alb-thumb">
-          <img src="img/thumb/g17-patrol.webp" data-full="img/g17-patrol.webp" alt="Эргүүлийн автомашин" loading="lazy">
-          <span class="alb-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16" y1="16" x2="21" y2="21"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
-        </div>
-        <figcaption class="alb-cap">
-          <div class="alb-loc">Орон нутаг · Шуурхай бүлэг</div>
-          <h3>Эргүүлийн ажиллагаанд гарч байна</h3>
-          <p>Шуурхай бүлгийн алба хаагч эргүүлийн автомашинд сууж, объектын тойрон хяналтад гарч байна.</p>
-        </figcaption>
-      </figure>
-
-      <figure class="alb-item">
-        <div class="alb-thumb">
-          <img src="img/thumb/g18-gateopen.webp" data-full="img/g18-gateopen.webp" alt="Объектын хаалганы хяналт" loading="lazy">
+          <img src="img/thumb/briefing.webp" data-full="img/briefing.webp" alt="Ээлжийн зааварчилгаа" loading="lazy">
           <span class="alb-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16" y1="16" x2="21" y2="21"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
         </div>
         <figcaption class="alb-cap">
           <div class="alb-loc">Орон нутаг</div>
-          <h3>Нэвтрэх хаалганы хяналт</h3>
-          <p>Хамгаалалтын бүсийн хаалгыг алба хаагч нээж, нэвтрэх зөвшөөрлийн дагуу хөдөлгөөнийг зохицуулж байна.</p>
+          <h3>Ээлжийн жагсаал, зааварчилгаа</h3>
+          <p>Ахлах ажилтан ээлжийн бүрэлдэхүүнд үүрэг даалгаврыг танилцуулж байна.</p>
         </figcaption>
       </figure>
 
       <figure class="alb-item">
         <div class="alb-thumb">
-          <img src="img/thumb/g19-dispatch.webp" data-full="img/g19-dispatch.webp" alt="Хяналтын төвийн бүртгэл" loading="lazy">
+          <img src="img/thumb/valuables.webp" data-full="img/valuables.webp" alt="Үнэт зүйлсийн тээвэрлэлтийн хамгаалалт" loading="lazy">
+          <span class="alb-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16" y1="16" x2="21" y2="21"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+        </div>
+        <figcaption class="alb-cap">
+          <div class="alb-loc">Улаанбаатар</div>
+          <h3>Үнэт зүйлсийн тээвэрлэлтийн хамгаалалт</h3>
+          <p>Шуурхай бүлгийн ажилтнууд үнэт зүйлсийн тээвэрлэлтэд бэлэн байдалд байна.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="alb-item">
+        <div class="alb-thumb">
+          <img src="img/thumb/rapid.webp" data-full="img/rapid.webp" alt="Шуурхай бүлэг" loading="lazy">
+          <span class="alb-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16" y1="16" x2="21" y2="21"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+        </div>
+        <figcaption class="alb-cap">
+          <div class="alb-loc">Улаанбаатар · Төв бүс</div>
+          <h3>Шуурхай бүлэг</h3>
+          <p>Дохиолол, дуудлага бүрт богино хугацаанд хүрч ажиллах шуурхай бүлгийн ажилтнууд.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="alb-item">
+        <div class="alb-thumb">
+          <img src="img/thumb/supervisor.webp" data-full="img/supervisor.webp" alt="Ээлжийн ахлагчийн хяналт шалгалт" loading="lazy">
+          <span class="alb-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16" y1="16" x2="21" y2="21"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+        </div>
+        <figcaption class="alb-cap">
+          <div class="alb-loc">Улаанбаатар · Төв бүс</div>
+          <h3>Ээлжийн ахлагчийн хяналт шалгалт</h3>
+          <p>Шуурхай бүлгийн ээлжийн ахлагч объект дээрх хамгаалалтын ажилтны үүрэг гүйцэтгэлийг шалгаж байна.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="alb-item">
+        <div class="alb-thumb">
+          <img src="img/thumb/radio.webp" data-full="img/radio.webp" alt="Радио холбоо" loading="lazy">
+          <span class="alb-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16" y1="16" x2="21" y2="21"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+        </div>
+        <figcaption class="alb-cap">
+          <div class="alb-loc">Улаанбаатар</div>
+          <h3>Холбоо, мэдээлэл солилцоо</h3>
+          <p>Хамгаалалтын ажилтан хяналтын төвтэй радио холбоогоор тасралтгүй мэдээлэл солилцоно.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="alb-item">
+        <div class="alb-thumb">
+          <img src="img/thumb/cctv.webp" data-full="img/cctv.webp" alt="Камерын хяналтын төв" loading="lazy">
           <span class="alb-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16" y1="16" x2="21" y2="21"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
         </div>
         <figcaption class="alb-cap">
           <div class="alb-loc">Хяналтын төв</div>
-          <h3>Операторын бүртгэл, хяналт</h3>
-          <p>Оператор камерын хяналт тавихын зэрэгцээ дуудлага, мэдээллийн бүртгэлийг тухай бүрт нь хөтөлж байна.</p>
+          <h3>Камерын хяналтын төв</h3>
+          <p>Оператор олон объектын камерын дүрсийг 24/7 горимоор нэгдсэн дэлгэцээр хянаж байна.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="alb-item">
+        <div class="alb-thumb">
+          <img src="img/thumb/training.webp" data-full="img/training.webp" alt="Мэргэжлийн сургалт" loading="lazy">
+          <span class="alb-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16" y1="16" x2="21" y2="21"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+        </div>
+        <figcaption class="alb-cap">
+          <div class="alb-loc">Сургалтын төв</div>
+          <h3>Мэргэжлийн сургалт</h3>
+          <p>Хамгаалалтын ажилтнуудад зориулсан мэргэжлийн мэдлэг, ур чадварын сургалт.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="alb-item">
+        <div class="alb-thumb">
+          <img src="img/thumb/meeting.webp" data-full="img/meeting.webp" alt="Удирдлагын зөвлөгөөн" loading="lazy">
+          <span class="alb-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16" y1="16" x2="21" y2="21"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+        </div>
+        <figcaption class="alb-cap">
+          <div class="alb-loc">Төв оффис</div>
+          <h3>Удирдлагын зөвлөгөөн</h3>
+          <p>Байгууллагын удирдлага, хэлтсүүдийн ажилтнууд үйл ажиллагааны төлөвлөгөөг хэлэлцэж байна.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="alb-item">
+        <div class="alb-thumb">
+          <img src="img/thumb/g10-tactical.webp" data-full="img/g10-tactical.webp" alt="Тусгай хамгаалалтын хэрэгсэл" loading="lazy">
+          <span class="alb-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16" y1="16" x2="21" y2="21"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+        </div>
+        <figcaption class="alb-cap">
+          <div class="alb-loc">Төв оффис</div>
+          <h3>Тусгай хамгаалалтын хэрэгсэл</h3>
+          <p>Тусгай хамгаалалтын бүрэн хэрэгсэл бүхий алба хаагчийн дүрэмт хувцас.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="alb-item">
+        <div class="alb-thumb">
+          <img src="img/thumb/flags.webp" data-full="img/flags.webp" alt="Албан ёсны туг" loading="lazy">
+          <span class="alb-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16" y1="16" x2="21" y2="21"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+        </div>
+        <figcaption class="alb-cap">
+          <div class="alb-loc">Төв оффис</div>
+          <h3>Албан ёсны туг</h3>
+          <p>Монгол Улсын төрийн далбаа болон «Хос Билиг Секьюрити Холдинг»-ийн шинэ лого бүхий туг.</p>
         </figcaption>
       </figure>
 
@@ -576,13 +587,12 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
     <div class="ft-grid">
       <div>
         <div class="ft-brand">
-          <img src="img/logo.webp" alt="ХОС БИЛИГ">
+          <img src="img/logo-h-dark.webp" alt="ХОС БИЛИГ СЕКЬЮРИТИ ХОЛДИНГ ХХК">
           <div class="ft-brand-name">
-            ХОС БИЛИГ СЕКЬЮРИТИ ХОЛДИНГ ХХК
             <span>АЮУЛГҮЙ БАЙДЛЫГ БИД МАНЛАЙЛНА</span>
           </div>
         </div>
-        <p class="ft-desc">Харуул хамгаалалтын салбарт 8 дахь жилдээ тогтвортой ажиллаж буй мэргэжлийн байгууллага. MNS 6908:2021 стандартын хэрэгжүүлэлт, даатгалтай хамгаалалтын алба.</p>
+        <p class="ft-desc">Харуул хамгаалалтын салбарт 9 дэх жилдээ тогтвортой ажиллаж буй мэргэжлийн байгууллага. MNS 6908:2021 стандартын хэрэгжүүлэлт, даатгалтай хамгаалалтын алба.</p>
       </div>
 
       <div>

@@ -202,10 +202,10 @@ section{padding:92px 0}
 .slide.on .slide-bg{transform:scale(1)}
 .slide::after{content:'';position:absolute;inset:0;
   background:linear-gradient(rgba(8,12,17,.72),rgba(8,12,17,.62) 45%,rgba(8,12,17,.86))}
-.s1{background-image:url('img/hero-01.webp')}
-.s2{background-image:url('img/hero-02.webp')}
-.s3{background-image:url('img/hero-03.webp')}
-.s4{background-image:url('img/hero-04.webp')}
+.s1{background-image:url('img/guard-car.webp')}
+.s2{background-image:url('img/cctv.webp')}
+.s3{background-image:url('img/rapid.webp')}
+.s4{background-image:url('img/mine-team.webp')}
 .slide-in{position:relative;z-index:2;max-width:1240px;margin:0 auto;padding:0 24px 120px;height:100%;
   display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
 .slide-tag{display:inline-flex;align-items:center;gap:10px;color:var(--gold);
@@ -233,8 +233,9 @@ section{padding:92px 0}
 .about{padding:0 0 92px;position:relative;z-index:6;margin-top:-90px}
 .about-card{background:#fff;box-shadow:0 26px 70px rgba(13,18,25,.16);padding:56px 52px}
 .about-in{display:grid;grid-template-columns:.92fr 1.08fr;gap:52px;align-items:center}
-.about-media{position:relative}
-.about-media img{width:100%;height:470px;object-fit:cover;object-position:30% center}
+.about-media{position:relative;display:grid;gap:14px}
+.about-media img{width:100%;height:340px;object-fit:cover;object-position:30% center}
+.about-media img+img{height:250px;object-position:center}
 .about-badge{position:absolute;right:-12px;bottom:-12px;background:var(--gold);color:#fff;padding:22px 26px;text-align:center}
 .about-badge b{display:block;font:800 38px/1 'Manrope',sans-serif}
 .about-badge span{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;margin-top:5px;opacity:.92}
@@ -243,16 +244,12 @@ section{padding:92px 0}
 .about-lede{font:500 17px/1.6 'Manrope',sans-serif;color:var(--ink);margin-bottom:24px;
   padding-bottom:22px;border-bottom:1px solid var(--line)}
 .about p{color:var(--txt-2);margin-bottom:15px}
-.about-boxes{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:26px}
-.about-box{background:var(--paper-2);border-left:3px solid var(--gold);padding:20px}
-.about-box b{display:block;font:700 14.5px/1.3 'Manrope',sans-serif;color:var(--ink);margin-bottom:6px}
-.about-box span{font-size:13px;color:var(--txt-2)}
-@media(max-width:980px){.about-in{grid-template-columns:1fr;gap:44px}.about-media img{height:340px}.about-card{padding:40px 26px}}
-@media(max-width:560px){.about-boxes{grid-template-columns:1fr}.about{margin-top:-50px}}
+@media(max-width:980px){.about-in{grid-template-columns:1fr;gap:44px}.about-media img{height:320px}.about-media img+img{height:230px}.about-card{padding:40px 26px}}
+@media(max-width:560px){.about{margin-top:-50px}.about-media img{height:250px}.about-media img+img{height:200px}}
 
 /* ── СТАТИСТИК ── */
 .stats{background:var(--ink);padding:62px 0;position:relative;overflow:hidden}
-.stats::before{content:'';position:absolute;inset:0;background:url('img/hero-03.webp') center/cover;opacity:.08}
+.stats::before{content:'';position:absolute;inset:0;background:url('img/hotel-team.webp') center/cover;opacity:.08}
 .stats-grid{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;text-align:center}
 .stat-n{font:800 clamp(38px,5vw,58px)/1 'Manrope',sans-serif;color:var(--gold)}
 .stat-n small{font-size:.5em;font-weight:700}
@@ -342,7 +339,7 @@ section{padding:92px 0}
 
 /* ── AI КАМЕР ── */
 .ai{background:var(--ink-2);color:#fff;position:relative;overflow:hidden}
-.ai::before{content:'';position:absolute;inset:0;background:url('img/hero-02.webp') center/cover;opacity:.1}
+.ai::before{content:'';position:absolute;inset:0;background:url('img/cctv.webp') center/cover;opacity:.1}
 .ai .wrap{position:relative}
 .ai .sec-head h2{color:#fff}
 .ai .sec-head .lede{color:rgba(255,255,255,.6)}
@@ -407,7 +404,7 @@ section{padding:92px 0}
 
 /* ── CTA (томруулсан) ── */
 .band{position:relative;background:var(--ink);padding:130px 0;text-align:center;overflow:hidden}
-.band::before{content:'';position:absolute;inset:0;background:url('img/hero-04.webp') center/cover;opacity:.24}
+.band::before{content:'';position:absolute;inset:0;background:url('img/cargo-convoy.webp') center/cover;opacity:.24}
 .band::after{content:'';position:absolute;inset:0;background:linear-gradient(rgba(13,18,25,.8),rgba(13,18,25,.9))}
 .band .wrap{position:relative;z-index:2}
 .band .eyebrow{font:800 clamp(26px,4.4vw,54px)/1.15 'Manrope',sans-serif;color:#fff;
@@ -457,12 +454,34 @@ section{padding:92px 0}
 .news-body{padding:24px 24px 26px}
 .news-cat{font:600 10.5px/1 'Inter',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
 .news-body h3{font-size:17px;font-weight:700;margin-bottom:10px}
-.news-body p{font-size:14px;color:var(--txt-2)}
-@media(max-width:1000px){.news-grid{grid-template-columns:1fr}}
+.news-body p{font-size:14px;color:var(--txt-2);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.news-grid{grid-template-columns:repeat(4,1fr);gap:22px}
+.news-item{display:flex;flex-direction:column}
+.news-body{flex:1;display:flex;flex-direction:column}
+.news-body h3{font-size:16px;line-height:1.35}
+.news-more{margin-top:auto;padding-top:14px;color:var(--gold);font:600 11px/1 'Inter',sans-serif;letter-spacing:.14em;text-transform:uppercase}
+@media(max-width:1180px){.news-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.news-grid{grid-template-columns:1fr}}
+/* мэдээний дэлгэрэнгүй цонх */
+.nm{position:fixed;inset:0;z-index:200;background:rgba(6,9,13,.86);display:flex;align-items:flex-start;justify-content:center;
+  padding:40px 16px;overflow-y:auto;opacity:0;visibility:hidden;transition:.25s}
+.nm.on{opacity:1;visibility:visible}
+.nm-box{position:relative;background:#fff;max-width:880px;width:100%;padding:28px 32px 34px}
+.nm-close{position:absolute;right:10px;top:10px;width:40px;height:40px;border:0;background:var(--ink);cursor:pointer;display:grid;place-items:center}
+.nm-close svg{width:18px;height:18px;stroke:#fff;fill:none;stroke-width:2}
+.nf-imgs{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:24px 0 22px}
+.nf-imgs.one{grid-template-columns:1fr}
+.nf-imgs img{width:100%;aspect-ratio:16/10;object-fit:cover}
+.nf-imgs.one img{aspect-ratio:auto;max-height:520px}
+.nf-meta{font:600 11px/1 'Inter',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.nm-box h3{font-size:clamp(19px,2.4vw,24px);font-weight:800;margin-bottom:16px}
+.nm-box p{color:var(--txt);margin-bottom:14px}
+.nm-box .nf-motto{font:700 13px/1.4 'Manrope',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-top:20px}
+@media(max-width:600px){.nm-box{padding:22px 18px 26px}.nf-imgs{grid-template-columns:1fr}}
 
 /* ── ХҮНИЙ НӨӨЦ (шинэ булан) ── */
 .hr{position:relative;background:var(--ink);color:#fff;overflow:hidden}
-.hr::before{content:'';position:absolute;inset:0;background:url('img/thumb/g06-uniform.webp') center/cover;opacity:.18}
+.hr::before{content:'';position:absolute;inset:0;background:url('img/thumb/supervisor.webp') center/cover;opacity:.18}
 .hr-in{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
 .hr-in h2{color:#fff;font-size:clamp(26px,3.4vw,42px);font-weight:800;text-transform:uppercase;margin-bottom:18px}
 .hr-in h2 b{color:var(--gold);font-weight:800}
@@ -499,10 +518,23 @@ section{padding:92px 0}
 .cap-ic svg{width:21px;height:21px;stroke:var(--gold);fill:none;stroke-width:1.5}
 .cap-card h3{font-size:15.5px;font-weight:700;margin-bottom:10px;text-transform:uppercase}
 .cap-card p{font-size:14px;color:var(--txt-2)}
+.cap-img{margin:-30px -26px 24px;height:210px;overflow:hidden;background:var(--paper-2)}
+.cap-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.cap-card:hover .cap-img img{transform:scale(1.05)}
+.cap-img.cut{background:linear-gradient(180deg,#EEF0F3,#F8F9FA)}
+.cap-img.cut img{object-fit:contain;padding-top:14px}
+.cap-card.wide{grid-column:span 2;background:var(--ink);border-color:var(--ink);display:flex;flex-direction:column;justify-content:center;padding:40px 44px}
+.cap-card.wide h3{color:#fff}
+.cap-card.wide p{color:rgba(255,255,255,.68);max-width:560px}
+.cap-card.wide .cap-ic{background:rgba(185,149,55,.18)}
+@media(max-width:640px){.cap-card.wide{grid-column:auto;padding:30px 26px}}
 @media(max-width:1000px){.cap-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:640px){.cap-grid{grid-template-columns:1fr}}
 
 /* ── сургалт ── */
+.tr-media{display:grid;grid-template-columns:1.4fr 1fr;gap:16px;margin:0 auto 40px;max-width:1000px}
+.tr-media img{width:100%;height:320px;object-fit:cover}
+@media(max-width:700px){.tr-media{grid-template-columns:1fr}.tr-media img{height:230px}}
 .tr-tags{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:900px;margin:0 auto}
 .tr-tag{background:#fff;border:1px solid var(--line);border-radius:999px;padding:11px 20px;
   font:500 14px/1 'Inter',sans-serif;color:var(--txt)}
@@ -544,6 +576,14 @@ section{padding:92px 0}
 .ct-foot{margin-top:38px;display:flex;justify-content:center;gap:16px;flex-wrap:wrap}
 .btn-dark{background:var(--ink)}
 .btn-dark:hover{background:var(--ink-3)}
+.ct-people{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);border-top:0;background:var(--paper-2)}
+.ct-person{padding:22px 32px;border-right:1px solid var(--line)}
+.ct-person:last-child{border-right:0}
+.ct-person b{display:block;font:700 15px/1.3 'Manrope',sans-serif;color:var(--ink)}
+.ct-person span{display:block;font-size:13px;color:var(--txt-2);margin:3px 0 8px}
+.ct-person a{font:700 16px/1.3 'Manrope',sans-serif;color:var(--gold)}
+.ct-person a:hover{color:var(--ink)}
+@media(max-width:900px){.ct-people{grid-template-columns:1fr}.ct-person{border-right:0;border-bottom:1px solid var(--line)}.ct-person:last-child{border-bottom:0}}
 @media(max-width:900px){.ct-grid{grid-template-columns:1fr}
   .ct-cell{border-right:0;border-bottom:1px solid var(--line)}
   .ct-cell:last-child{border-bottom:0}}
@@ -562,10 +602,9 @@ section{padding:92px 0}
 /* ── FOOTER ── */
 footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
 .ft-grid{display:grid;grid-template-columns:1.15fr 1.5fr 1.35fr;gap:52px;padding-bottom:52px}
-.ft-brand{display:flex;align-items:center;gap:13px;margin-bottom:20px}
-.ft-brand img{width:48px;height:48px;object-fit:contain}
-.ft-brand-name{font:700 13.5px/1.25 'Manrope',sans-serif;color:#fff}
-.ft-brand-name span{display:block;font:400 10.5px/1.4 'Inter',sans-serif;color:rgba(255,255,255,.42);margin-top:3px}
+.ft-brand{display:flex;flex-direction:column;align-items:flex-start;gap:12px;margin-bottom:20px}
+.ft-brand img{width:230px;max-width:100%;height:auto}
+.ft-brand-name span{display:block;font:400 10.5px/1.4 'Inter',sans-serif;color:rgba(255,255,255,.42);letter-spacing:.08em}
 .ft-desc{font-size:13.5px}
 .ft-h{font:800 17px/1 'Manrope',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#fff;
   margin-bottom:24px;display:flex;align-items:center;gap:16px}
@@ -617,7 +656,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
 <header class="hdr">
   <div class="hdr-in">
     <a href="#hero" class="brand">
-      <img src="img/logo.webp" alt="ХОС БИЛИГ">
+      <img src="img/logo-dark.webp" alt="ХОС БИЛИГ">
       <div class="brand-name">
         ХОС БИЛИГ СЕКЬЮРИТИ ХОЛДИНГ ХХК
         <span>АЮУЛГҮЙ БАЙДЛЫГ БИД МАНЛАЙЛНА</span>
@@ -743,7 +782,8 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
     <div class="about-card">
       <div class="about-in">
         <div class="about-media">
-          <img src="img/thumb/g11-flags.webp" alt="Монгол Улсын болон «Хос Билиг Секьюрити»-гийн туг">
+          <img src="img/g10-tactical.webp" alt="«Хос Билиг Секьюрити Холдинг»-ийн туг болон тусгай хамгаалалтын хэрэгсэл">
+          <img src="img/thumb/meeting.webp" alt="Удирдлагын зөвлөгөөн" loading="lazy">
           <div class="about-badge"><b>9</b><span>дахь жилдээ</span></div>
         </div>
         <div>
@@ -756,17 +796,6 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
           <p>Сүүлийн 5 жилийн хугацаанд бид өндөр эрсдэлтэй, тусгай шаардлага бүхий объектуудад хамгаалалтын үйлчилгээ үзүүлж, салбарын туршлага, мэргэжлийн чадавхаа тасралтгүй хөгжүүлэн ажиллаж ирсэн. Үүнд уул уурхайн олборлолт, боловсруулах үйлдвэр, нүүрсний кемп, бизнесийн төвүүд зэрэг үйл ажиллагааны онцлог, эрсдэлийн түвшин өндөр объектууд багтдаг.</p>
           <p>Бидний зорилго бол зөвхөн объектыг хамгаалах бус, харилцагчийнхаа аюулгүй, тогтвортой үйл ажиллагааны найдвартай түнш байх явдал юм.</p>
           <p class="about-claim">Мэргэжлийн хамгаалалт. Найдвартай түншлэл. Тогтвортой аюулгүй байдал.</p>
-
-          <div class="about-boxes">
-            <div class="about-box">
-              <b>Даатгалтай хамгаалалтын үйлчилгээ</b>
-              <span>Эрсдэлийг хамтдаа хариуцна — учирсан хохирлын 90 хүртэлх хувийг даатгалаар нөхөн төлүүлэх боломжтой.</span>
-            </div>
-            <div class="about-box">
-              <b>MNS 6908:2021 стандарт</b>
-              <span>«Аюулгүй байдал, харуул хамгаалалтын үйлчилгээ» үндэсний стандартыг үйл ажиллагаандаа мөрдөн хэрэгжүүлдэг.</span>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -792,42 +821,42 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
 
     <div class="dir-grid">
       <a href="partner.html" class="dir-card">
-        <img src="img/thumb/g17-patrol.webp" alt="" loading="lazy">
+        <img src="img/thumb/object.webp" alt="" loading="lazy">
         <div class="dir-ic"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
         <div class="dir-in"><div class="dir-n">01</div><h3>Объектын хамгаалалт</h3></div>
       </a>
       <a href="partner.html" class="dir-card">
-        <img src="img/thumb/g13-bank.webp" alt="" loading="lazy">
+        <img src="img/thumb/bank.webp" alt="" loading="lazy">
         <div class="dir-ic"><svg viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="12" rx="1"/><path d="M8 8V6a4 4 0 0 1 8 0v2"/><circle cx="12" cy="14" r="2"/></svg></div>
         <div class="dir-in"><div class="dir-n">02</div><h3>Банк, санхүүгийн байгууллагын хамгаалалт</h3></div>
       </a>
       <a href="partner.html" class="dir-card">
-        <img src="img/thumb/g16-plant.webp" alt="" loading="lazy">
+        <img src="img/thumb/mine-gate.webp" alt="" loading="lazy">
         <div class="dir-ic"><svg viewBox="0 0 24 24"><path d="M3 20L9 7l4 7 3-4 5 10z"/><line x1="2" y1="20" x2="22" y2="20"/></svg></div>
         <div class="dir-in"><div class="dir-n">03</div><h3>Уул уурхай, ашигт малтмалын объектын хамгаалалт</h3></div>
       </a>
       <a href="partner.html" class="dir-card">
-        <img src="img/thumb/g04-explosives.webp" alt="" loading="lazy">
+        <img src="img/thumb/cargo-escort.webp" alt="" loading="lazy">
         <div class="dir-ic"><svg viewBox="0 0 24 24"><rect x="1" y="6" width="13" height="10"/><path d="M14 9h4l4 4v3h-8z"/><circle cx="6" cy="19" r="2"/><circle cx="18" cy="19" r="2"/></svg></div>
         <div class="dir-in"><div class="dir-n">04</div><h3>Аюултай ачаа, тэсэрч дэлбэрэх бодис, тэсэлгээний хэрэгслийн хамгаалалт</h3></div>
       </a>
       <a href="partner.html" class="dir-card">
-        <img src="img/thumb/g12-construction.webp" alt="" loading="lazy">
+        <img src="img/thumb/construction.webp" alt="" loading="lazy">
         <div class="dir-ic"><svg viewBox="0 0 24 24"><rect x="3" y="9" width="18" height="12"/><polyline points="3 9 12 3 21 9"/></svg></div>
         <div class="dir-in"><div class="dir-n">05</div><h3>Барилга байгууламж, бүтээн байгуулалтын объектын хамгаалалт</h3></div>
       </a>
       <a href="partner.html" class="dir-card">
-        <img src="img/thumb/g03-hotel.webp" alt="" loading="lazy">
+        <img src="img/thumb/hotel-team.webp" alt="" loading="lazy">
         <div class="dir-ic"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18"/><line x1="9" y1="8" x2="10" y2="8"/><line x1="14" y1="8" x2="15" y2="8"/><path d="M10 21v-4h4v4"/></svg></div>
         <div class="dir-in"><div class="dir-n">06</div><h3>Амралт, зочид буудал, худалдаа, үйлчилгээний газрын хамгаалалт</h3></div>
       </a>
       <a href="partner.html" class="dir-card">
-        <img src="img/thumb/g01-mall.webp" alt="" loading="lazy">
+        <img src="img/thumb/event.webp" alt="" loading="lazy">
         <div class="dir-ic"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg></div>
         <div class="dir-in"><div class="dir-n">07</div><h3>Шоу тоглолт, олон хүн хамарсан арга хэмжээний хамгаалалт</h3></div>
       </a>
       <a href="partner.html" class="dir-card">
-        <img src="img/thumb/g07-gear.webp" alt="" loading="lazy">
+        <img src="img/thumb/valuables.webp" alt="" loading="lazy">
         <div class="dir-ic"><svg viewBox="0 0 24 24"><path d="M12 2l2.5 6.5L21 11l-6.5 2.5L12 20l-2.5-6.5L3 11l6.5-2.5z"/></svg></div>
         <div class="dir-in"><div class="dir-n">08</div><h3>Үнэт эдлэл, үнэт зүйлсийн тээвэрлэлтийн үеийн хамгаалалт</h3></div>
       </a>
@@ -930,26 +959,30 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
 
     <div class="cap-grid">
       <article class="cap-card">
+        <div class="cap-img"><img src="img/thumb/cctv.webp" alt="Камерын хяналтын төв" loading="lazy"></div>
         <div class="cap-ic"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg></div>
         <h3>Камерын хяналт</h3>
         <p>Объектын аюулгүй байдлыг тасралтгүй хянах зориулалттай камерын хяналтын систем болон мэргэжлийн операторын үйл ажиллагааг хэрэгжүүлж, шаардлагатай мэдээллийг шуурхай хянах, бүртгэх нөхцөлийг бүрдүүлэн ажиллаж байна.</p>
       </article>
       <article class="cap-card">
+        <div class="cap-img"><img src="img/thumb/rapid.webp" alt="Шуурхай ажиллагааны автомашин" loading="lazy"></div>
         <div class="cap-ic"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="6" width="13" height="10"/><path d="M14 9h4l4 4v3h-8z"/><circle cx="6" cy="19" r="2"/><circle cx="18" cy="19" r="2"/></svg></div>
         <h3>Шуурхай ажиллагааны автомашин</h3>
         <p>Шуурхай бүлгийн үйл ажиллагааг дэмжих зориулалтын автомашинаар хангагдсан бөгөөд шаардлагатай тохиолдолд объектод шуурхай хүрч ажиллах, хариу арга хэмжээ авах боломжийг бүрдүүлсэн.</p>
       </article>
       <article class="cap-card">
+        <div class="cap-img cut"><img src="img/uniform.webp" alt="Хамгаалалтын ажилтны албаны хувцас" loading="lazy"></div>
         <div class="cap-ic"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
         <h3>Мэргэжлийн хамгаалалтын хэрэгсэл</h3>
         <p>Хамгаалалтын ажилтнуудыг ажил үүргийн онцлогт тохирсон мэргэжлийн албаны хувцас, таних тэмдэг, хамгаалалтын хэрэгслээр ханган ажилладаг.</p>
       </article>
       <article class="cap-card">
+        <div class="cap-img cut"><img src="img/tactical-gear.webp" alt="Тусгай хамгаалалтын хэрэгсэл" loading="lazy"></div>
         <div class="cap-ic"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
         <h3>Тусгай хамгаалалтын хэрэгсэл</h3>
         <p>Холбогдох хууль, дүрэм, журмын хүрээнд хамгаалалтын үйл ажиллагаанд ашиглах гав, бороохой болон бусад зориулалтын тусгай хэрэгслийг шаардлагатай тохиолдолд ашиглах нөхцөлөөр ханган ажиллана.</p>
       </article>
-      <article class="cap-card">
+      <article class="cap-card wide">
         <div class="cap-ic"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="12" rx="1"/><path d="M8 8V6a4 4 0 0 1 8 0v2"/><circle cx="12" cy="14" r="2"/></svg></div>
         <h3>Галт зэвсгийн хамгаалалт</h3>
         <p>Холбогдох хууль тогтоомж, зөвшөөрөл, байгууллагын дотоод журмын шаардлагыг чанд мөрдөн, зэвсэг ашиглах эрх бүхий ажилтан, шаардлагатай хамгаалалтын чиглэлд зориулалтын галт зэвсгийн хамгаалалтыг хэрэгжүүлнэ.</p>
@@ -966,6 +999,11 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
       <h2>Ур чадварыг <b>тогтмол хөгжүүлнэ</b></h2>
       <div class="bar"></div>
       <p class="lede">Манай хамгаалалтын ажилтнуудын мэргэжлийн мэдлэг, ур чадвар, сахилга хариуцлага, бэлэн байдлыг тогтмол дээшлүүлэх зорилгоор улирал бүр мэргэжлийн сургалт, дадлага, хөгжлийн хөтөлбөрийг зохион байгуулдаг.</p>
+    </div>
+
+    <div class="tr-media">
+      <img src="img/thumb/training.webp" alt="Хамгаалалтын ажилтнуудын мэргэжлийн сургалт" loading="lazy">
+      <img src="img/thumb/briefing.webp" alt="Ээлжийн бүрэлдэхүүнд зааварчилгаа өгч буй нь" loading="lazy">
     </div>
 
     <div class="tr-tags">
@@ -1135,16 +1173,18 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
       <button class="gal-arrow prev" id="gPrev" aria-label="Өмнөх"><svg viewBox="0 0 24 24"><polyline points="15 5 8 12 15 19"/></svg></button>
       <button class="gal-arrow next" id="gNext" aria-label="Дараах"><svg viewBox="0 0 24 24"><polyline points="9 5 16 12 9 19"/></svg></button>
       <div class="gal-rail" id="galRail">
-        <figure class="gal-item"><img src="img/thumb/g01-mall.webp" alt="" loading="lazy"><figcaption>Худалдаа үйлчилгээний төвийн хамгаалалт</figcaption></figure>
-        <figure class="gal-item"><img src="img/thumb/g03-hotel.webp" alt="" loading="lazy"><figcaption>Зочид буудлын хамгаалалт — Улаанбаатар</figcaption></figure>
-        <figure class="gal-item"><img src="img/thumb/g05-gate.webp" alt="" loading="lazy"><figcaption>Орон нутгийн объектын хяналтын цэг</figcaption></figure>
-        <figure class="gal-item"><img src="img/thumb/g08-transport.webp" alt="" loading="lazy"><figcaption>Тээврийн хэрэгслийн үзлэг, шалгалт</figcaption></figure>
-        <figure class="gal-item"><img src="img/thumb/g02-team.webp" alt="" loading="lazy"><figcaption>Ээлжийн бүрэлдэхүүн, шуурхай бүлэг</figcaption></figure>
-        <figure class="gal-item"><img src="img/thumb/g10-tactical.webp" alt="" loading="lazy"><figcaption>Тусгай хамгаалалтын бүрэн хэрэгсэл</figcaption></figure>
-        <figure class="gal-item"><img src="img/thumb/g12-construction.webp" alt="" loading="lazy"><figcaption>Бүтээн байгуулалтын талбайн хамгаалалт</figcaption></figure>
-        <figure class="gal-item"><img src="img/thumb/g16-plant.webp" alt="" loading="lazy"><figcaption>Боловсруулах үйлдвэрийн хамгаалалт</figcaption></figure>
-        <figure class="gal-item"><img src="img/thumb/g17-patrol.webp" alt="" loading="lazy"><figcaption>Эргүүлийн ажиллагаа</figcaption></figure>
-        <figure class="gal-item"><img src="img/thumb/g19-dispatch.webp" alt="" loading="lazy"><figcaption>Хяналтын төвийн оператор</figcaption></figure>
+        <figure class="gal-item"><img src="img/thumb/guard-car.webp" alt="" loading="lazy"><figcaption>Бизнесийн төвийн хамгаалалт</figcaption></figure>
+        <figure class="gal-item"><img src="img/thumb/hotel-team.webp" alt="" loading="lazy"><figcaption>Зочид буудлын хамгаалалт — Улаанбаатар</figcaption></figure>
+        <figure class="gal-item"><img src="img/thumb/mine-team.webp" alt="" loading="lazy"><figcaption>Уул уурхайн объектын хамгаалалт</figcaption></figure>
+        <figure class="gal-item"><img src="img/thumb/cargo-convoy.webp" alt="" loading="lazy"><figcaption>Ачаа тээвэрлэлтийн дагалдан хамгаалалт</figcaption></figure>
+        <figure class="gal-item"><img src="img/thumb/supervisor.webp" alt="" loading="lazy"><figcaption>Ээлжийн ахлагчийн хяналт шалгалт</figcaption></figure>
+        <figure class="gal-item"><img src="img/thumb/bank.webp" alt="" loading="lazy"><figcaption>Банк, санхүүгийн байгууллагын хамгаалалт</figcaption></figure>
+        <figure class="gal-item"><img src="img/thumb/construction.webp" alt="" loading="lazy"><figcaption>Бүтээн байгуулалтын талбайн хамгаалалт</figcaption></figure>
+        <figure class="gal-item"><img src="img/thumb/rapid.webp" alt="" loading="lazy"><figcaption>Шуурхай бүлэг</figcaption></figure>
+        <figure class="gal-item"><img src="img/thumb/object.webp" alt="" loading="lazy"><figcaption>Объектын харуулын пост</figcaption></figure>
+        <figure class="gal-item"><img src="img/thumb/cctv.webp" alt="" loading="lazy"><figcaption>Хяналтын төвийн оператор</figcaption></figure>
+        <figure class="gal-item"><img src="img/thumb/training.webp" alt="" loading="lazy"><figcaption>Мэргэжлийн сургалт</figcaption></figure>
+        <figure class="gal-item"><img src="img/thumb/flags.webp" alt="" loading="lazy"><figcaption>Албан ёсны туг</figcaption></figure>
       </div>
     </div>
   </div>
@@ -1160,27 +1200,89 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
     </div>
 
     <div class="news-grid">
-      <a href="#" class="news-item">
-        <div class="news-thumb"><img src="img/thumb/g06-uniform.webp" alt="" loading="lazy"><span class="news-date">2026.07.20</span></div>
-        <div class="news-body"><div class="news-cat">Байгууллага</div>
-          <h3>Шинэ харуулын баг бэлтгэх сургалт амжилттай боллоо</h3>
-          <p>Шинэ харуулын бүрэлдэхүүнд зориулсан хоёр долоо хоногийн сургалтыг амжилттай зохион байгуулав.</p></div>
+      <a href="#news-training" class="news-item" id="news-training">
+        <div class="news-thumb"><img src="img/thumb/n-training-1.webp" alt="" loading="lazy"><span class="news-date">2026.10.05</span></div>
+        <div class="news-body"><div class="news-cat">Сургалт</div>
+          <h3>Ажилтнуудын ур чадвар, бүтээмжийг нэмэгдүүлэх сургалт, хэлэлцүүлэг зохион байгууллаа</h3>
+          <p>Ажилтнуудын мэргэжлийн ур чадвар, ажлын бүтээмжийг дээшлүүлэх бодлого, цаашид авах арга хэмжээний талаар танилцуулга хийлээ.</p>
+          <span class="news-more">Дэлгэрэнгүй</span></div>
+        <div class="news-full" hidden>
+          <div class="nf-imgs">
+            <img src="img/n-training-1.webp" alt="Сургалт, хэлэлцүүлэг" loading="lazy">
+            <img src="img/n-training-2.webp" alt="Сургалт, хэлэлцүүлэг" loading="lazy">
+          </div>
+          <div class="nf-meta">2026.10.05 · Сургалт</div>
+          <h3>Ажилтнуудын ур чадвар, бүтээмжийг нэмэгдүүлэх чиглэлээр сургалт, хэлэлцүүлэг зохион байгууллаа</h3>
+          <p>Манай байгууллагын ажилтнуудын мэргэжлийн ур чадвар, ажлын бүтээмжийг дээшлүүлэх, ажлын чанар, хариуцлагыг сайжруулах зорилгын хүрээнд цаашид авч хэрэгжүүлэх бодлого, арга хэмжээний талаар мэдээлэл, танилцуулга хийлээ.</p>
+          <p>Энэ үеэр Хуулийн зөвлөх Г.Солонго байгууллагын хэмжээнд ажилтнуудын ур чадвар, бүтээмжийг нэмэгдүүлэхэд чиглэсэн бодлого, цаашид хэрэгжүүлэх арга хэмжээний талаар танилцуулж, ажил үүргээ үр дүнтэй гүйцэтгэх, мэргэжлийн хандлага, сахилга хариуцлагыг дээшлүүлэхэд анхаарах асуудлуудыг онцоллоо.</p>
+          <p>Цаашид ажилтнуудын мэргэжлийн ур чадвар, мэдлэг, ажлын бүтээмжийг тасралтгүй хөгжүүлэх зорилгоор долоо хоног бүр сургалт, хөгжлийн хөтөлбөрийг тогтмол хэрэгжүүлж, ажилтны гүйцэтгэл, хариуцлага, байгууллагын үйл ажиллагааны чанарыг дээшлүүлэхэд чиглэсэн бодлого, арга хэмжээг хэрэгжүүлэн ажиллана.</p>
+          <p class="nf-motto">Аюулгүй байдлыг бид манлайлна</p>
+        </div>
       </a>
-      <a href="#" class="news-item">
-        <div class="news-thumb"><img src="img/thumb/g04-explosives.webp" alt="" loading="lazy"><span class="news-date">2026.06.05</span></div>
-        <div class="news-body"><div class="news-cat">Үйлчилгээ</div>
-          <h3>Дохиолол хамгаалалтын шинэ систем нэвтрүүллээ</h3>
-          <p>Ухаалаг камерын систем болон автомат дохиоллыг бүх объектод нэвтрүүлж эхэллээ.</p></div>
+      <a href="#news-mine" class="news-item" id="news-mine">
+        <div class="news-thumb"><img src="img/thumb/n-mine.webp" alt="" loading="lazy"><span class="news-date">2026.10.02</span></div>
+        <div class="news-body"><div class="news-cat">Уул уурхай</div>
+          <h3>Аюулгүй байдал бол бидний үнэт зүйл</h3>
+          <p>Уул уурхайн талбайд нэг секундийн сонор сэрэмж чухал, нэг алхмын хариуцлага ч үнэ цэнтэй.</p>
+          <span class="news-more">Дэлгэрэнгүй</span></div>
+        <div class="news-full" hidden>
+          <div class="nf-imgs one">
+            <img src="img/n-mine.webp" alt="Хамгаалалтын 1 дүгээр тасаг" loading="lazy">
+          </div>
+          <div class="nf-meta">2026.10.02 · Уул уурхай</div>
+          <h3>Аюулгүй байдал бол бидний ажлын зөвхөн нэг хэсэг биш — бидний үнэт зүйл</h3>
+          <p>Уул уурхайн талбайд нэг секундийн сонор сэрэмж чухал, нэг алхмын хариуцлага ч үнэ цэнтэй.</p>
+          <p>Зурагт: Золбаяр даргатай хамгаалалтын 1 дүгээр тасаг.</p>
+        </div>
       </a>
-      <a href="#" class="news-item">
-        <div class="news-thumb"><img src="img/thumb/g09-female.webp" alt="" loading="lazy"><span class="news-date">2026.05.12</span></div>
-        <div class="news-body"><div class="news-cat">Ажлын байр</div>
-          <h3>Хамгаалагч ажилд авна — шинэ ажлын байр нээгдлээ</h3>
-          <p>Мэргэшсэн харуул хамгаалагч ажилд авах зар гарлаа. Цагийн хуваарь уян хатан.</p></div>
+      <a href="#news-jobfair" class="news-item" id="news-jobfair">
+        <div class="news-thumb"><img src="img/thumb/n-jobfair-2.webp" alt="" loading="lazy"><span class="news-date">2026.09.25</span></div>
+        <div class="news-body"><div class="news-cat">Хүний нөөц</div>
+          <h3>«Чингэлтэй 1000 ажлын байр» өдөрлөгт оролцлоо</h3>
+          <p>Ажил хайж буй иргэд, оюутан залуучуудад компанийнхаа нээлттэй ажлын байр, ажлын нөхцөлийг танилцууллаа.</p>
+          <span class="news-more">Дэлгэрэнгүй</span></div>
+        <div class="news-full" hidden>
+          <div class="nf-imgs">
+            <img src="img/n-jobfair-1.webp" alt="«Чингэлтэй 1000 ажлын байр» өдөрлөг" loading="lazy">
+            <img src="img/n-jobfair-2.webp" alt="«Чингэлтэй 1000 ажлын байр» өдөрлөг" loading="lazy">
+          </div>
+          <div class="nf-meta">2026.09.25 · Хүний нөөц</div>
+          <h3>«Чингэлтэй 1000 ажлын байр» өдөрлөгт оролцлоо</h3>
+          <p>Чингэлтэй дүүрэгт ажил хайж буй иргэд, оюутан залуучуудыг ажил олгогч байгууллагуудтай холбох зорилготой «Чингэлтэй 1000 ажлын байр» өдөрлөгт амжилттай оролцлоо.</p>
+          <p>Өдөрлөгийн үеэр компанийнхаа нээлттэй ажлын байр, ажиллах орчин, ажлын нөхцөл болон ажил горилогчдод олгож буй боломжуудын талаар танилцуулж, сонирхсон иргэдэд мэдээлэл, зөвлөгөө өгч ажиллалаа.</p>
+          <p>Манай ажлын байрыг сонирхон хүрэлцэн ирж, мэдээлэл авсан нийт оролцогчдодоо баярлалаа.</p>
+        </div>
+      </a>
+      <a href="#news-inspection" class="news-item" id="news-inspection">
+        <div class="news-thumb"><img src="img/thumb/n-inspect-1.webp" alt="" loading="lazy"><span class="news-date">2026.09.25</span></div>
+        <div class="news-body"><div class="news-cat">Хяналт шалгалт</div>
+          <h3>Объектын хяналт, шалгалт</h3>
+          <p>Хамгаалалтын объектуудад ээлж хүлээлцэх ажиллагаа болон хяналт шалгалтыг тогтмол зохион байгууллаа.</p>
+          <span class="news-more">Дэлгэрэнгүй</span></div>
+        <div class="news-full" hidden>
+          <div class="nf-imgs">
+            <img src="img/n-inspect-1.webp" alt="Объектын хяналт, шалгалт" loading="lazy">
+            <img src="img/n-inspect-2.webp" alt="Объектын хяналт, шалгалт" loading="lazy">
+          </div>
+          <div class="nf-meta">2026.09.25 · Хяналт шалгалт</div>
+          <h3>Объектын хяналт, шалгалт</h3>
+          <p>Манай байгууллага хамгаалалтын объектуудад ээлж хүлээлцэх ажиллагаа болон хяналт шалгалтыг тогтмол зохион байгуулж, хамгаалалтын ажилтнуудын үүрэг гүйцэтгэл, постын бэлэн байдал, объектын хамгаалалтын нөхцөл байдал болон камерын хяналтын үйл ажиллагаатай танилцан ажиллалаа.</p>
+          <p>Хяналт шалгалтын хүрээнд хамгаалалтын ажилтнуудын үүрэг гүйцэтгэлд үнэлгээ өгч, илэрсэн асуудал, зөрчилд шаардлагатай арга хэмжээг авч, хамгаалалтын үйл ажиллагааг стандарт, шаардлагын дагуу тасралтгүй сайжруулахад анхааран ажиллаж байна.</p>
+        </div>
       </a>
     </div>
   </div>
 </section>
+
+<!-- мэдээний дэлгэрэнгүй — агуулгыг .news-full-ээс хуулна -->
+<div class="nm" id="nm" role="dialog" aria-modal="true" aria-label="Мэдээ мэдээлэл">
+  <div class="nm-box">
+    <button class="nm-close" id="nmClose" aria-label="Хаах">
+      <svg viewBox="0 0 24 24"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
+    </button>
+    <div id="nmBody"></div>
+  </div>
+</div>
 
 <!-- ─── ХҮНИЙ НӨӨЦ — шинэ булан ─── -->
 <section class="hr" id="hr">
@@ -1235,6 +1337,24 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
       </div>
     </div>
 
+    <div class="ct-people">
+      <div class="ct-person">
+        <b>Н.Тэнүүнмөрөн</b>
+        <span>Үйл ажиллагаа эрхэлсэн захирал</span>
+        <a href="tel:+97689996830">+976 8999 6830</a>
+      </div>
+      <div class="ct-person">
+        <b>Г.Солонго</b>
+        <span>Хуулийн зөвлөх</span>
+        <a href="tel:+97689896830">+976 8989 6830</a>
+      </div>
+      <div class="ct-person">
+        <b>Байгууллагын утас</b>
+        <span>Даваа–Баасан 09:00–18:00</span>
+        <a href="tel:+97677202525">+976 7720 2525</a>
+      </div>
+    </div>
+
     <div class="ct-foot">
       <a href="partner.html" class="btn">Үнийн санал авах <svg viewBox="0 0 24 24"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="14 6 20 12 14 18"/></svg></a>
       <a href="#hr" class="btn btn-dark">Ажлын байр үзэх <svg viewBox="0 0 24 24"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="14 6 20 12 14 18"/></svg></a>
@@ -1279,13 +1399,12 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
     <div class="ft-grid">
       <div>
         <div class="ft-brand">
-          <img src="img/logo.webp" alt="ХОС БИЛИГ">
+          <img src="img/logo-h-dark.webp" alt="ХОС БИЛИГ СЕКЬЮРИТИ ХОЛДИНГ ХХК">
           <div class="ft-brand-name">
-            ХОС БИЛИГ СЕКЬЮРИТИ ХОЛДИНГ ХХК
             <span>АЮУЛГҮЙ БАЙДЛЫГ БИД МАНЛАЙЛНА</span>
           </div>
         </div>
-        <p class="ft-desc">Харуул хамгаалалтын салбарт 8 дахь жилдээ тогтвортой ажиллаж буй мэргэжлийн байгууллага. MNS 6908:2021 стандартын хэрэгжүүлэлт, даатгалтай хамгаалалтын алба.</p>
+        <p class="ft-desc">Харуул хамгаалалтын салбарт 9 дэх жилдээ тогтвортой ажиллаж буй мэргэжлийн байгууллага. MNS 6908:2021 стандартын хэрэгжүүлэлт, даатгалтай хамгаалалтын алба.</p>
       </div>
 
       <div>
@@ -1356,6 +1475,30 @@ function pLogo(img){img.style.display='none'}
   document.addEventListener('keydown',function(e){
     if(e.key==='Escape'&&lb.classList.contains('on'))close();
   });
+})();
+
+/* мэдээний дэлгэрэнгүй цонх — #news-... холбоосоор шууд нээгдэнэ */
+(function(){
+  var nm=document.getElementById('nm'),body=document.getElementById('nmBody');
+  if(!nm)return;
+  function open(item){
+    var full=item.querySelector('.news-full');if(!full)return;
+    body.innerHTML=full.innerHTML;
+    [].slice.call(body.querySelectorAll('img')).forEach(function(i){i.removeAttribute('loading')});
+    nm.classList.add('on');nm.scrollTop=0;document.body.style.overflow='hidden';
+  }
+  function close(){
+    nm.classList.remove('on');body.innerHTML='';document.body.style.overflow='';
+    if(/^#news-/.test(location.hash))history.replaceState(null,'',location.pathname+location.search+'#news');
+  }
+  [].slice.call(document.querySelectorAll('.news-item')).forEach(function(a){
+    a.addEventListener('click',function(e){e.preventDefault();open(a);history.replaceState(null,'','#'+a.id)});
+  });
+  document.getElementById('nmClose').onclick=close;
+  nm.addEventListener('click',function(e){if(e.target===nm)close()});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&nm.classList.contains('on'))close()});
+  var h=location.hash&&document.getElementById(location.hash.slice(1));
+  if(h&&h.classList.contains('news-item'))open(h);
 })();
 
 /* hero слайдер */

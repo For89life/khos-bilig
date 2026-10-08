@@ -145,7 +145,7 @@ def translate(html, page):
 
 def retarget(html):
     """Замуудыг /en/ хуудаснаас зөв заахаар болгоно (үндсэн замаар)."""
-    html = re.sub(r'(src|href)="img/', r'\1="/img/', html)
+    html = re.sub(r'(src|href|data-full)="img/', r'\1="/img/', html)
     html = html.replace("url('img/", "url('/img/")
     html = re.sub(r'(src|href)="i18n\.js"', r'\1="/i18n.js"', html)
     html = re.sub(r'href="index\.html"', 'href="/en/"', html)
