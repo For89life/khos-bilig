@@ -34,7 +34,7 @@
   "logo": "https://mss.mn/img/logo.webp",
   "image": "https://mss.mn/img/og-cover.jpg",
   "email": "info@khosbilig.mn",
-  "telephone": ["+976-7720-2525", "+976-9963-6785"],
+  "telephone": "+976-7720-2525",
   "foundingDate": "2018-02-05",
   "priceRange": "$$",
   "slogan": "Аюулгүй байдлыг бид манлайлна",
@@ -138,10 +138,9 @@ section{padding:92px 0}
 .hdr{position:sticky;top:0;z-index:120;background:rgba(13,18,25,.96);backdrop-filter:blur(10px);
   border-bottom:1px solid rgba(255,255,255,.08)}
 .hdr-in{max-width:1240px;margin:0 auto;padding:0 24px;height:var(--hdr-h);display:flex;align-items:center;gap:26px}
-.brand{display:flex;align-items:center;gap:13px}
-.brand img{width:46px;height:46px;object-fit:contain}
-.brand-name{font:700 13.5px/1.25 'Manrope',sans-serif;color:#fff;letter-spacing:.02em}
-.brand-name span{display:block;font:400 10.5px/1.4 'Inter',sans-serif;color:rgba(255,255,255,.45);letter-spacing:.08em;margin-top:3px}
+.brand{display:flex;flex-direction:column;align-items:flex-start;gap:6px;flex:none}
+.brand img{height:38px;width:auto}
+.brand-name span{display:block;white-space:nowrap;font:500 9.5px/1 'Inter',sans-serif;color:rgba(255,255,255,.5);letter-spacing:.14em}
 .menu{margin-left:auto;display:flex;align-items:center;gap:2px}
 .menu>li>a{display:flex;align-items:center;gap:6px;padding:10px 14px;color:rgba(255,255,255,.82);
   font:600 12px/1 'Inter',sans-serif;letter-spacing:.09em;text-transform:uppercase;transition:color .2s}
@@ -171,9 +170,8 @@ section{padding:92px 0}
 /* нарийсах тусам цэс нягтарна — гэхдээ нуугдахгүй */
 @media(max-width:1240px){.hdr-soc,.hdr-div{display:none}.menu>li>a{padding:10px 9px;font-size:11.5px;letter-spacing:.05em}}
 @media(max-width:1080px){
-  .brand img{width:40px;height:40px}
-  .brand-name{font-size:12.5px}
-  .brand-name span{font-size:9.5px;letter-spacing:.06em}
+  .brand img{height:32px}
+  .brand-name span{font-size:8.5px;letter-spacing:.1em}
   .menu>li>a{padding:9px 7px;font-size:11px;letter-spacing:.03em}
 }
 /* нарийн дэлгэц — цэс хоёр дахь мөрөнд бууна, бургер хэвээр */
@@ -275,7 +273,7 @@ section{padding:92px 0}
   background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);display:grid;place-items:center}
 .dir-ic svg{width:20px;height:20px;stroke:#fff;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
 @media(max-width:1100px){.dir-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:560px){.dir-grid{grid-template-columns:1fr}}
+@media(max-width:560px){.dir-grid{gap:12px}.dir-card{height:200px}.dir-in{padding:16px 14px}.dir-n{font-size:11px;margin-bottom:7px}.dir-in h3{font-size:13px;line-height:1.3}.dir-ic{width:36px;height:36px;right:12px;top:12px}.dir-ic svg{width:16px;height:16px}}
 
 /* ── БҮСҮҮД ── */
 .reg-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
@@ -381,6 +379,7 @@ section{padding:92px 0}
 .adv-row:hover{background:rgba(185,149,55,.1)}
 .adv-row i{font:800 30px/1 'Manrope',sans-serif;font-style:normal;color:var(--gold);flex:none;width:62px}
 .adv-row span{font:600 clamp(17px,2.1vw,25px)/1.4 'Manrope',sans-serif;color:#fff;letter-spacing:-.01em}
+.adv-row span b{color:var(--gold-2);font-weight:800}
 @media(max-width:560px){.adv-row{padding:22px 4px;gap:16px}.adv-row i{width:40px;font-size:22px}}
 
 /* ── ХАМТРАГЧИД ── */
@@ -533,6 +532,9 @@ section{padding:92px 0}
 .more-btn[aria-expanded="true"] svg{transform:rotate(180deg)}
 .more-btn .m-close,.more-btn[aria-expanded="true"] .m-open{display:none}
 .more-btn[aria-expanded="true"] .m-close{display:inline}
+.about-ins{max-width:640px;margin:26px auto 0;background:var(--paper-2);border-top:3px solid var(--gold);padding:20px 26px}
+.about-ins b{display:block;font:800 15px/1.35 'Manrope',sans-serif;color:var(--ink);text-transform:uppercase;letter-spacing:.02em;margin-bottom:6px}
+.about-ins span{font-size:14px;color:var(--txt-2)}
 .about-txt .about-claim{border-left:0;padding:18px 0 0;margin:10px 0 0;position:relative}
 .about-txt .about-claim::before{content:'';position:absolute;top:0;left:50%;width:56px;height:3px;margin-left:-28px;background:var(--gold)}
 
@@ -561,7 +563,7 @@ section{padding:92px 0}
 @media(max-width:760px){.team-photo img{height:240px}}
 
 /* ── мэргэжлийн чадавх ── */
-.cap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.cap-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
 .cap-card{background:#fff;border:1px solid var(--line);padding:30px 26px;transition:.3s}
 .cap-card:hover{border-color:var(--gold);transform:translateY(-5px)}
 .cap-ic{width:50px;height:50px;border-radius:50%;background:rgba(185,149,55,.12);
@@ -569,56 +571,51 @@ section{padding:92px 0}
 .cap-ic svg{width:21px;height:21px;stroke:var(--gold);fill:none;stroke-width:1.5}
 .cap-card h3{font-size:15.5px;font-weight:700;margin-bottom:10px;text-transform:uppercase}
 .cap-card p{font-size:14px;color:var(--txt-2)}
-.cap-img{margin:-30px -26px 24px;height:210px;overflow:hidden;background:var(--paper-2)}
+.cap-card p b{color:var(--ink);font-weight:600}
+.cap-img{margin:-30px -26px 24px;height:260px;overflow:hidden;background:var(--paper-2)}
 .cap-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
 .cap-card:hover .cap-img img{transform:scale(1.05)}
 .cap-img.cut{background:linear-gradient(180deg,#EEF0F3,#F8F9FA)}
 .cap-img.cut img{object-fit:contain;padding-top:14px}
-.cap-card.wide{grid-column:span 2;background:var(--ink);border-color:var(--ink);display:flex;flex-direction:column;justify-content:center;padding:40px 44px}
-.cap-card.wide h3{color:#fff}
-.cap-card.wide p{color:rgba(255,255,255,.68);max-width:560px}
-.cap-card.wide .cap-ic{background:rgba(185,149,55,.18)}
-@media(max-width:640px){.cap-card.wide{grid-column:auto;padding:30px 26px}}
-@media(max-width:1000px){.cap-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:640px){.cap-grid{grid-template-columns:1fr}}
+@media(max-width:700px){.cap-grid{grid-template-columns:1fr}.cap-img{height:210px}}
+/* гарчиг нэг мөрөнд — «Мэргэжлийн баг. Орчин үеийн технологи.», «Өргөн хүрээний…», «Хамгаалалтын шийдлээ ярилцъя» */
+@media(min-width:900px){
+  #capability .sec-head{max-width:1100px}
+  #capability .sec-head h2,.team-sec .sub-h,.ct-top h2{white-space:nowrap}
+  .team-sec .sub-h{max-width:none}
+}
 
 
 
 /* ── ХОЛБОО БАРИХ (шинэчилсэн бүтэц) ── */
 .ct{background:#F4EEE1;border-top:1px solid #E6DCC4}
-.ct-top{text-align:center;max-width:780px;margin:0 auto 52px}
+.ct-top{text-align:center;max-width:1000px;margin:0 auto 52px}
 .ct-top h2{font-size:clamp(28px,3.8vw,48px);font-weight:800;text-transform:uppercase;letter-spacing:-.01em}
 .ct-top h2 b{color:var(--gold);font-weight:800}
 .ct-top p{margin-top:16px;color:var(--txt-2)}
-.ct-grid{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);background:#fff}
-.ct-cell{padding:38px 32px;border-right:1px solid var(--line);position:relative}
-.ct-cell:last-child{border-right:0}
-.ct-cell::before{content:'';position:absolute;left:0;right:0;top:0;height:3px;background:var(--gold);
-  transform:scaleX(0);transform-origin:left;transition:transform .3s}
-.ct-cell:hover::before{transform:none}
-.ct-ic{width:44px;height:44px;border-radius:50%;background:rgba(185,149,55,.12);
-  display:grid;place-items:center;margin-bottom:20px}
+/* 2 багана: зүүн — утас, захирал, хуулийн зөвлөх; баруун — имэйл, хаяг, Facebook */
+.ct-grid{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);background:#fff;max-width:1040px;margin:0 auto}
+.ct-col{padding:12px 40px;border-top:3px solid var(--gold)}
+.ct-col+.ct-col{border-left:1px solid var(--line)}
+.ct-row{display:flex;gap:18px;align-items:flex-start;padding:24px 0;border-bottom:1px solid var(--line)}
+.ct-row:last-child{border-bottom:0}
+.ct-name{font:700 16px/1.3 'Manrope',sans-serif;color:var(--ink);margin-bottom:4px}
+.ct-row .ct-v.sm a{color:var(--gold)}
+.ct-row .ct-v.sm a:hover{color:var(--ink)}
+.ct-ic{width:44px;height:44px;flex:none;border-radius:50%;background:rgba(185,149,55,.12);
+  display:grid;place-items:center}
 .ct-ic svg{width:19px;height:19px;stroke:var(--gold);fill:none;stroke-width:1.6}
-.ct-l{font:600 10.5px/1 'Inter',sans-serif;letter-spacing:.2em;text-transform:uppercase;
-  color:var(--txt-2);margin-bottom:13px}
+.ct-l{font:600 10.5px/1.4 'Inter',sans-serif;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--txt-2);margin-bottom:8px}
 .ct-v{font:800 23px/1.4 'Manrope',sans-serif;color:var(--ink);letter-spacing:-.01em}
 .ct-v.sm{font-size:17px}
 .ct-v a:hover{color:var(--gold)}
-.ct-sub{margin-top:11px;font-size:13.5px;color:var(--txt-2)}
+.ct-sub{margin-top:6px;font-size:13.5px;color:var(--txt-2)}
 .ct-foot{margin-top:38px;display:flex;justify-content:center;gap:16px;flex-wrap:wrap}
 .btn-dark{background:var(--ink)}
 .btn-dark:hover{background:var(--ink-3)}
-.ct-people{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);border-top:0;background:var(--paper-2)}
-.ct-person{padding:22px 32px;border-right:1px solid var(--line)}
-.ct-person:last-child{border-right:0}
-.ct-person b{display:block;font:700 15px/1.3 'Manrope',sans-serif;color:var(--ink)}
-.ct-person span{display:block;font-size:13px;color:var(--txt-2);margin:3px 0 8px}
-.ct-person a{font:700 16px/1.3 'Manrope',sans-serif;color:var(--gold)}
-.ct-person a:hover{color:var(--ink)}
-@media(max-width:900px){.ct-people{grid-template-columns:1fr}.ct-person{border-right:0;border-bottom:1px solid var(--line)}.ct-person:last-child{border-bottom:0}}
-@media(max-width:900px){.ct-grid{grid-template-columns:1fr}
-  .ct-cell{border-right:0;border-bottom:1px solid var(--line)}
-  .ct-cell:last-child{border-bottom:0}}
+@media(max-width:800px){.ct-grid{grid-template-columns:1fr}.ct-col{padding:6px 22px}
+  .ct-col+.ct-col{border-left:0;border-top:1px solid var(--line)}}
 
 /* ── БАЙРШИЛ ── */
 .map{background:var(--ink-2);color:#fff}
@@ -632,7 +629,7 @@ section{padding:92px 0}
 @media(max-width:900px){.map-box{grid-template-columns:1fr}}
 
 /* ── FOOTER ── */
-footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
+footer{background:var(--ink);color:rgba(255,255,255,.58);padding:0}
 .ft-grid{display:grid;grid-template-columns:1.15fr 1.5fr 1.35fr;gap:52px;padding-bottom:52px}
 .ft-brand{display:flex;flex-direction:column;align-items:flex-start;gap:12px;margin-bottom:20px}
 .ft-brand img{width:230px;max-width:100%;height:auto}
@@ -653,7 +650,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
 .ft-ct-l{font-size:11px;color:rgba(255,255,255,.4);letter-spacing:.1em;text-transform:uppercase;margin-top:3px}
 .ft-btns{display:grid;gap:12px}
 .ft-btns .btn{justify-content:center}
-.ft-bot{border-top:1px solid rgba(255,255,255,.1);padding:22px 0;display:flex;justify-content:space-between;
+.ft-bot{padding:22px 0;display:flex;justify-content:space-between;
   gap:18px;flex-wrap:wrap;font-size:12.5px}
 .ft-soc{display:flex;gap:18px}
 .ft-soc a:hover{color:var(--gold)}
@@ -673,7 +670,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
     </span>
     <span class="tb-i">
       <svg viewBox="0 0 24 24" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
-      <b>7720-2525</b> · <b>9963-6785</b>
+      <b>7720-2525</b>
     </span>
     <span class="tb-i">
       <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
@@ -688,11 +685,8 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
 <header class="hdr">
   <div class="hdr-in">
     <a href="#hero" class="brand">
-      <img src="img/logo-dark.webp" alt="ХОС БИЛИГ">
-      <div class="brand-name">
-        ХОС БИЛИГ СЕКЬЮРИТИ ХОЛДИНГ ХХК
-        <span>АЮУЛГҮЙ БАЙДЛЫГ БИД МАНЛАЙЛНА</span>
-      </div>
+      <img src="img/logo-h-dark.webp" alt="ХОС БИЛИГ СЕКЬЮРИТИ ХОЛДИНГ ХХК">
+      <div class="brand-name"><span>АЮУЛГҮЙ БАЙДЛЫГ БИД МАНЛАЙЛНА</span></div>
     </a>
 
     <ul class="menu">
@@ -752,9 +746,9 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
   <article class="slide on" data-i="0">
     <div class="slide-bg s1"></div>
     <div class="slide-in">
-      <div class="slide-tag">24/7 Найдвартай хамгаалалт</div>
+      <div class="slide-tag">24/7 хамгаалалт</div>
       <h1>Төгс үйлчилгээг бид <b>24/7 түүчээлнэ</b></h1>
-      <p>Бид сүүлийн үеийн дэвшилтэт технологийг ашиглаж, алба хаагчдаа шинэлэг арга барил, мэргэжлийн өндөр ур чадварт тогтмол сургадаг. Ёс зүй, сахилга батыг эрхэмлэн, аюулгүй байдлыг дээд зэргээр хангасан тэргүүлэгч компаниудын нэг.</p>
+      <p>Шуурхай бүлэг дохиолол, дуудлага бүрд газар дээр нь очиж нөхцөл байдлыг хяналтдаа авна.</p>
       <a href="partner.html" class="btn">Үнийн санал авах
         <svg viewBox="0 0 24 24"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="14 6 20 12 14 18"/></svg></a>
     </div>
@@ -790,8 +784,8 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
     </div>
     <div class="slide-in">
       <div class="slide-tag">Даатгалтай хамгаалалтын алба</div>
-      <h2 class="slide-h">Хохирлыг <b>90% хүртэл барагдуулна</b></h2>
-      <p>Даатгалын байгууллагатай хамтран ажилладаг бөгөөд хамгаалалтын албаны буруугаас хохирол учирсан нь тогтоогдвол 90 хүртэлх хувийг барагдуулна.</p>
+      <h2 class="slide-h">Хохирлыг <b>100% хүртэл барагдуулна</b></h2>
+      <p>Даатгалын байгууллагатай хамтран ажилладаг бөгөөд хамгаалалтын албаны буруугаас хохирол учирсан нь тогтоогдвол 100 хүртэлх хувийг барагдуулна.</p>
       <a href="#insurance" class="btn">Дэлгэрэнгүй үзэх
         <svg viewBox="0 0 24 24"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="14 6 20 12 14 18"/></svg></a>
     </div>
@@ -816,12 +810,11 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
         <div class="about-txt">
           <div class="eyebrow">Танилцуулга</div>
           <h2>Хамтдаа бүтээлцсэн <b>9 жил</b></h2>
-          <p class="about-lede">Аюулгүй байдлыг бид мэргэжлийн түвшинд хамгаална.</p>
-          <p>«Хос Билиг Секьюрити Холдинг» ХХК нь Монгол Улсын Үндсэн хууль, «Гэрээт харуул хамгаалалтын тухай» хууль болон холбогдох хууль, дүрэм, журам, эрх зүйн актуудыг үйл ажиллагаандаа чанд мөрдөн ажилладаг, харуул хамгаалалтын салбарт 9 дэх жилдээ тогтвортой, тасралтгүй үйл ажиллагаа явуулж буй мэргэжлийн байгууллага юм.</p>
+          <p class="about-lede">Таны аюулгүй байдал — бидний мэргэжлийн хариуцлага</p>
+          <p>«Хос Билиг Секьюрити Холдинг» ХХК нь Монгол Улсын Үндсэн хууль, «Гэрээт харуул хамгаалалтын тухай» хууль болон холбогдох эрх зүйн актыг мөрдлөг болгон, салбартаа 9 дэх жилдээ тогтвортой үйл ажиллагаагаа явуулж буй мэргэжлийн хамгаалалтын байгууллага юм.</p>
           <div class="more" id="about-more">
-          <p>Бид аюулгүй байдлыг зөвхөн хамгаалалтын үүрэг бус, харилцагчийн хөрөнгө, ажилтан, үйл ажиллагааны тасралтгүй байдал, нэр хүндийг хамгаалах стратегийн чухал хэсэг гэж үздэг. Тиймээс бид хамгаалалтын үйлчилгээг харилцагчийн онцлог, объектын эрсдэлийн түвшин, үйл ажиллагааны хэрэгцээнд нийцүүлэн төлөвлөж, мэргэжлийн өндөр түвшинд хүргэхийг зорин ажилладаг.</p>
-          <p>Үйл ажиллагаандаа MNS 6908:2021 «Аюулгүй байдал, харуул хамгаалалтын үйлчилгээ» үндэсний стандартыг мөрдөж, орчин үеийн арга барил, мэргэжлийн боловсон хүчин, хариуцлагатай менежментэд тулгуурлан хамгаалалтын үйлчилгээг үзүүлж байна.</p>
-          <p>Сүүлийн 5 жилийн хугацаанд бид өндөр эрсдэлтэй, тусгай шаардлага бүхий объектуудад хамгаалалтын үйлчилгээ үзүүлж, салбарын туршлага, мэргэжлийн чадавхаа тасралтгүй хөгжүүлэн ажиллаж ирсэн. Үүнд уул уурхайн олборлолт, боловсруулах үйлдвэр, нүүрсний кемп, бизнесийн төвүүд зэрэг үйл ажиллагааны онцлог, эрсдэлийн түвшин өндөр объектууд багтдаг.</p>
+          <p>Бид харилцагчийн объект, эд хөрөнгийн аюулгүй байдлыг хангах найдвартай, мэргэжлийн хамгаалалтын үйлчилгээг үзүүлж, объектын онцлог, эрсдэлийн түвшин болон хамгаалалтын хэрэгцээ шаардлагад нийцсэн шийдлийг боловсруулан ажилладаг.</p>
+          <p>Бид үйлчилгээний чанар, хариуцлага, сахилга бат, шуурхай ажиллагааг эрхэмлэн, хамгаалалтын үйлчилгээг харилцагчийн үйл ажиллагааны онцлог, объектын эрсдэлийн түвшин, хэрэгцээ шаардлагад үндэслэн мэргэжлийн түвшинд төлөвлөж, найдвартай, үр дүнтэй шийдлээр ханган ажилладаг.</p>
           <p>Бидний зорилго бол зөвхөн объектыг хамгаалах бус, харилцагчийнхаа аюулгүй, тогтвортой үйл ажиллагааны найдвартай түнш байх явдал юм.</p>
           </div>
           <div class="more-ctl">
@@ -831,11 +824,15 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
             </button>
           </div>
           <p class="about-claim">Мэргэжлийн хамгаалалт. Найдвартай түншлэл. Тогтвортой аюулгүй байдал.</p>
+          <div class="about-ins">
+            <b>Даатгалтай хамгаалалтын үйлчилгээ</b>
+            <span>Эрсдэлийг хамтдаа хариуцна — учирсан хохирлын 100 хүртэлх хувийг даатгалаар нөхөн төлүүлэх боломжтой.</span>
+          </div>
         </div>
         <div class="about-media">
           <img src="img/office-sign.webp" alt="«Хос Билиг Секьюрити» ХХК-ийн оффисын үүд, байгууллагын туг" loading="lazy">
           <img src="img/meeting.webp" alt="Удирдлагын зөвлөгөөн" loading="lazy">
-          <div class="about-badge"><b>9</b><span>дахь жилдээ</span></div>
+          <div class="about-badge"><b>9</b><span>дэх жилдээ</span></div>
         </div>
       </div>
     </div>
@@ -845,8 +842,8 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
 <!-- ─── СТАТИСТИК ─── -->
 <div class="stats">
   <div class="wrap stats-grid">
-    <div><div class="stat-n"><span class="cnt" data-to="9">0</span></div><div class="stat-l">дахь жилдээ тогтвортой</div></div>
-    <div><div class="stat-n"><span class="cnt" data-to="90">0</span><small>%</small></div><div class="stat-l">хүртэл хохирол барагдуулалт</div></div>
+    <div><div class="stat-n"><span class="cnt" data-to="9">0</span></div><div class="stat-l">жил</div></div>
+    <div><div class="stat-n"><span class="cnt" data-to="100">0</span><small>%</small></div><div class="stat-l">хүртэл хохирол барагдуулалт</div></div>
     <div><div class="stat-n">24/7</div><div class="stat-l">нэгдсэн операторын хяналт</div></div>
   </div>
 </div>
@@ -868,37 +865,37 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
       <a href="partner.html" class="dir-card">
         <img src="img/thumb/bank.webp" alt="" loading="lazy">
         <div class="dir-ic"><svg viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="12" rx="1"/><path d="M8 8V6a4 4 0 0 1 8 0v2"/><circle cx="12" cy="14" r="2"/></svg></div>
-        <div class="dir-in"><div class="dir-n">02</div><h3>Банк, санхүүгийн байгууллагын хамгаалалт</h3></div>
+        <div class="dir-in"><div class="dir-n">02</div><h3>Банк, санхүүгийн байгууллага</h3></div>
       </a>
       <a href="partner.html" class="dir-card">
         <img src="img/thumb/mine-gate.webp" alt="" loading="lazy">
         <div class="dir-ic"><svg viewBox="0 0 24 24"><path d="M3 20L9 7l4 7 3-4 5 10z"/><line x1="2" y1="20" x2="22" y2="20"/></svg></div>
-        <div class="dir-in"><div class="dir-n">03</div><h3>Уул уурхай, ашигт малтмалын объектын хамгаалалт</h3></div>
+        <div class="dir-in"><div class="dir-n">03</div><h3>Уул уурхай, ашигт малтмалын объект</h3></div>
       </a>
       <a href="partner.html" class="dir-card">
         <img src="img/thumb/cargo-escort.webp" alt="" loading="lazy">
         <div class="dir-ic"><svg viewBox="0 0 24 24"><rect x="1" y="6" width="13" height="10"/><path d="M14 9h4l4 4v3h-8z"/><circle cx="6" cy="19" r="2"/><circle cx="18" cy="19" r="2"/></svg></div>
-        <div class="dir-in"><div class="dir-n">04</div><h3>Аюултай ачаа, тэсэрч дэлбэрэх бодис, тэсэлгээний хэрэгслийн хамгаалалт</h3></div>
+        <div class="dir-in"><div class="dir-n">04</div><h3>Аюултай ачаа, тэсрэх бодис</h3></div>
       </a>
       <a href="partner.html" class="dir-card">
         <img src="img/thumb/construction.webp" alt="" loading="lazy">
         <div class="dir-ic"><svg viewBox="0 0 24 24"><rect x="3" y="9" width="18" height="12"/><polyline points="3 9 12 3 21 9"/></svg></div>
-        <div class="dir-in"><div class="dir-n">05</div><h3>Барилга байгууламж, бүтээн байгуулалтын объектын хамгаалалт</h3></div>
+        <div class="dir-in"><div class="dir-n">05</div><h3>Барилга, бүтээн байгуулалт</h3></div>
       </a>
       <a href="partner.html" class="dir-card">
         <img src="img/thumb/hotel-team.webp" alt="" loading="lazy">
         <div class="dir-ic"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18"/><line x1="9" y1="8" x2="10" y2="8"/><line x1="14" y1="8" x2="15" y2="8"/><path d="M10 21v-4h4v4"/></svg></div>
-        <div class="dir-in"><div class="dir-n">06</div><h3>Амралт, зочид буудал, худалдаа, үйлчилгээний газрын хамгаалалт</h3></div>
+        <div class="dir-in"><div class="dir-n">06</div><h3>Зочид буудал, худалдаа, амралт</h3></div>
       </a>
       <a href="partner.html" class="dir-card">
         <img src="img/thumb/event.webp" alt="" loading="lazy">
         <div class="dir-ic"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg></div>
-        <div class="dir-in"><div class="dir-n">07</div><h3>Шоу тоглолт, олон хүн хамарсан арга хэмжээний хамгаалалт</h3></div>
+        <div class="dir-in"><div class="dir-n">07</div><h3>Шоу, олон нийтийн арга хэмжээ</h3></div>
       </a>
       <a href="partner.html" class="dir-card">
-        <img src="img/thumb/valuables.webp" alt="" loading="lazy">
+        <img src="img/thumb/radio.webp" alt="" loading="lazy">
         <div class="dir-ic"><svg viewBox="0 0 24 24"><path d="M12 2l2.5 6.5L21 11l-6.5 2.5L12 20l-2.5-6.5L3 11l6.5-2.5z"/></svg></div>
-        <div class="dir-in"><div class="dir-n">08</div><h3>Үнэт эдлэл, үнэт зүйлсийн тээвэрлэлтийн үеийн хамгаалалт</h3></div>
+        <div class="dir-in"><div class="dir-n">08</div><h3>Үнэт зүйлийн тээвэрлэлт</h3></div>
       </a>
     </div>
   </div>
@@ -908,7 +905,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
 <section id="regions">
   <div class="wrap">
     <div class="sec-head">
-      <div class="eyebrow">Улаанбаатар дүүргийн бүсүүд</div>
+      <div class="eyebrow">Улаанбаатар хотын бүсүүд</div>
       <h2>Бүсчилсэн зохион байгуулалттай <b>нэгжүүд</b></h2>
       <div class="bar"></div>
       <p class="lede">Улаанбаатар хотыг гурван бүсэд хувааж, хөдөө орон нутгийг тусгай нэгжээр хариуцан улсын хэмжээнд үйлчилгээ үзүүлнэ.</p>
@@ -920,7 +917,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
         <div class="reg-ic"><svg viewBox="0 0 24 24"><rect x="3" y="9" width="18" height="12"/><polyline points="3 9 12 3 21 9"/><rect x="10" y="14" width="4" height="7"/></svg></div>
         <div class="reg-city">Улаанбаатар хот</div>
         <h3>Төв бүс</h3>
-        <p>Хотын төв бүсийн объект, байгууллагуудын хамгаалалтыг хариуцан зохион байгуулна.</p>
+        <p>Сүхбаатар, Чингэлтэй, Баянзүрх дүүргийн объектыг хариуцна.</p>
         <button type="button" class="reg-map" data-full="img/districts/central.webp" aria-label="Төв бүсийн зураглалыг томруулж үзэх">
           <img src="img/districts/thumb/central.webp" alt="Улаанбаатар хот — Төвийн бүс: Сүхбаатар, Чингэлтэй, Баянзүрх дүүрэг" loading="lazy" width="760" height="543">
           <span class="reg-map-ico"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16" y1="16" x2="21" y2="21"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
@@ -931,7 +928,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
         <div class="reg-ic"><svg viewBox="0 0 24 24"><rect x="3" y="9" width="18" height="12"/><polyline points="3 9 12 3 21 9"/><rect x="10" y="14" width="4" height="7"/></svg></div>
         <div class="reg-city">Улаанбаатар хот</div>
         <h3>Баруун бүс</h3>
-        <p>Баруун бүсийн объект, байгууллагуудын хамгаалалтыг хариуцан зохион байгуулна.</p>
+        <p>Сонгинохайрхан, Баянгол, Хан-Уул дүүргийн объектыг хариуцна.</p>
         <button type="button" class="reg-map" data-full="img/districts/west.webp" aria-label="Баруун бүсийн зураглалыг томруулж үзэх">
           <img src="img/districts/thumb/west.webp" alt="Улаанбаатар хот — Баруун бүс: Сонгинохайрхан, Баянгол, Хан-Уул дүүрэг" loading="lazy" width="760" height="543">
           <span class="reg-map-ico"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16" y1="16" x2="21" y2="21"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
@@ -942,7 +939,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
         <div class="reg-ic"><svg viewBox="0 0 24 24"><rect x="3" y="9" width="18" height="12"/><polyline points="3 9 12 3 21 9"/><rect x="10" y="14" width="4" height="7"/></svg></div>
         <div class="reg-city">Улаанбаатар хот</div>
         <h3>Зүүн бүс</h3>
-        <p>Зүүн бүсийн объект, байгууллагуудын хамгаалалтыг хариуцан зохион байгуулна.</p>
+        <p>Налайх, Багануур, Багахангай дүүргийн объектыг хариуцна.</p>
         <button type="button" class="reg-map" data-full="img/districts/east.webp" aria-label="Зүүн бүсийн зураглалыг томруулж үзэх">
           <img src="img/districts/thumb/east.webp" alt="Улаанбаатар хот — Зүүн бүс: Налайх, Багануур, Багахангай дүүрэг" loading="lazy" width="760" height="543">
           <span class="reg-map-ico"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16" y1="16" x2="21" y2="21"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
@@ -953,7 +950,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
         <div class="reg-ic"><svg viewBox="0 0 24 24"><path d="M3 20L9 7l4 7 3-4 5 10z"/><line x1="2" y1="20" x2="22" y2="20"/></svg></div>
         <div class="reg-city">Орон нутаг</div>
         <h3>Хөдөө орон нутаг</h3>
-        <p>Баянхонгор, Дорнод, Дорноговь аймаг дахь уул уурхайн олборлолт, үйлдвэр, кемпийн хамгаалалтыг тусгай нэгжээр хариуцна.</p>
+        <p>Уул уурхай, үйлдвэр, кемпийг тусгай нэгж хамгаална.</p>
       </article>
     </div>
 
@@ -975,22 +972,15 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
       <img src="img/leadership.webp" alt="Байгууллагын удирдлагын уулзалт" loading="lazy">
     </figure>
 
-    <h3 class="sub-h">Өргөн хүрээний үйл ажиллагаа, нэгдсэн мэргэжлийн баг</h3>
-    <div class="team-txt more" id="team-more">
-      <p>«Хос Билиг Секьюрити Холдинг» ХХК нь Улаанбаатар хотын 9 дүүрэг болон хөдөө орон нутагт хамгаалалтын үйлчилгээг үзүүлж, нийт 200 орчим хамгаалалтын ажилтан, 5 хүний бүрэлдэхүүнтэй шуурхай бүлэг, 3 камерын хяналтын оператор, 10 гаруй оффисын ажилтан бүхий нэгдсэн багийн зохион байгуулалттайгаар үйл ажиллагаагаа явуулж байна.</p>
-      <p>Өнөөдрийн байдлаар бид Улаанбаатар хот болон орон нутагт үйл ажиллагаа явуулдаг 20 гаруй харилцагч байгууллагад хамгаалалтын үйлчилгээ үзүүлэн, харилцагч бүрийн хэрэгцээ, объектын онцлогт нийцсэн найдвартай хамгаалалтын шийдлийг хүргэн ажиллаж байна.</p>
-    </div>
-    <div class="more-ctl">
-      <button type="button" class="more-btn" aria-expanded="false" aria-controls="team-more">
-        <span class="m-open">Дэлгэрэнгүй унших</span><span class="m-close">Хураах</span>
-        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-      </button>
+    <h3 class="sub-h">Өргөн хүрээний үйл ажиллагаа, нэгдсэн баг</h3>
+    <div class="team-txt">
+      <p>Бид Улаанбаатарын 9 дүүрэг болон орон нутагт үйлчилдэг. Манай багт 200 гаруй хамгаалалтын ажилтан, 5 хүний шуурхай бүлэг, 5 камерын хяналтын оператор, 10 гаруй оффисын ажилтан бий. Одоогоор 20 гаруй байгууллагад үйлчилж байна.</p>
     </div>
 
     <div class="force">
       <div class="force-i"><b>200+</b><span>хамгаалалтын ажилтан</span></div>
       <div class="force-i"><b>5</b><span>хүний шуурхай бүлэг</span></div>
-      <div class="force-i"><b>3</b><span>камерын хяналтын оператор</span></div>
+      <div class="force-i"><b>5</b><span>камерын хяналтын оператор</span></div>
       <div class="force-i"><b>10+</b><span>оффисын ажилтан</span></div>
       <div class="force-i"><b>20+</b><span>харилцагч байгууллага</span></div>
     </div>
@@ -1012,30 +1002,25 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
         <div class="cap-img"><img src="img/thumb/cctv.webp" alt="Камерын хяналтын төв" loading="lazy"></div>
         <div class="cap-ic"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg></div>
         <h3>Камерын хяналт</h3>
-        <p>Объектын аюулгүй байдлыг тасралтгүй хянах зориулалттай камерын хяналтын систем болон мэргэжлийн операторын үйл ажиллагааг хэрэгжүүлж, шаардлагатай мэдээллийг шуурхай хянах, бүртгэх нөхцөлийг бүрдүүлэн ажиллаж байна.</p>
+        <p>Объектын хяналт, мэдээллийг бүртгэх, дамжуулах, шуурхай бүлэгт дэмжлэг үзүүлэх, хамгаалалтын үйл ажиллагаанд хяналт тавьж, зөвлөмж өгөх.</p>
       </article>
       <article class="cap-card">
-        <div class="cap-img"><img src="img/thumb/rapid.webp" alt="Шуурхай ажиллагааны автомашин" loading="lazy"></div>
-        <div class="cap-ic"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="6" width="13" height="10"/><path d="M14 9h4l4 4v3h-8z"/><circle cx="6" cy="19" r="2"/><circle cx="18" cy="19" r="2"/></svg></div>
-        <h3>Шуурхай ажиллагааны автомашин</h3>
-        <p>Шуурхай бүлгийн үйл ажиллагааг дэмжих зориулалтын автомашинаар хангагдсан бөгөөд шаардлагатай тохиолдолд объектод шуурхай хүрч ажиллах, хариу арга хэмжээ авах боломжийг бүрдүүлсэн.</p>
-      </article>
-      <article class="cap-card">
-        <div class="cap-img cut"><img src="img/uniform.webp" alt="Хамгаалалтын ажилтны албаны хувцас" loading="lazy"></div>
+        <div class="cap-img"><img src="img/thumb/supervisor.webp" alt="Шуурхай бүлгийн ээлжийн ахлах хяналт шалгалт хийж буй нь" loading="lazy"></div>
         <div class="cap-ic"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
-        <h3>Мэргэжлийн хамгаалалтын хэрэгсэл</h3>
-        <p>Хамгаалалтын ажилтнуудыг ажил үүргийн онцлогт тохирсон мэргэжлийн албаны хувцас, таних тэмдэг, хамгаалалтын хэрэгслээр ханган ажилладаг.</p>
+        <h3>Шуурхай бүлгийн ээлжийн ахлах</h3>
+        <p>Хамгаалалт, аюулгүй байдлын ажилтны үйл ажиллагаанд биечлэн хяналт тавьж, мэргэжлийн удирдлагаар хангаж ажиллах.</p>
       </article>
       <article class="cap-card">
         <div class="cap-img cut"><img src="img/tactical-gear.webp" alt="Тусгай хамгаалалтын хэрэгсэл" loading="lazy"></div>
         <div class="cap-ic"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-        <h3>Тусгай хамгаалалтын хэрэгсэл</h3>
-        <p>Холбогдох хууль, дүрэм, журмын хүрээнд хамгаалалтын үйл ажиллагаанд ашиглах гав, бороохой болон бусад зориулалтын тусгай хэрэгслийг шаардлагатай тохиолдолд ашиглах нөхцөлөөр ханган ажиллана.</p>
+        <h3>Галт зэвсэг, тусгай хэрэгсэл</h3>
+        <p><b>Улсын ерөнхий прокурор, Хууль зүй, дотоод хэргийн сайдын хамтарсан 2003 оны 12/05 тоот тушаалын нэгдүгээр хавсралт.</b> Холбогдох хууль тогтоомж, дүрэм журам, тушаал, байгууллагын дотоод зохицуулалтын хүрээнд хамгаалалтын үйл ажиллагаанд шаардлагатай тусгай хэрэгсэл, зориулалтын галт зэвсгийг холбогдох сургалтад хамрагдсан эрх бүхий, мэргэшсэн ажилтнууд зөвшөөрөгдсөн нөхцөлд ашиглан аюулгүй байдлыг мэргэжлийн түвшинд ханган ажиллаж байна.</p>
       </article>
-      <article class="cap-card wide">
-        <div class="cap-ic"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="12" rx="1"/><path d="M8 8V6a4 4 0 0 1 8 0v2"/><circle cx="12" cy="14" r="2"/></svg></div>
-        <h3>Галт зэвсгийн хамгаалалт</h3>
-        <p>Холбогдох хууль тогтоомж, зөвшөөрөл, байгууллагын дотоод журмын шаардлагыг чанд мөрдөн, зэвсэг ашиглах эрх бүхий ажилтан, шаардлагатай хамгаалалтын чиглэлд зориулалтын галт зэвсгийн хамгаалалтыг хэрэгжүүлнэ.</p>
+      <article class="cap-card">
+        <div class="cap-img cut"><img src="img/uniform.webp" alt="Хамгаалалтын ажилтны албаны хувцас" loading="lazy"></div>
+        <div class="cap-ic"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3l5 4-3 3v11H6V10L3 7l5-4c1 2 2.5 3 4 3s3-1 4-3z"/></svg></div>
+        <h3>Хамгаалалтын ажилтны хувцас, тусгай хэрэгсэл</h3>
+        <p><b>Цагдаагийн ерөнхий газрын даргын 2022 оны 12 дугаар сарын 20-ны өдрийн А/337 тоот тушаалаар</b> батлагдсан журмын дагуу манай байгууллага хамгаалалтын ажилтнуудаа ажлын онцлог, үүрэг гүйцэтгэх нөхцөлд тохирсон дүрэмт хувцас, таних тэмдэг болон шаардлагатай хамгаалалтын тусгай хэрэгслээр бүрэн ханган ажиллуулдаг. Энэ нь ажилтнуудын аюулгүй байдал, тав тухыг хангаж, үүргээ мэргэжлийн түвшинд гүйцэтгэх нөхцөлийг бүрдүүлдэг.</p>
       </article>
     </div>
   </div>
@@ -1073,8 +1058,8 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
 <section id="insurance">
   <div class="wrap ins-in">
     <div>
-      <div class="ins-pct">90<span>%</span></div>
-      <div class="ins-pct-l">хүртэл хохирол барагдуулалт</div>
+      <div class="ins-pct">100<span>%</span></div>
+      <div class="ins-pct-l">хүртэл хохирлын нөхөн төлбөр</div>
       <div class="ins-logo">
         <img src="img/munkh-insurance.webp" alt="Мөнх Даатгал ХХК">
         <span>Даатгагч түнш</span>
@@ -1082,8 +1067,8 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
     </div>
     <div>
       <div class="eyebrow">Эрсдэл хариуцах тогтолцоо, даатгал</div>
-      <h2>Хариуцлага нь <b>баталгаажсан хамгаалалт</b></h2>
-      <p>Гуравдагч этгээдийн өмнө үүсэж болзошгүй хохирлын эрсдэлийг бууруулах зорилгоор бид «Мөнх Даатгал» ХХК-тай «Ерөнхий хариуцлагын даатгалын гэрээ» байгуулан ажилладаг. Гуравдагч этгээдийн амь нас, эрүүл мэнд, эд хөрөнгөд учирсан эрсдэлийг хариуцаж, хамгаалалтын албаны буруугаас хохирол учирсан нь тогтоогдвол хохирлын 90 хүртэлх хувийг барагдуулна.</p>
+      <h2>Даатгалаар <b>баталгаажсан</b></h2>
+      <p>Гуравдагч этгээдийн өмнө үүсэж болзошгүй хохирлын эрсдэлийг бууруулах зорилгоор бид «Мөнх Даатгал» ХХК-тай «Ерөнхий хариуцлагын даатгалын гэрээ» байгуулан ажилладаг. Гуравдагч этгээдийн амь нас, эрүүл мэнд, эд хөрөнгөд учирсан эрсдэлийг хариуцаж, хамгаалалтын албаны буруугаас хохирол учирсан нь тогтоогдвол хохирлын 100 хүртэлх хувийг барагдуулна.</p>
     </div>
   </div>
 </section>
@@ -1097,11 +1082,11 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
       <div class="bar"></div>
     </div>
     <div class="adv-list">
-      <div class="adv-row"><i>01</i><span>Хууль эрх зүйн бүрэн зохицуулалттай үйл ажиллагаа</span></div>
-      <div class="adv-row"><i>02</i><span>MNS 6908:2021 стандартын дагуу тогтвортой хэрэгжүүлэлт</span></div>
-      <div class="adv-row"><i>03</i><span>Тусгайлсан хамгаалалт шаардсан өндөр зэрэглэлийн объектууд дээр ажилласан туршлага</span></div>
+      <div class="adv-row"><i>01</i><span><b>Шуурхай алба, нэгдсэн төв хяналт, 24/7.</b> Операторууд бүх объектыг нэг төвөөс 24 цаг хянана.</span></div>
+      <div class="adv-row"><i>02</i><span>Хиймэл оюун ухаант камер, шөнийн хараа, эргэлтийн механизмтай (PTZ) камер, мэргэжлийн хамгаалалтын хэрэгслээр объектыг хангана.</span></div>
+      <div class="adv-row"><i>03</i><span>Даатгалтай хамгаалалт, эрсдэл хариуцах чадвартай систем</span></div>
       <div class="adv-row"><i>04</i><span>Тасралтгүй хяналт, шуурхай удирдлага бүхий зохион байгуулалт</span></div>
-      <div class="adv-row"><i>05</i><span>Даатгалын хамгаалалттай, эрсдэл хариуцах чадвартай систем</span></div>
+      <div class="adv-row"><i>05</i><span>Шуурхай бүлгийн үнэ төлбөргүй үйлчилгээ, объектыг эргэх давтамж</span></div>
     </div>
   </div>
 </section>
@@ -1354,43 +1339,59 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
       <p>Объектынхоо онцлогийг хэлээрэй — бид тохирсон санал, үнийн тооцоог 24 цагийн дотор хүргүүлнэ.</p>
     </div>
 
-    <div class="ct-grid">
-      <div class="ct-cell">
-        <div class="ct-ic"><svg viewBox="0 0 24 24" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></div>
-        <div class="ct-l">Утас</div>
-        <div class="ct-v"><a href="tel:77202525">7720-2525</a></div>
-        <div class="ct-v"><a href="tel:99636785">9963-6785</a></div>
-        <div class="ct-sub">Даваа–Баасан 09:00–18:00 · Шуурхай 24/7</div>
+    <div class="ct-grid ct-2">
+      <div class="ct-col">
+        <div class="ct-row">
+          <div class="ct-ic"><svg viewBox="0 0 24 24" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></div>
+          <div>
+            <div class="ct-l">Утас</div>
+            <div class="ct-v"><a href="tel:77202525">7720-2525</a></div>
+            <div class="ct-sub">Даваа–Баасан 09:00–18:00 · Шуурхай 24/7</div>
+          </div>
+        </div>
+        <div class="ct-row">
+          <div class="ct-ic"><svg viewBox="0 0 24 24" stroke-linecap="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+          <div>
+            <div class="ct-l">Үйл ажиллагаа эрхэлсэн захирал</div>
+            <div class="ct-name">Н.Тэнүүнмөрөн</div>
+            <div class="ct-v sm"><a href="tel:+97689996830">8999-6830</a></div>
+          </div>
+        </div>
+        <div class="ct-row">
+          <div class="ct-ic"><svg viewBox="0 0 24 24" stroke-linecap="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+          <div>
+            <div class="ct-l">Хуулийн зөвлөх</div>
+            <div class="ct-name">Г.Солонго</div>
+            <div class="ct-v sm"><a href="tel:+97689896830">8989-6830</a></div>
+          </div>
+        </div>
       </div>
-      <div class="ct-cell">
-        <div class="ct-ic"><svg viewBox="0 0 24 24" stroke-linecap="round"><rect x="2" y="4" width="20" height="16"/><polyline points="2 6 12 13 22 6"/></svg></div>
-        <div class="ct-l">Мэйл хаяг</div>
-        <div class="ct-v sm"><a href="mailto:info@khosbilig.mn">info@khosbilig.mn</a></div>
-        <div class="ct-sub">Танд 24 цагийн дотор хариу илгээх болно.</div>
-      </div>
-      <div class="ct-cell">
-        <div class="ct-ic"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-        <div class="ct-l">Хаяг</div>
-        <div class="ct-v sm">Баянбогд Плаза, 3-р давхар</div>
-        <div class="ct-sub">Улаанбаатар хот, Чингэлтэй дүүрэг, 5-р хороо, Их тойруу</div>
-      </div>
-    </div>
 
-    <div class="ct-people">
-      <div class="ct-person">
-        <b>Н.Тэнүүнмөрөн</b>
-        <span>Үйл ажиллагаа эрхэлсэн захирал</span>
-        <a href="tel:+97689996830">+976 8999 6830</a>
-      </div>
-      <div class="ct-person">
-        <b>Г.Солонго</b>
-        <span>Хуулийн зөвлөх</span>
-        <a href="tel:+97689896830">+976 8989 6830</a>
-      </div>
-      <div class="ct-person">
-        <b>Байгууллагын утас</b>
-        <span>Даваа–Баасан 09:00–18:00</span>
-        <a href="tel:+97677202525">+976 7720 2525</a>
+      <div class="ct-col">
+        <div class="ct-row">
+          <div class="ct-ic"><svg viewBox="0 0 24 24" stroke-linecap="round"><rect x="2" y="4" width="20" height="16"/><polyline points="2 6 12 13 22 6"/></svg></div>
+          <div>
+            <div class="ct-l">Имэйл</div>
+            <div class="ct-v sm"><a href="mailto:info@khosbilig.mn">info@khosbilig.mn</a></div>
+            <div class="ct-sub">Танд 24 цагийн дотор хариу илгээх болно.</div>
+          </div>
+        </div>
+        <div class="ct-row">
+          <div class="ct-ic"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div>
+            <div class="ct-l">Хаяг</div>
+            <div class="ct-v sm">Баянбогд Плаза, 3-р давхар</div>
+            <div class="ct-sub">Улаанбаатар хот, Чингэлтэй дүүрэг, 5-р хороо, Их тойруу</div>
+          </div>
+        </div>
+        <div class="ct-row">
+          <div class="ct-ic"><svg viewBox="0 0 24 24"><path d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.2-1.5 1.5-1.5h1.7V4c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.1V10H7.6v3h2.7v8h3.2z" fill="currentColor" stroke="none"/></svg></div>
+          <div>
+            <div class="ct-l">Facebook</div>
+            <div class="ct-v sm"><a href="https://www.facebook.com/profile.php?id=61573189405777" target="_blank" rel="noopener">Хос Билиг Секьюрити</a></div>
+            <div class="ct-sub">Мэдээ, үйл ажиллагааны шинэ мэдээлэл</div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -1408,7 +1409,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
       <div class="map-side">
         <div class="eyebrow">Байршил</div>
         <div class="map-addr">Улаанбаатар хот, Чингэлтэй дүүрэг, 5-р хороо, Их тойруу, Баянбогд Плаза, 3-р давхарт</div>
-        <div class="map-meta">Утас: 7720-2525 · 9963-6785</div>
+        <div class="map-meta">Утас: 7720-2525</div>
         <div class="map-meta" style="margin-bottom:24px">Даваа–Баасан 09:00–18:00 · Шуурхай 24/7</div>
         <a href="https://www.google.com/maps/search/?api=1&query=%D0%91%D0%B0%D1%8F%D0%BD%D0%B1%D0%BE%D0%B3%D0%B4+%D0%9F%D0%BB%D0%B0%D0%B7%D0%B0+%D0%A3%D0%BB%D0%B0%D0%B0%D0%BD%D0%B1%D0%B0%D0%B0%D1%82%D0%B0%D1%80" class="link" target="_blank" rel="noopener">
           Google Maps дээр нээх
@@ -1435,56 +1436,6 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:78px 0 0}
 <!-- ─── FOOTER — жишээний бүтцээр ─── -->
 <footer>
   <div class="wrap">
-    <div class="ft-grid">
-      <div>
-        <div class="ft-brand">
-          <img src="img/logo-h-dark.webp" alt="ХОС БИЛИГ СЕКЬЮРИТИ ХОЛДИНГ ХХК">
-          <div class="ft-brand-name">
-            <span>АЮУЛГҮЙ БАЙДЛЫГ БИД МАНЛАЙЛНА</span>
-          </div>
-        </div>
-        <p class="ft-desc">Харуул хамгаалалтын салбарт 9 дэх жилдээ тогтвортой ажиллаж буй мэргэжлийн байгууллага. MNS 6908:2021 стандартын хэрэгжүүлэлт, даатгалтай хамгаалалтын алба.</p>
-      </div>
-
-      <div>
-        <div class="ft-h">Үйлчилгээ</div>
-        <div class="ft-cols">
-          <a href="#directions">Объектын хамгаалалт</a>
-          <a href="#directions">Барилга байгууламж, бүтээн байгуулалтын объектын хамгаалалт</a>
-          <a href="#directions">Банк, санхүүгийн байгууллагын хамгаалалт</a>
-          <a href="#directions">Амралт, зочид буудал, худалдаа, үйлчилгээний газрын хамгаалалт</a>
-          <a href="#directions">Уул уурхай, ашигт малтмалын объектын хамгаалалт</a>
-          <a href="#directions">Шоу тоглолт, арга хэмжээний хамгаалалт</a>
-          <a href="#directions">Аюултай ачаа, тэсэрч дэлбэрэх бодисын хамгаалалт</a>
-          <a href="#directions">Үнэт эдлэл, үнэт зүйлсийн тээвэрлэлтийн үеийн хамгаалалт</a>
-          <a href="#ai">24/7 AI камерын хяналт</a>
-          <a href="#hr">Хүний нөөц</a>
-        </div>
-      </div>
-
-      <div>
-        <div class="ft-h">Холбоо барих</div>
-        <div class="ft-ct">
-          <div class="ft-ct-row">
-            <div class="ft-ct-ic"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-            <div><div class="ft-ct-v">Улаанбаатар хот, Чингэлтэй дүүрэг, 5-р хороо, Их тойруу, Баянбогд Плаза, 3-р давхарт</div><div class="ft-ct-l">Албан хаяг</div></div>
-          </div>
-          <div class="ft-ct-row">
-            <div class="ft-ct-ic"><svg viewBox="0 0 24 24" stroke-linecap="round"><rect x="2" y="4" width="20" height="16"/><polyline points="2 6 12 13 22 6"/></svg></div>
-            <div><div class="ft-ct-v"><a href="mailto:info@khosbilig.mn">info@khosbilig.mn</a></div><div class="ft-ct-l">Мэйл хаяг</div></div>
-          </div>
-          <div class="ft-ct-row">
-            <div class="ft-ct-ic"><svg viewBox="0 0 24 24" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></div>
-            <div><div class="ft-ct-v"><a href="tel:77202525">7720-2525</a> · <a href="tel:99636785">9963-6785</a></div><div class="ft-ct-l">Утас · 24/7</div></div>
-          </div>
-        </div>
-        <div class="ft-btns">
-          <a href="partner.html" class="btn">Үнийн санал авах</a>
-          <a href="#contact" class="btn btn-outline">Зөвлөгөө авах</a>
-        </div>
-      </div>
-    </div>
-
     <div class="ft-bot">
       <div>© 2026 ХОС БИЛИГ СЕКЬЮРИТИ ХОЛДИНГ ХХК. Зохиогчийн эрхээр хамгаалагдав.</div>
       <div class="ft-soc">

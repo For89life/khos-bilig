@@ -48,7 +48,7 @@ SCHEMA_EN = """<script type="application/ld+json">
   "logo": "https://mss.mn/img/logo.webp",
   "image": "https://mss.mn/img/og-cover.jpg",
   "email": "info@khosbilig.mn",
-  "telephone": ["+976-7720-2525", "+976-9963-6785"],
+  "telephone": "+976-7720-2525",
   "foundingDate": "2018-02-05",
   "priceRange": "$$",
   "slogan": "We lead the way in security",
