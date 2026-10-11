@@ -251,7 +251,7 @@ section{padding:92px 0}
 
 /* ── СТАТИСТИК ── */
 .stats{background:var(--ink);padding:62px 0;position:relative;overflow:hidden}
-.stats::before{content:'';position:absolute;inset:0;background:url('img/hotel-team.webp') center/cover;opacity:.08}
+.stats::before{content:'';position:absolute;inset:0;background:url('img/team-palace.webp') center/cover;opacity:.08}
 .stats-grid{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;text-align:center}
 .stat-n{font:800 clamp(38px,5vw,58px)/1 'Manrope',sans-serif;color:var(--gold)}
 .stat-n small{font-size:.5em;font-weight:700}
@@ -407,7 +407,7 @@ section{padding:92px 0}
 
 /* ── CTA (томруулсан) ── */
 .band{position:relative;background:var(--ink);padding:130px 0;text-align:center;overflow:hidden}
-.band::before{content:'';position:absolute;inset:0;background:url('img/cargo-convoy.webp') center/cover;opacity:.24}
+.band::before{content:'';position:absolute;inset:0;background:url('img/desert-wide.webp') center/cover;opacity:.24}
 .band::after{content:'';position:absolute;inset:0;background:linear-gradient(rgba(13,18,25,.8),rgba(13,18,25,.9))}
 .band .wrap{position:relative;z-index:2}
 .band .eyebrow{font:800 clamp(26px,4.4vw,54px)/1.15 'Manrope',sans-serif;color:#fff;
@@ -578,6 +578,19 @@ section{padding:92px 0}
 .cap-img.cut{background:linear-gradient(180deg,#EEF0F3,#F8F9FA)}
 .cap-img.cut img{object-fit:contain;padding-top:14px}
 @media(max-width:700px){.cap-grid{grid-template-columns:1fr}.cap-img{height:210px}}
+/* шуурхай ажиллагааны автомашинууд — ил тод зургууд цайвар хавтан дээр */
+.fleet{margin-top:56px;background:var(--paper-2);border-top:3px solid var(--gold);padding:44px 40px 40px}
+.fleet-head{text-align:center;max-width:760px;margin:0 auto 32px}
+.fleet-head h3{font-size:clamp(22px,2.8vw,32px);font-weight:800;text-transform:uppercase;margin-bottom:12px}
+.fleet-head h3 b{color:var(--gold);font-weight:800}
+.fleet-head p{color:var(--txt-2)}
+.fleet-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.fleet-grid figure{background:linear-gradient(180deg,#fff,#EEF0F3);border:1px solid var(--line);height:210px;
+  display:grid;place-items:center;padding:16px;transition:.3s}
+.fleet-grid figure:hover{border-color:var(--gold);transform:translateY(-4px)}
+.fleet-grid img{max-width:100%;max-height:100%;object-fit:contain;filter:drop-shadow(0 12px 14px rgba(13,18,25,.22))}
+@media(max-width:1000px){.fleet-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.fleet{padding:30px 16px}.fleet-grid{gap:10px}.fleet-grid figure{height:140px;padding:10px}}
 /* гарчиг нэг мөрөнд — «Мэргэжлийн баг. Орчин үеийн технологи.», «Өргөн хүрээний…», «Хамгаалалтын шийдлээ ярилцъя» */
 @media(min-width:900px){
   #capability .sec-head{max-width:1100px}
@@ -873,7 +886,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:0}
         <div class="dir-in"><div class="dir-n">03</div><h3>Уул уурхай, ашигт малтмалын объект</h3></div>
       </a>
       <a href="partner.html" class="dir-card">
-        <img src="img/thumb/cargo-escort.webp" alt="" loading="lazy">
+        <img src="img/thumb/cargo-truck.webp" alt="" loading="lazy">
         <div class="dir-ic"><svg viewBox="0 0 24 24"><rect x="1" y="6" width="13" height="10"/><path d="M14 9h4l4 4v3h-8z"/><circle cx="6" cy="19" r="2"/><circle cx="18" cy="19" r="2"/></svg></div>
         <div class="dir-in"><div class="dir-n">04</div><h3>Аюултай ачаа, тэсрэх бодис</h3></div>
       </a>
@@ -893,7 +906,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:0}
         <div class="dir-in"><div class="dir-n">07</div><h3>Шоу, олон нийтийн арга хэмжээ</h3></div>
       </a>
       <a href="partner.html" class="dir-card">
-        <img src="img/thumb/radio.webp" alt="" loading="lazy">
+        <img src="img/thumb/cars-city.webp" alt="" loading="lazy">
         <div class="dir-ic"><svg viewBox="0 0 24 24"><path d="M12 2l2.5 6.5L21 11l-6.5 2.5L12 20l-2.5-6.5L3 11l6.5-2.5z"/></svg></div>
         <div class="dir-in"><div class="dir-n">08</div><h3>Үнэт зүйлийн тээвэрлэлт</h3></div>
       </a>
@@ -1011,21 +1024,34 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:0}
         <p>Хамгаалалт, аюулгүй байдлын ажилтны үйл ажиллагаанд биечлэн хяналт тавьж, мэргэжлийн удирдлагаар хангаж ажиллах.</p>
       </article>
       <article class="cap-card">
-        <div class="cap-img cut"><img src="img/tactical-gear.webp" alt="Тусгай хамгаалалтын хэрэгсэл" loading="lazy"></div>
+        <div class="cap-img cut"><img src="img/firearm-gear.webp" alt="Галт зэвсэг, тусгай хэрэгсэл бүхий хамгаалалтын ажилтан" loading="lazy"></div>
         <div class="cap-ic"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
         <h3>Галт зэвсэг, тусгай хэрэгсэл</h3>
         <p><b>Улсын ерөнхий прокурор, Хууль зүй, дотоод хэргийн сайдын хамтарсан 2003 оны 12/05 тоот тушаалын нэгдүгээр хавсралт.</b> Холбогдох хууль тогтоомж, дүрэм журам, тушаал, байгууллагын дотоод зохицуулалтын хүрээнд хамгаалалтын үйл ажиллагаанд шаардлагатай тусгай хэрэгсэл, зориулалтын галт зэвсгийг холбогдох сургалтад хамрагдсан эрх бүхий, мэргэшсэн ажилтнууд зөвшөөрөгдсөн нөхцөлд ашиглан аюулгүй байдлыг мэргэжлийн түвшинд ханган ажиллаж байна.</p>
       </article>
       <article class="cap-card">
-        <div class="cap-img cut"><img src="img/uniform.webp" alt="Хамгаалалтын ажилтны албаны хувцас" loading="lazy"></div>
+        <div class="cap-img cut"><img src="img/uniform-2.webp" alt="Хамгаалалтын ажилтны дүрэмт хувцас" loading="lazy"></div>
         <div class="cap-ic"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3l5 4-3 3v11H6V10L3 7l5-4c1 2 2.5 3 4 3s3-1 4-3z"/></svg></div>
         <h3>Хамгаалалтын ажилтны хувцас, тусгай хэрэгсэл</h3>
         <p><b>Цагдаагийн ерөнхий газрын даргын 2022 оны 12 дугаар сарын 20-ны өдрийн А/337 тоот тушаалаар</b> батлагдсан журмын дагуу манай байгууллага хамгаалалтын ажилтнуудаа ажлын онцлог, үүрэг гүйцэтгэх нөхцөлд тохирсон дүрэмт хувцас, таних тэмдэг болон шаардлагатай хамгаалалтын тусгай хэрэгслээр бүрэн ханган ажиллуулдаг. Энэ нь ажилтнуудын аюулгүй байдал, тав тухыг хангаж, үүргээ мэргэжлийн түвшинд гүйцэтгэх нөхцөлийг бүрдүүлдэг.</p>
       </article>
     </div>
+
+    <div class="fleet">
+      <div class="fleet-head">
+        <div class="eyebrow">Тээврийн хэрэгсэл</div>
+        <h3>Шуурхай ажиллагааны <b>автомашинууд</b></h3>
+        <p>Шуурхай бүлэг зориулалтын, тусгай тэмдэглэгээтэй автомашинуудаар хангагдсан бөгөөд дохиолол, дуудлага бүрд объектод шуурхай хүрч ажиллана.</p>
+      </div>
+      <div class="fleet-grid">
+        <figure><img src="img/car-suv.webp" alt="Шуурхай ажиллагааны Toyota Land Cruiser автомашин" loading="lazy"></figure>
+        <figure><img src="img/car-van.webp" alt="Шуурхай бүлгийн Hyundai Starex автомашин" loading="lazy"></figure>
+        <figure><img src="img/car-pair.webp" alt="Шуурхай ажиллагааны Land Cruiser Prado болон Hyundai Sonata автомашин" loading="lazy"></figure>
+        <figure><img src="img/car-white.webp" alt="Хамгаалалтын Toyota Land Cruiser автомашин" loading="lazy"></figure>
+      </div>
+    </div>
   </div>
 </section>
-
 
 <!-- ─── AI КАМЕР ─── -->
 <section class="ai" id="ai">
@@ -1189,7 +1215,12 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:0}
         <figure class="gal-item"><img src="img/thumb/object.webp" alt="" loading="lazy"><figcaption>Объектын харуулын пост</figcaption></figure>
         <figure class="gal-item"><img src="img/thumb/cctv.webp" alt="" loading="lazy"><figcaption>Хяналтын төвийн оператор</figcaption></figure>
         <figure class="gal-item"><img src="img/thumb/training.webp" alt="" loading="lazy"><figcaption>Мэргэжлийн сургалт</figcaption></figure>
-        <figure class="gal-item"><img src="img/thumb/flags.webp" alt="" loading="lazy"><figcaption>Албан ёсны туг</figcaption></figure>
+        <figure class="gal-item"><img src="img/thumb/cars-city.webp" alt="" loading="lazy"><figcaption>Шуурхай ажиллагааны автомашинууд</figcaption></figure>
+        <figure class="gal-item"><img src="img/thumb/team-palace.webp" alt="" loading="lazy"><figcaption>Хамгаалалтын ээлжийн бүрэлдэхүүн</figcaption></figure>
+        <figure class="gal-item"><img src="img/thumb/control-room.webp" alt="" loading="lazy"><figcaption>Нэгдсэн хяналтын төв</figcaption></figure>
+        <figure class="gal-item"><img src="img/thumb/cargo-truck.webp" alt="" loading="lazy"><figcaption>Хүнд даацын ачааг дагалдан хамгаалах</figcaption></figure>
+        <figure class="gal-item"><img src="img/thumb/team-desert.webp" alt="" loading="lazy"><figcaption>Орон нутгийн объектын баг</figcaption></figure>
+        <figure class="gal-item"><img src="img/thumb/team-polo.webp" alt="" loading="lazy"><figcaption>Объектын хамгаалалтын ажилтнууд</figcaption></figure>
       </div>
     </div>
   </div>
@@ -1311,7 +1342,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:0}
 
       <div class="hr-pics">
         <img class="p1" src="img/thumb/training.webp" alt="Хамгаалалтын ажилтнуудын мэргэжлийн сургалт" loading="lazy">
-        <img class="p2" src="img/thumb/briefing.webp" alt="Ээлжийн бүрэлдэхүүнд зааварчилгаа өгч буй нь" loading="lazy">      </div>
+        <img class="p2" src="img/thumb/mine-briefing.webp" alt="Ээлжийн бүрэлдэхүүнд зааварчилгаа өгч буй нь" loading="lazy">      </div>
     </div>
 
     <div class="hr-bottom">

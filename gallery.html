@@ -192,6 +192,8 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:0}
 .alb-thumb{position:relative;aspect-ratio:16/10;overflow:hidden}
 .alb-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .55s}
 .alb-item:hover .alb-thumb img{transform:scale(1.07)}
+.alb-thumb.cut{background:linear-gradient(180deg,#fff,#E9ECF0)}
+.alb-thumb.cut img{object-fit:contain;padding:14px;filter:drop-shadow(0 10px 12px rgba(13,18,25,.22))}
 .alb-zoom{position:absolute;right:16px;top:16px;width:40px;height:40px;border-radius:50%;background:rgba(13,18,25,.6);
   display:grid;place-items:center;opacity:0;transform:translateY(-6px);transition:.3s}
 .alb-item:hover .alb-zoom{opacity:1;transform:none}
@@ -315,6 +317,198 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:0}
 <section>
   <div class="wrap">
     <div class="alb-grid" id="albGrid">
+
+      <figure class="alb-item">
+        <div class="alb-thumb">
+          <img src="img/thumb/cars-city.webp" data-full="img/cars-city.webp" alt="Шуурхай ажиллагааны автомашинууд" loading="lazy">
+          <span class="alb-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16" y1="16" x2="21" y2="21"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+        </div>
+        <figcaption class="alb-cap">
+          <div class="alb-loc">Улаанбаатар</div>
+          <h3>Шуурхай ажиллагааны автомашинууд</h3>
+          <p>Тусгай тэмдэглэгээ, дохиоллын гэрэлтэй шуурхай бүлгийн автомашинууд бэлэн байдалд байна.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="alb-item">
+        <div class="alb-thumb cut">
+          <img src="img/car-suv.webp" data-full="img/car-suv.webp" alt="Toyota Land Cruiser — шуурхай ажиллагааны автомашин" loading="lazy">
+          <span class="alb-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16" y1="16" x2="21" y2="21"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+        </div>
+        <figcaption class="alb-cap">
+          <div class="alb-loc">Тээврийн хэрэгсэл</div>
+          <h3>Шуурхай ажиллагааны автомашин</h3>
+          <p>Орон нутаг, хүнд нөхцөлд ажиллах зориулалттай Toyota Land Cruiser.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="alb-item">
+        <div class="alb-thumb cut">
+          <img src="img/car-van.webp" data-full="img/car-van.webp" alt="Hyundai Starex — шуурхай бүлгийн автомашин" loading="lazy">
+          <span class="alb-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16" y1="16" x2="21" y2="21"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+        </div>
+        <figcaption class="alb-cap">
+          <div class="alb-loc">Тээврийн хэрэгсэл</div>
+          <h3>Шуурхай бүлгийн автомашин</h3>
+          <p>Шуурхай бүлгийн бүрэлдэхүүнийг объект руу хүргэх Hyundai Starex.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="alb-item">
+        <div class="alb-thumb cut">
+          <img src="img/car-pair.webp" data-full="img/car-pair.webp" alt="Land Cruiser Prado болон Hyundai Sonata" loading="lazy">
+          <span class="alb-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16" y1="16" x2="21" y2="21"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+        </div>
+        <figcaption class="alb-cap">
+          <div class="alb-loc">Тээврийн хэрэгсэл</div>
+          <h3>Эргүүл, дагалдан хамгаалалтын автомашин</h3>
+          <p>Дохиоллын гэрэлтэй эргүүлийн автомашинууд хотын болон замын хамгаалалтад ажиллана.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="alb-item">
+        <div class="alb-thumb cut">
+          <img src="img/car-white.webp" data-full="img/car-white.webp" alt="Toyota Land Cruiser — хамгаалалтын автомашин" loading="lazy">
+          <span class="alb-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16" y1="16" x2="21" y2="21"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+        </div>
+        <figcaption class="alb-cap">
+          <div class="alb-loc">Тээврийн хэрэгсэл</div>
+          <h3>Хамгаалалтын автомашин</h3>
+          <p>Орон нутгийн объект, уул уурхайн талбайд ажиллах зориулалттай автомашин.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="alb-item">
+        <div class="alb-thumb">
+          <img src="img/thumb/cargo-truck.webp" data-full="img/cargo-truck.webp" alt="Хүнд даацын ачааг дагалдан хамгаалах" loading="lazy">
+          <span class="alb-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16" y1="16" x2="21" y2="21"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+        </div>
+        <figcaption class="alb-cap">
+          <div class="alb-loc">Тээвэрлэлт</div>
+          <h3>Хүнд даацын ачааг дагалдан хамгаалах</h3>
+          <p>Шуурхай ажиллагааны автомашин хүнд даацын ачааг замын турш дагалдан хамгаалж байна.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="alb-item">
+        <div class="alb-thumb">
+          <img src="img/thumb/rapid-team.webp" data-full="img/rapid-team.webp" alt="Шуурхай бүлгийн ажилтнууд" loading="lazy">
+          <span class="alb-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16" y1="16" x2="21" y2="21"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+        </div>
+        <figcaption class="alb-cap">
+          <div class="alb-loc">Шуурхай бүлэг</div>
+          <h3>Шуурхай бүлгийн ажилтнууд</h3>
+          <p>Тусгай хамгаалалтын хэрэгсэлтэй шуурхай бүлгийн ажилтнууд.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="alb-item">
+        <div class="alb-thumb">
+          <img src="img/thumb/control-room.webp" data-full="img/control-room.webp" alt="Нэгдсэн хяналтын төв" loading="lazy">
+          <span class="alb-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16" y1="16" x2="21" y2="21"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+        </div>
+        <figcaption class="alb-cap">
+          <div class="alb-loc">Хяналтын төв</div>
+          <h3>Нэгдсэн хяналтын төв</h3>
+          <p>Операторууд олон объектын камерын дүрсийг нэг төвөөс 24/7 хянаж байна.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="alb-item">
+        <div class="alb-thumb">
+          <img src="img/thumb/team-palace.webp" data-full="img/team-palace.webp" alt="Хамгаалалтын ээлжийн бүрэлдэхүүн" loading="lazy">
+          <span class="alb-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16" y1="16" x2="21" y2="21"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+        </div>
+        <figcaption class="alb-cap">
+          <div class="alb-loc">Улаанбаатар</div>
+          <h3>Хамгаалалтын ээлжийн бүрэлдэхүүн</h3>
+          <p>Объектын хамгаалалтын ээлжийн бүрэлдэхүүн шуурхай ажиллагааны автомашины хамт.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="alb-item">
+        <div class="alb-thumb">
+          <img src="img/thumb/team-bus.webp" data-full="img/team-bus.webp" alt="Тээвэрлэлтийн үеийн хамгаалалт" loading="lazy">
+          <span class="alb-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16" y1="16" x2="21" y2="21"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+        </div>
+        <figcaption class="alb-cap">
+          <div class="alb-loc">Улаанбаатар</div>
+          <h3>Тээвэрлэлтийн үеийн хамгаалалт</h3>
+          <p>Хамгаалалтын ажилтнууд зорчигч тээврийн үед аюулгүй байдлыг хангаж байна.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="alb-item">
+        <div class="alb-thumb">
+          <img src="img/thumb/team-polo.webp" data-full="img/team-polo.webp" alt="Объектын хамгаалалтын ажилтнууд" loading="lazy">
+          <span class="alb-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16" y1="16" x2="21" y2="21"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+        </div>
+        <figcaption class="alb-cap">
+          <div class="alb-loc">Улаанбаатар</div>
+          <h3>Объектын хамгаалалтын ажилтнууд</h3>
+          <p>Байгууллагын шинэ дүрэмт хувцастай объектын хамгаалалтын ажилтнууд.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="alb-item">
+        <div class="alb-thumb">
+          <img src="img/thumb/mine-briefing.webp" data-full="img/mine-briefing.webp" alt="Уурхайн кемпийн ээлжийн зааварчилгаа" loading="lazy">
+          <span class="alb-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16" y1="16" x2="21" y2="21"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+        </div>
+        <figcaption class="alb-cap">
+          <div class="alb-loc">Орон нутаг</div>
+          <h3>Уурхайн кемпийн ээлжийн зааварчилгаа</h3>
+          <p>Ахлах ажилтан ээлж эхлэхийн өмнө бүрэлдэхүүнд үүрэг даалгавар өгч байна.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="alb-item">
+        <div class="alb-thumb">
+          <img src="img/thumb/team-desert.webp" data-full="img/team-desert.webp" alt="Орон нутгийн объектын баг" loading="lazy">
+          <span class="alb-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16" y1="16" x2="21" y2="21"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+        </div>
+        <figcaption class="alb-cap">
+          <div class="alb-loc">Орон нутаг</div>
+          <h3>Орон нутгийн объектын баг</h3>
+          <p>Орон нутгийн объектын хамгаалалтын бүрэлдэхүүн шуурхай бүлгийн автомашины хамт.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="alb-item">
+        <div class="alb-thumb">
+          <img src="img/thumb/desert-wide.webp" data-full="img/desert-wide.webp" alt="Говийн бүсийн хамгаалалтын баг" loading="lazy">
+          <span class="alb-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16" y1="16" x2="21" y2="21"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+        </div>
+        <figcaption class="alb-cap">
+          <div class="alb-loc">Орон нутаг</div>
+          <h3>Говийн бүсийн хамгаалалтын баг</h3>
+          <p>Говийн бүсийн объект дээр ажилладаг хамгаалалтын бүрэлдэхүүн.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="alb-item">
+        <div class="alb-thumb">
+          <img src="img/thumb/planning.webp" data-full="img/planning.webp" alt="Хамгаалалтын төлөвлөлт" loading="lazy">
+          <span class="alb-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16" y1="16" x2="21" y2="21"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+        </div>
+        <figcaption class="alb-cap">
+          <div class="alb-loc">Төв оффис</div>
+          <h3>Хамгаалалтын төлөвлөлт</h3>
+          <p>Объектын хамгаалалтын төлөвлөгөөг баг хамтран боловсруулж байна.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="alb-item">
+        <div class="alb-thumb">
+          <img src="img/thumb/team-archive.webp" data-full="img/team-archive.webp" alt="Байгууллагын түүхэн зураг" loading="lazy">
+          <span class="alb-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16" y1="16" x2="21" y2="21"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span>
+        </div>
+        <figcaption class="alb-cap">
+          <div class="alb-loc">Түүхэн зураг</div>
+          <h3>Анхны бүрэлдэхүүн</h3>
+          <p>Байгууллагын анхны жилүүдийн хамгаалалтын бүрэлдэхүүн.</p>
+        </figcaption>
+      </figure>
 
       <figure class="alb-item">
         <div class="alb-thumb">
