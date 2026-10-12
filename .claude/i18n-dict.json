@@ -287,7 +287,7 @@
   "Дараах": "Next",
   "Хамтран ажиллах": "Work with us",
   "Объектынхоо хамгаалалтыг": "Let's plan your site's",
-  "хамтдаа төлөвлөе": "security together",
+  "хамтдаа төлөвлөе": "together",
   "Хэрэгцээтэй үйлчилгээний чиглэлээ сонгоод үнийн санал хүсэх маягтыг бөглөнө үү. Таны сонголт маягтад автоматаар бичигдэнэ.": "Choose the services you need and fill in the quote request form. Your selection is carried into the form automatically.",
   "Үйл ажиллагааны чиглэл": "Our services",
   "Хэрэгцээтэй үйлчилгээгээ": "Choose the services",
@@ -441,7 +441,7 @@
   "Н.Тэнүүнмөрөн": "N. Tenuunmurun",
   "Үйл ажиллагаа эрхэлсэн захирал": "Chief Operating Officer",
   "Г.Солонго": "G. Solongo",
-  "Хуулийн зөвлөх": "Legal Counsel",
+  "Хуулийн мэргэжилтэн": "Legal Specialist",
   "Байгууллагын утас": "Main office line",
   "Даваа–Баасан 09:00–18:00": "Mon–Fri 09:00–18:00",
   "Банкны хамгаалалт": "Bank security",
@@ -596,7 +596,11 @@
   "Түүхэн зураг": "Archive",
   "Анхны бүрэлдэхүүн": "Our first team",
   "Байгууллагын анхны жилүүдийн хамгаалалтын бүрэлдэхүүн.": "The security team from the company's early years.",
-  "Маягт бөглөхөөс өмнө тодруулах зүйл байвал ажлын цагаар холбоо барина уу. Яаралтай тохиолдолд 24 цагийн турш хариу өгнө.": "If you have any questions before filling in the form, please contact us during business hours. For urgent matters we respond 24 hours a day."
+  "Маягт бөглөхөөс өмнө тодруулах зүйл байвал ажлын цагаар холбоо барина уу. Яаралтай тохиолдолд 24 цагийн турш хариу өгнө.": "If you have any questions before filling in the form, please contact us during business hours. For urgent matters we respond 24 hours a day.",
+  "Шуурхай бүлэг зориулалтын, тусгай гэрэл, дуут дохио бүхий автомашинаар бүрэн хангагдсан бөгөөд дуудлага бүрт объектод хүрч ажиллана.": "Our rapid-response team is fully equipped with dedicated vehicles fitted with warning lights and sirens, and reaches the site for every call.",
+  "Төвийн бүс": "Central zone",
+  "Гуравдагч этгээдийн өмнө үүсэж болзошгүй хохирлын эрсдэлийг бууруулах зорилгоор бид «Мөнх Даатгал» ХХК-тай «Ерөнхий хариуцлагын даатгалын гэрээ» байгуулан ажилладаг. Гуравдагч этгээдийн эд хөрөнгөд учирсан эрсдэлийг хариуцаж, хамгаалалтын ажилтны буруугаас хохирол учирсан нь тогтоогдвол хохирлыг 100% бүрэн барагдуулна.": "To reduce the risk of damage to third parties we maintain a General Liability Insurance Agreement with Munkh Insurance LLC. It covers damage to third-party property: where an investigation determines that the damage was caused by one of our security officers, the loss is compensated in full, 100%.",
+  "Энэ үеэр Хуулийн мэргэжилтэн Г.Солонго байгууллагын хэмжээнд ажилтнуудын ур чадвар, бүтээмжийг нэмэгдүүлэхэд чиглэсэн бодлого, цаашид хэрэгжүүлэх арга хэмжээний талаар танилцуулж, ажил үүргээ үр дүнтэй гүйцэтгэх, мэргэжлийн хандлага, сахилга хариуцлагыг дээшлүүлэхэд анхаарах асуудлуудыг онцоллоо.": "During the session, Legal Specialist G. Solongo presented the organization's policies and planned measures aimed at enhancing employees' professional skills and productivity. She also highlighted the importance of effective job performance, professional conduct, discipline and accountability."
  },
  "PAGE": {
   "partner.html": {
