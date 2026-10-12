@@ -492,10 +492,22 @@ section{padding:92px 0}
 .hr-perk{display:flex;align-items:center;gap:12px;font:600 14px/1.35 'Manrope',sans-serif;color:var(--ink)}
 .hr-perk i{width:36px;height:36px;flex:none;border-radius:50%;background:rgba(185,149,55,.12);display:grid;place-items:center}
 .hr-perk svg{width:16px;height:16px;stroke:var(--gold);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.hr-pics{position:relative;padding:0 0 48px 48px}
-.hr-pics img{width:100%;object-fit:cover}
-.hr-pics .p1{height:400px}
-.hr-pics .p2{position:absolute;left:0;bottom:0;width:52%;height:200px;border:8px solid #fff;box-shadow:0 20px 44px rgba(13,18,25,.18)}
+/* хүний нөөцийн зургийн слайдер — зөөлөн солигдоно */
+.hr-slider{position:relative;height:460px;overflow:hidden;background:var(--ink);box-shadow:0 24px 54px rgba(13,18,25,.18)}
+.hr-slides figure{position:absolute;inset:0;margin:0;opacity:0;transition:opacity .8s ease}
+.hr-slides figure.on{opacity:1}
+.hr-slides img{width:100%;height:100%;object-fit:cover;transform:scale(1.05);transition:transform 6s linear}
+.hr-slides figure.on img{transform:scale(1)}
+.hr-slides figcaption{position:absolute;left:0;right:0;bottom:0;padding:44px 24px 46px;color:#fff;
+  font:700 15px/1.3 'Manrope',sans-serif;background:linear-gradient(transparent,rgba(13,18,25,.85))}
+.hr-arr{position:absolute;top:50%;transform:translateY(-50%);z-index:2;width:42px;height:42px;border:0;cursor:pointer;
+  background:rgba(13,18,25,.55);display:grid;place-items:center;transition:background .2s}
+.hr-arr:hover{background:var(--gold)}
+.hr-arr svg{width:18px;height:18px;stroke:#fff;fill:none;stroke-width:2}
+.hr-arr.prev{left:12px}.hr-arr.next{right:12px}
+.hr-dots{position:absolute;left:24px;bottom:20px;z-index:2;display:flex;gap:8px}
+.hr-dots button{width:24px;height:3px;border:0;padding:0;background:rgba(255,255,255,.4);cursor:pointer;transition:.25s}
+.hr-dots button.on{width:40px;background:var(--gold)}
 .hr-bottom{margin-top:72px}
 .hr-box{border:1px solid var(--line);padding:34px 32px}
 .hr-box.dark{background:var(--ink);border-color:var(--ink);position:relative;overflow:hidden}
@@ -512,8 +524,7 @@ section{padding:92px 0}
 .hr-job b{display:block;font:700 15px/1.4 'Manrope',sans-serif;color:#fff;margin-bottom:4px}
 .hr-job span{display:block;font:400 13.5px/1.6 'Inter',sans-serif;color:rgba(255,255,255,.62)}
 @media(max-width:1000px){.hr-top{grid-template-columns:1fr;gap:44px}.hr-bottom{margin-top:52px}.hr-jobs{grid-template-columns:1fr}}
-@media(max-width:600px){.hr-perks{grid-template-columns:1fr}.hr-pics{padding:0 0 36px 24px}.hr-pics .p1{height:260px}
-  .hr-pics .p2{height:140px;width:58%}.hr-box{padding:26px 20px}}
+@media(max-width:600px){.hr-perks{grid-template-columns:1fr}.hr-slider{height:280px}.hr-box{padding:26px 20px}}
 /* ── танилцуулгын онцлох мөр ── */
 .about-claim{font:600 16px/1.6 'Manrope',sans-serif;color:var(--ink);
   border-left:3px solid var(--gold);padding:4px 0 4px 16px;margin:4px 0 20px}
@@ -1059,8 +1070,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:0}
         <p>Секундэд 0–20° эргэх хурдтайгаар орчныг бүрэн тольдоно.</p></article>
       <article class="ai-card"><div class="ai-lbl">Автомат ажиллагаа</div><div class="ai-n">16<small>урьдчилсан байрлал</small></div>
         <p>16 төрлийн preset байрлал, 2 цэгийн хооронд скан хийх, хамгаалалтын горимтой.</p></article>
-      <article class="ai-card"><div class="ai-lbl">Санах ой</div><div class="ai-n">Memory<small>resume</small></div>
-        <p>Тог тасарсан ч санах ойгоо хадгалж, ажиллагааг тасралтгүй үргэлжлүүлнэ.</p></article>
+      <article class="ai-card"><div class="ai-lbl">Санах ой</div>        <p>Тог тасарсан ч санах ойгоо хадгалж, ажиллагааг тасралтгүй үргэлжлүүлнэ.</p></article>
     </div>
   </div>
 </section>
@@ -1325,9 +1335,19 @@ footer{background:var(--ink);color:rgba(255,255,255,.58);padding:0}
           <svg viewBox="0 0 24 24"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="14 6 20 12 14 18"/></svg></a>
       </div>
 
-      <div class="hr-pics">
-        <img class="p1" src="img/thumb/training.webp" alt="Хамгаалалтын ажилтнуудын мэргэжлийн сургалт" loading="lazy">
-        <img class="p2" src="img/thumb/mine-briefing.webp" alt="Ээлжийн бүрэлдэхүүнд зааварчилгаа өгч буй нь" loading="lazy">      </div>
+      <div class="hr-slider" id="hrSlider" aria-roledescription="carousel" aria-label="Хүний нөөцийн зургууд">
+        <div class="hr-slides">
+          <figure class="on"><img src="img/thumb/training.webp" alt="Хамгаалалтын ажилтнуудын мэргэжлийн сургалт"><figcaption>Мэргэжлийн сургалт</figcaption></figure>
+          <figure><img src="img/thumb/mine-briefing.webp" alt="Ээлжийн бүрэлдэхүүнд зааварчилгаа өгч буй нь" loading="lazy"><figcaption>Ээлжийн зааварчилгаа</figcaption></figure>
+          <figure><img src="img/thumb/team-palace.webp" alt="Хамгаалалтын ээлжийн бүрэлдэхүүн" loading="lazy"><figcaption>Хамгаалалтын ээлжийн бүрэлдэхүүн</figcaption></figure>
+          <figure><img src="img/thumb/n-training-1.webp" alt="Сургалт, хэлэлцүүлэг" loading="lazy"><figcaption>Сургалт, хэлэлцүүлэг</figcaption></figure>
+          <figure><img src="img/thumb/team-polo.webp" alt="Объектын хамгаалалтын ажилтнууд" loading="lazy"><figcaption>Объектын хамгаалалтын ажилтнууд</figcaption></figure>
+          <figure><img src="img/thumb/n-jobfair-2.webp" alt="«Чингэлтэй 1000 ажлын байр» өдөрлөг" loading="lazy"><figcaption>«Чингэлтэй 1000 ажлын байр» өдөрлөг</figcaption></figure>
+        </div>
+        <button type="button" class="hr-arr prev" aria-label="Өмнөх зураг"><svg viewBox="0 0 24 24"><polyline points="15 5 8 12 15 19"/></svg></button>
+        <button type="button" class="hr-arr next" aria-label="Дараах зураг"><svg viewBox="0 0 24 24"><polyline points="9 5 16 12 9 19"/></svg></button>
+        <div class="hr-dots"></div>
+      </div>
     </div>
 
     <div class="hr-bottom">
@@ -1526,6 +1546,26 @@ function pLogo(img){img.style.display='none'}
     }
   });
 });
+
+/* хүний нөөцийн зургийн слайдер */
+(function(){
+  var root=document.getElementById('hrSlider');
+  if(!root)return;
+  var figs=[].slice.call(root.querySelectorAll('.hr-slides figure')),dotsBox=root.querySelector('.hr-dots'),i=0,t;
+  var dots=figs.map(function(f,k){
+    var b=document.createElement('button');b.type='button';b.setAttribute('aria-label',(k+1)+'-р зураг');
+    b.onclick=function(){go(k)};dotsBox.appendChild(b);return b;
+  });
+  function go(n){
+    i=(n+figs.length)%figs.length;
+    figs.forEach(function(f,k){f.classList.toggle('on',k===i)});
+    dots.forEach(function(d,k){d.classList.toggle('on',k===i)});
+    clearInterval(t);t=setInterval(function(){go(i+1)},5000);
+  }
+  root.querySelector('.hr-arr.prev').onclick=function(){go(i-1)};
+  root.querySelector('.hr-arr.next').onclick=function(){go(i+1)};
+  go(0);
+})();
 
 /* hero слайдер */
 (function(){
